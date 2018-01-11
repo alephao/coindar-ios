@@ -20,7 +20,18 @@
 		2746AA2D1FFE5B300075A5D3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746AA2C1FFE5B300075A5D3 /* Networking.swift */; };
 		27B6C25020062BE1000D2362 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C24F20062BE1000D2362 /* EventCell.swift */; };
 		27B6C253200632F0000D2362 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C252200632F0000D2362 /* EventDetailsViewController.swift */; };
+		27B6C26620075FF5000D2362 /* lastEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B6C26520075FF5000D2362 /* lastEvents.json */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27B6C25F20075FC9000D2362 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2746AA0C1FFE51390075A5D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2746AA131FFE51390075A5D3;
+			remoteInfo = Coindar;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		270F05C61FFE895800EA7004 /* Embed Frameworks */ = {
@@ -51,6 +62,9 @@
 		2746AA2C1FFE5B300075A5D3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		27B6C24F20062BE1000D2362 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		27B6C252200632F0000D2362 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		27B6C25A20075FC9000D2362 /* CoindarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoindarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B6C25E20075FC9000D2362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27B6C26520075FF5000D2362 /* lastEvents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lastEvents.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,13 @@
 			files = (
 				270F05E01FFE89EC00EA7004 /* CoindarFoundation.framework in Frameworks */,
 				270F05DD1FFE89EC00EA7004 /* CoindarAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27B6C25720075FC9000D2362 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +111,7 @@
 				270F05DF1FFE89EC00EA7004 /* CoindarFoundation.framework */,
 				270F05DC1FFE89EC00EA7004 /* CoindarAPI.framework */,
 				2746AA161FFE51390075A5D3 /* Coindar */,
+				27B6C25B20075FC9000D2362 /* CoindarTests */,
 				2746AA151FFE51390075A5D3 /* Products */,
 				270F05C71FFE897000EA7004 /* Frameworks */,
 			);
@@ -99,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				2746AA141FFE51390075A5D3 /* Coindar.app */,
+				27B6C25A20075FC9000D2362 /* CoindarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,6 +156,23 @@
 			path = EventDetails;
 			sourceTree = "<group>";
 		};
+		27B6C25B20075FC9000D2362 /* CoindarTests */ = {
+			isa = PBXGroup;
+			children = (
+				27B6C26420075FD3000D2362 /* Resources */,
+				27B6C25E20075FC9000D2362 /* Info.plist */,
+			);
+			path = CoindarTests;
+			sourceTree = "<group>";
+		};
+		27B6C26420075FD3000D2362 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				27B6C26520075FF5000D2362 /* lastEvents.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +194,24 @@
 			productReference = 2746AA141FFE51390075A5D3 /* Coindar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		27B6C25920075FC9000D2362 /* CoindarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27B6C26120075FC9000D2362 /* Build configuration list for PBXNativeTarget "CoindarTests" */;
+			buildPhases = (
+				27B6C25620075FC9000D2362 /* Sources */,
+				27B6C25720075FC9000D2362 /* Frameworks */,
+				27B6C25820075FC9000D2362 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27B6C26020075FC9000D2362 /* PBXTargetDependency */,
+			);
+			name = CoindarTests;
+			productName = CoindarTests;
+			productReference = 27B6C25A20075FC9000D2362 /* CoindarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,6 +225,11 @@
 					2746AA131FFE51390075A5D3 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					27B6C25920075FC9000D2362 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2746AA131FFE51390075A5D3;
 					};
 				};
 			};
@@ -184,6 +247,7 @@
 			projectRoot = "";
 			targets = (
 				2746AA131FFE51390075A5D3 /* Coindar */,
+				27B6C25920075FC9000D2362 /* CoindarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +259,14 @@
 			files = (
 				2746AA221FFE513A0075A5D3 /* LaunchScreen.storyboard in Resources */,
 				2746AA1F1FFE513A0075A5D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27B6C25820075FC9000D2362 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B6C26620075FF5000D2362 /* lastEvents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,7 +287,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27B6C25620075FC9000D2362 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27B6C26020075FC9000D2362 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2746AA131FFE51390075A5D3 /* Coindar */;
+			targetProxy = 27B6C25F20075FC9000D2362 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2746AA201FFE513A0075A5D3 /* LaunchScreen.storyboard */ = {
@@ -368,6 +455,38 @@
 			};
 			name = Release;
 		};
+		27B6C26220075FC9000D2362 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				INFOPLIST_FILE = CoindarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.alaphao.CoindarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coindar.app/Coindar";
+			};
+			name = Debug;
+		};
+		27B6C26320075FC9000D2362 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				INFOPLIST_FILE = CoindarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.alaphao.CoindarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coindar.app/Coindar";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -385,6 +504,15 @@
 			buildConfigurations = (
 				2746AA271FFE513A0075A5D3 /* Debug */,
 				2746AA281FFE513A0075A5D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27B6C26120075FC9000D2362 /* Build configuration list for PBXNativeTarget "CoindarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27B6C26220075FC9000D2362 /* Debug */,
+				27B6C26320075FC9000D2362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
