@@ -23,7 +23,7 @@ class EventCell: UITableViewCell {
         l.numberOfLines = 0
         l.textAlignment = .right
         l.font = .systemFont(ofSize: 14, weight: .regular)
-        l.textColor = UIColor.hex(0xACB7D5)
+        l.textColor = UIColor.Coindar.lightBlue
         return l
     }()
     

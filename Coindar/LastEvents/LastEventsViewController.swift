@@ -20,7 +20,7 @@ class LastEventsViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        title = "Coindar"
+        title = "Last Events"
         tableView.delegate = self
         tableView.dataSource = eventsDataSource
     }
@@ -53,7 +53,8 @@ extension LastEventsViewController: UITableViewDelegate {
 
 extension LastEventsViewController: LastEventsViewModelDelegate {
     func showDetails(for event: CoindarEvent) {
-        let eventDetailsViewController = EventDetailsViewController(nibName: nil, bundle: nil)
+        let eventDetailsViewModel = EventDetailsViewModel(event: event)
+        let eventDetailsViewController = EventDetailsViewController(viewModel: eventDetailsViewModel)
         navigationController?.pushViewController(eventDetailsViewController, animated: true)
     }
     

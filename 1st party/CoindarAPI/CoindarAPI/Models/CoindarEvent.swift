@@ -6,11 +6,14 @@ public struct CoindarEvent: Decodable {
         /// yyyy-mm-dd HH: MM
         static let ymdTime = DateFormatter(dateFormat: "yyyy-MM-dd HH:mm")
 
-        // yyyy-MM-dd
+        /// yyyy-MM-dd
         static let ymd = DateFormatter(dateFormat: "yyyy-MM-dd")
         
-        // yyyy-MM
+        /// yyyy-MM
         static let ym = DateFormatter(dateFormat: "yyyy-MM")
+        
+        /// MMMM dd, EEEE
+        public static let medium = DateFormatter(dateFormat: "MMMM dd, EEEE")
         
         static func anyDate(from string: String) -> Date? {
             return ymdTime.date(from: string) ?? ymd.date(from: string) ?? ym.date(from: string)

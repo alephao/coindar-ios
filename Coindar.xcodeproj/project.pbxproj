@@ -21,6 +21,8 @@
 		27B6C25020062BE1000D2362 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C24F20062BE1000D2362 /* EventCell.swift */; };
 		27B6C253200632F0000D2362 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C252200632F0000D2362 /* EventDetailsViewController.swift */; };
 		27B6C26620075FF5000D2362 /* lastEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B6C26520075FF5000D2362 /* lastEvents.json */; };
+		27B6C2692007644C000D2362 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C2682007644C000D2362 /* Colors.swift */; };
+		27B6C26B20076BAA000D2362 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C26A20076BAA000D2362 /* EventDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		27B6C25A20075FC9000D2362 /* CoindarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoindarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B6C25E20075FC9000D2362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B6C26520075FF5000D2362 /* lastEvents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lastEvents.json; sourceTree = "<group>"; };
+		27B6C2682007644C000D2362 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		27B6C26A20076BAA000D2362 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +133,9 @@
 		2746AA161FFE51390075A5D3 /* Coindar */ = {
 			isa = PBXGroup;
 			children = (
-				2746AA291FFE51750075A5D3 /* Services */,
 				2746AA171FFE51390075A5D3 /* AppDelegate.swift */,
+				27B6C26720076441000D2362 /* Library */,
+				2746AA291FFE51750075A5D3 /* Services */,
 				270F05E21FFE8DEE00EA7004 /* LastEvents */,
 				27B6C251200632DE000D2362 /* EventDetails */,
 				2746AA1E1FFE513A0075A5D3 /* Assets.xcassets */,
@@ -152,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				27B6C252200632F0000D2362 /* EventDetailsViewController.swift */,
+				27B6C26A20076BAA000D2362 /* EventDetailsViewModel.swift */,
 			);
 			path = EventDetails;
 			sourceTree = "<group>";
@@ -171,6 +177,14 @@
 				27B6C26520075FF5000D2362 /* lastEvents.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		27B6C26720076441000D2362 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				27B6C2682007644C000D2362 /* Colors.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +292,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				270F05E61FFE8E0F00EA7004 /* LastEventsDataSource.swift in Sources */,
+				27B6C2692007644C000D2362 /* Colors.swift in Sources */,
+				27B6C26B20076BAA000D2362 /* EventDetailsViewModel.swift in Sources */,
 				27B6C253200632F0000D2362 /* EventDetailsViewController.swift in Sources */,
 				2746AA1A1FFE513A0075A5D3 /* LastEventsViewController.swift in Sources */,
 				270F05E41FFE8E0000EA7004 /* LastEventsViewModel.swift in Sources */,
