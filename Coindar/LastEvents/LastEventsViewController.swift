@@ -11,7 +11,7 @@ class LastEventsViewController: UIViewController {
         tv.estimatedRowHeight = 80
         tv.tableFooterView = UIView()
         tv.separatorInset = .zero
-        tv.separatorColor = UIColor.hex(0x999999)
+        tv.separatorColor = UIColor.hex(0xa0a0a0)
         return tv
     }()
     

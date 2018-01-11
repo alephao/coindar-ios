@@ -30,6 +30,8 @@ class EventCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        selectionStyle = .none
+        
         let eventStackView = UIStackView(arrangedSubviews: [eventNameLabel, eventAddedLabel])
         eventStackView.axis = .vertical
         eventStackView.spacing = 4
@@ -42,9 +44,9 @@ class EventCell: UITableViewCell {
 
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
         mainStackView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor).isActive = true
-        mainStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 4).isActive = true
+        mainStackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 8).isActive = true
         mainStackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor).isActive = true
-        mainStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -4).isActive = true
+        mainStackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -8).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
