@@ -1,15 +1,20 @@
 import CoindarAPI
 
 protocol LastEventsViewModelDelegate: AnyObject {
-    func update(_ events: [CoindarEvent])
+    func update(_ sections: [LastEventsViewModel.Section])
     func showDetails(for event: CoindarEvent)
 }
 
 class LastEventsViewModel {
     
-    private var events: [CoindarEvent] = [] {
+    struct Section {
+        let title: String
+        var items: [CoindarEvent]
+    }
+    
+    private var sections: [Section] = [] {
         didSet {
-            delegate?.update(events)
+            delegate?.update(sections)
         }
     }
     
@@ -20,7 +25,7 @@ class LastEventsViewModel {
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        let selectedEvent = events[indexPath.row]
+        let selectedEvent = sections[indexPath.section].items[indexPath.row]
         delegate?.showDetails(for: selectedEvent)
     }
     
@@ -64,7 +69,22 @@ class LastEventsViewModel {
 
         let data = json.data(using: .utf8)!
         let events = try! JSONDecoder().decode([CoindarEvent].self, from: data)
-        self.events = events
+        
+        let sections = events.reduce([Section]()) { secs, event in
+            let title = CoindarEvent.Formatters.medium.string(from: event.startDate)
+
+            var secs = secs
+            
+            if let i = secs.index(where: { sec in sec.title == title }) {
+                secs[i].items.append(event)
+                return secs
+            } else {
+                secs.append(Section(title: title, items: [event]))
+                return secs
+            }
+        }
+        
+        self.sections = sections
         
 //        let token = CoindarAPI.lastEvents(limit: nil)
 //        Networking().getData(token) { [weak self] result in

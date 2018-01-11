@@ -15,7 +15,7 @@ class LastEventsViewController: UIViewController {
         return tv
     }()
     
-    private let eventsDataSource = LastEventsDataSource(events: [])
+    private let eventsDataSource = LastEventsDataSource(sections: [])
     fileprivate lazy var viewModel: LastEventsViewModel = LastEventsViewModel(delegate: self)
     
     init() {
@@ -58,8 +58,8 @@ extension LastEventsViewController: LastEventsViewModelDelegate {
         navigationController?.pushViewController(eventDetailsViewController, animated: true)
     }
     
-    func update(_ events: [CoindarEvent]) {
-        eventsDataSource.setEvents(events)
+    func update(_ sections: [LastEventsViewModel.Section]) {
+        eventsDataSource.setSections(sections)
         tableView.reloadData()
     }
 }

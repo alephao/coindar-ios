@@ -3,29 +3,33 @@ import CoindarAPI
 
 class LastEventsDataSource: NSObject, UITableViewDataSource {
     
-    private var events: [CoindarEvent] = []
+    private var sections: [LastEventsViewModel.Section] = []
     
-    init(events: [CoindarEvent]) {
-        self.events = events
+    init(sections: [LastEventsViewModel.Section]) {
+        self.sections = sections
     }
     
-    func setEvents(_ events: [CoindarEvent]) {
-        self.events = events
+    func setSections(_ sections: [LastEventsViewModel.Section]) {
+        self.sections = sections
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return sections[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: EventCell = tableView.dequeueReusableCell()
-        let event = events[indexPath.row]
+        let event = sections[indexPath.section].items[indexPath.row]
         cell.setup(event)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section].title
     }
     
 }

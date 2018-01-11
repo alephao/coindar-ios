@@ -1,4 +1,5 @@
 import UIKit
+import SafariServices
 
 class EventDetailsViewController: UIViewController {
  
@@ -45,8 +46,8 @@ class EventDetailsViewController: UIViewController {
         eventCaptionLabel.text = viewModel.eventCaption
         startOnLabel.attributedText = viewModel.startOn
         
-        if let proofLink = viewModel.proofLink {
-
+        if let _ = viewModel.proofLink {
+            proofLinkButton.addTarget(self, action: #selector(openProofLink), for: .primaryActionTriggered)
         } else {
             proofLinkButton.isEnabled = false
             proofLinkButton.setTitle("No proof link available", for: .normal)
@@ -85,6 +86,13 @@ class EventDetailsViewController: UIViewController {
         proofLinkButton.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -20).isActive = true
         proofLinkButton.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor).isActive = true
         proofLinkButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+    }
+    
+    @objc
+    func openProofLink() {
+        guard let proofLink = viewModel.proofLink else { return }
+        let safariViewController = SFSafariViewController(url: proofLink)
+        navigationController?.present(safariViewController, animated: true, completion: nil)
     }
     
 }

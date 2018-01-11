@@ -13,7 +13,7 @@ class EventDetailsViewModel {
     }
     
     var startOn: NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: "Starts on \(CoindarEvent.Formatters.medium.string(from: event.publicDate))")
+        let attributedString = NSMutableAttributedString(string: "Starts on \(CoindarEvent.Formatters.medium.string(from: event.startDate))")
         attributedString.addAttribute(.font, value: UIFont.boldSystemFont(ofSize: 20), range: NSRange(location: 0, length: 9))
         return attributedString
     }
