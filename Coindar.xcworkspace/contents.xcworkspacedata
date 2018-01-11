@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Coindar.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:1st party/CoindarAPI/CoindarAPI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:1st party/CoindarFoundation/CoindarFoundation.xcodeproj">
+   </FileRef>
+</Workspace>

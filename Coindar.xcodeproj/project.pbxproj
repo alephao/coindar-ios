@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		270F05DD1FFE89EC00EA7004 /* CoindarAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270F05DC1FFE89EC00EA7004 /* CoindarAPI.framework */; };
+		270F05DE1FFE89EC00EA7004 /* CoindarAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 270F05DC1FFE89EC00EA7004 /* CoindarAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		270F05E01FFE89EC00EA7004 /* CoindarFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270F05DF1FFE89EC00EA7004 /* CoindarFoundation.framework */; };
+		270F05E11FFE89EC00EA7004 /* CoindarFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 270F05DF1FFE89EC00EA7004 /* CoindarFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		270F05E41FFE8E0000EA7004 /* LastEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F05E31FFE8E0000EA7004 /* LastEventsViewModel.swift */; };
+		270F05E61FFE8E0F00EA7004 /* LastEventsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F05E51FFE8E0F00EA7004 /* LastEventsDataSource.swift */; };
+		2746AA181FFE51390075A5D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746AA171FFE51390075A5D3 /* AppDelegate.swift */; };
+		2746AA1A1FFE513A0075A5D3 /* LastEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746AA191FFE513A0075A5D3 /* LastEventsViewController.swift */; };
+		2746AA1F1FFE513A0075A5D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2746AA1E1FFE513A0075A5D3 /* Assets.xcassets */; };
+		2746AA221FFE513A0075A5D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2746AA201FFE513A0075A5D3 /* LaunchScreen.storyboard */; };
+		2746AA2D1FFE5B300075A5D3 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746AA2C1FFE5B300075A5D3 /* Networking.swift */; };
+		27B6C25020062BE1000D2362 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C24F20062BE1000D2362 /* EventCell.swift */; };
+		27B6C253200632F0000D2362 /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C252200632F0000D2362 /* EventDetailsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		270F05C61FFE895800EA7004 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				270F05E11FFE89EC00EA7004 /* CoindarFoundation.framework in Embed Frameworks */,
+				270F05DE1FFE89EC00EA7004 /* CoindarAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		270F05DC1FFE89EC00EA7004 /* CoindarAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoindarAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		270F05DF1FFE89EC00EA7004 /* CoindarFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoindarFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		270F05E31FFE8E0000EA7004 /* LastEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventsViewModel.swift; sourceTree = "<group>"; };
+		270F05E51FFE8E0F00EA7004 /* LastEventsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventsDataSource.swift; sourceTree = "<group>"; };
+		2746AA141FFE51390075A5D3 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2746AA171FFE51390075A5D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2746AA191FFE513A0075A5D3 /* LastEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventsViewController.swift; sourceTree = "<group>"; };
+		2746AA1E1FFE513A0075A5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2746AA211FFE513A0075A5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2746AA231FFE513A0075A5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2746AA2C1FFE5B300075A5D3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		27B6C24F20062BE1000D2362 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		27B6C252200632F0000D2362 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2746AA111FFE51390075A5D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270F05E01FFE89EC00EA7004 /* CoindarFoundation.framework in Frameworks */,
+				270F05DD1FFE89EC00EA7004 /* CoindarAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		270F05C71FFE897000EA7004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		270F05E21FFE8DEE00EA7004 /* LastEvents */ = {
+			isa = PBXGroup;
+			children = (
+				2746AA191FFE513A0075A5D3 /* LastEventsViewController.swift */,
+				270F05E31FFE8E0000EA7004 /* LastEventsViewModel.swift */,
+				270F05E51FFE8E0F00EA7004 /* LastEventsDataSource.swift */,
+				27B6C24F20062BE1000D2362 /* EventCell.swift */,
+			);
+			path = LastEvents;
+			sourceTree = "<group>";
+		};
+		2746AA0B1FFE51390075A5D3 = {
+			isa = PBXGroup;
+			children = (
+				270F05DF1FFE89EC00EA7004 /* CoindarFoundation.framework */,
+				270F05DC1FFE89EC00EA7004 /* CoindarAPI.framework */,
+				2746AA161FFE51390075A5D3 /* Coindar */,
+				2746AA151FFE51390075A5D3 /* Products */,
+				270F05C71FFE897000EA7004 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2746AA151FFE51390075A5D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2746AA141FFE51390075A5D3 /* Coindar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2746AA161FFE51390075A5D3 /* Coindar */ = {
+			isa = PBXGroup;
+			children = (
+				2746AA291FFE51750075A5D3 /* Services */,
+				2746AA171FFE51390075A5D3 /* AppDelegate.swift */,
+				270F05E21FFE8DEE00EA7004 /* LastEvents */,
+				27B6C251200632DE000D2362 /* EventDetails */,
+				2746AA1E1FFE513A0075A5D3 /* Assets.xcassets */,
+				2746AA201FFE513A0075A5D3 /* LaunchScreen.storyboard */,
+				2746AA231FFE513A0075A5D3 /* Info.plist */,
+			);
+			path = Coindar;
+			sourceTree = "<group>";
+		};
+		2746AA291FFE51750075A5D3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2746AA2C1FFE5B300075A5D3 /* Networking.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		27B6C251200632DE000D2362 /* EventDetails */ = {
+			isa = PBXGroup;
+			children = (
+				27B6C252200632F0000D2362 /* EventDetailsViewController.swift */,
+			);
+			path = EventDetails;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2746AA131FFE51390075A5D3 /* Coindar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "Coindar" */;
+			buildPhases = (
+				2746AA101FFE51390075A5D3 /* Sources */,
+				2746AA111FFE51390075A5D3 /* Frameworks */,
+				2746AA121FFE51390075A5D3 /* Resources */,
+				270F05C61FFE895800EA7004 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Coindar;
+			productName = Coindar;
+			productReference = 2746AA141FFE51390075A5D3 /* Coindar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2746AA0C1FFE51390075A5D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Lala;
+				TargetAttributes = {
+					2746AA131FFE51390075A5D3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2746AA0F1FFE51390075A5D3 /* Build configuration list for PBXProject "Coindar" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2746AA0B1FFE51390075A5D3;
+			productRefGroup = 2746AA151FFE51390075A5D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2746AA131FFE51390075A5D3 /* Coindar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2746AA121FFE51390075A5D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2746AA221FFE513A0075A5D3 /* LaunchScreen.storyboard in Resources */,
+				2746AA1F1FFE513A0075A5D3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2746AA101FFE51390075A5D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				270F05E61FFE8E0F00EA7004 /* LastEventsDataSource.swift in Sources */,
+				27B6C253200632F0000D2362 /* EventDetailsViewController.swift in Sources */,
+				2746AA1A1FFE513A0075A5D3 /* LastEventsViewController.swift in Sources */,
+				270F05E41FFE8E0000EA7004 /* LastEventsViewModel.swift in Sources */,
+				2746AA181FFE51390075A5D3 /* AppDelegate.swift in Sources */,
+				27B6C25020062BE1000D2362 /* EventCell.swift in Sources */,
+				2746AA2D1FFE5B300075A5D3 /* Networking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2746AA201FFE513A0075A5D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2746AA211FFE513A0075A5D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2746AA241FFE513A0075A5D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2746AA251FFE513A0075A5D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2746AA271FFE513A0075A5D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				INFOPLIST_FILE = Coindar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.alaphao.Coindar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2746AA281FFE513A0075A5D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				INFOPLIST_FILE = Coindar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.alaphao.Coindar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2746AA0F1FFE51390075A5D3 /* Build configuration list for PBXProject "Coindar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2746AA241FFE513A0075A5D3 /* Debug */,
+				2746AA251FFE513A0075A5D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "Coindar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2746AA271FFE513A0075A5D3 /* Debug */,
+				2746AA281FFE513A0075A5D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2746AA0C1FFE51390075A5D3 /* Project object */;
+}
