@@ -13,7 +13,7 @@ public struct CoindarEvent: Decodable {
         static let ym = DateFormatter(dateFormat: "yyyy-MM")
         
         /// MMMM dd, EEEE
-        public static let medium = DateFormatter(dateFormat: "MMMM dd, EEEE")
+        public static let medium = DateFormatter(dateFormat: "MMMM dd, EEEE yyyy")
         
         static func anyDate(from string: String) -> Date? {
             return ymdTime.date(from: string) ?? ymd.date(from: string) ?? ym.date(from: string)
@@ -53,7 +53,7 @@ public struct CoindarEvent: Decodable {
         proof = try values.decode(String.self, forKey: .proof)
         
         let publicDateString = try values.decode(String.self, forKey: .publicDate)
-        guard let publicDate = Formatters.anyDate(from: publicDateString) else {
+        guard let publicDate = Formatters.ymdTime.date(from: publicDateString) else {
             throw DecodingError.dataCorruptedError(forKey: .publicDate, in: values, debugDescription: "Wrong date format: \(publicDateString)")
         }
         self.publicDate = publicDate

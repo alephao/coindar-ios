@@ -19,21 +19,21 @@ extension CoindarAPI: API {
         }
     }
     
-    public var params: [String : Any]? {
+    public var params: [String : String]? {
         switch self {
         case .lastEvents(let limit):
             if let limit = limit {
-                return ["limit": limit]
+                return ["limit": String(limit)]
             } else {
                 return nil
             }
         case .coinEvents(let coinName):
             return ["name": coinName]
         case .events(let year, let month, let day):
-            var parameters: [String: Any] = ["year": year,
-                                             "month": month]
+            var parameters: [String: String] = ["year": String(year),
+                                                "month": String(month)]
             if let day = day {
-                parameters["day"] = day
+                parameters["day"] = String(day)
             }
             return parameters
         }

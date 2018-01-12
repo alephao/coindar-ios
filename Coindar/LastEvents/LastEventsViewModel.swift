@@ -51,7 +51,13 @@ class LastEventsViewModel {
                         secs.append(Section(title: title, items: [event]))
                         return secs
                     }
-                }
+                    }.sorted(by: { a, b in
+                        a.items[0].startDate.compare(b.items[0].startDate) == ComparisonResult.orderedAscending
+                    })
+                    .filter({ section in
+                        section.items[0].startDate.compare(Date()) != ComparisonResult.orderedAscending
+                    })
+                
                 
                 DispatchQueue.main.async {
                     self?.sections = sections
