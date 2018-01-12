@@ -3,9 +3,65 @@ import CoindarAPI
 
 class CoindarService: Service {
     
-    func fetchLastEvents(callback: @escaping (Result<[CoindarEvent]>) -> Void) {
+    typealias CoindarCallback = (Result<[CoindarEvent]>) -> Void
+    
+    static let calendar = Calendar(identifier: .gregorian)
+    
+    func fetchLastEvents(callback: @escaping CoindarCallback) {
         
         let token = CoindarAPI.lastEvents(limit: nil)
+        provider.networking.getData(token) { result in
+            switch result {
+            case .error(let error):
+                callback(.error(error))
+                break
+            case .success(let data):
+                do {
+                    let events = try JSONDecoder().decode([CoindarEvent].self, from: data)
+                    callback(.success(events))
+                } catch {
+                    callback(.error(error))
+                }
+            }
+        }
+    }
+    
+    /// Fetch events this month + offset
+    func fetchEventsThisMonth(offset: Int = 0, callback: @escaping CoindarCallback) {
+        let today = Date().addingTimeInterval(Double(86400 * offset))
+        let month = CoindarService.calendar.component(.month, from: today)
+        let year = CoindarService.calendar.component(.year, from: today)
+        
+        let token = CoindarAPI.events(year: year,
+                                      month: month,
+                                      day: nil)
+        
+        provider.networking.getData(token) { result in
+            switch result {
+            case .error(let error):
+                callback(.error(error))
+                break
+            case .success(let data):
+                do {
+                    let events = try JSONDecoder().decode([CoindarEvent].self, from: data)
+                    callback(.success(events))
+                } catch {
+                    callback(.error(error))
+                }
+            }
+        }
+    }
+    
+    func fetchEventsToday(offset: Int = 0, callback: @escaping CoindarCallback) {
+        let today = Date().addingTimeInterval(Double(86400 * offset))
+        let day = CoindarService.calendar.component(.day, from: today)
+        let month = CoindarService.calendar.component(.month, from: today)
+        let year = CoindarService.calendar.component(.year, from: today)
+        
+        let token = CoindarAPI.events(year: year,
+                                      month: month,
+                                      day: day)
+        
         provider.networking.getData(token) { result in
             switch result {
             case .error(let error):

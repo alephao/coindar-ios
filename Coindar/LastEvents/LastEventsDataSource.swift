@@ -3,33 +3,41 @@ import CoindarAPI
 
 class LastEventsDataSource: NSObject, UITableViewDataSource {
     
-    private var sections: [LastEventsViewModel.Section] = []
+    private var items: [LastEventsViewModel.Item] = []
     
-    init(sections: [LastEventsViewModel.Section]) {
-        self.sections = sections
+    init(items: [LastEventsViewModel.Item]) {
+        self.items = items
     }
     
-    func setSections(_ sections: [LastEventsViewModel.Section]) {
-        self.sections = sections
+    func setItems(_ items: [LastEventsViewModel.Item]) {
+        self.items = items
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].items.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: EventCell = tableView.dequeueReusableCell()
-        let event = sections[indexPath.section].items[indexPath.row]
-        cell.setup(event)
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].title
+        let item = items[indexPath.row]
+        
+        switch item {
+        case .event(let event):
+            let cell: EventCell = tableView.dequeueReusableCell()
+            cell.setup(event)
+            return cell
+        case .header(let title):
+            let cell: HeaderCell = tableView.dequeueReusableCell()
+            cell.setup(title: title)
+            return cell
+            break
+        case .loadMore:
+            let cell: LoadMoreCell = tableView.dequeueReusableCell()
+            return cell
+        }
     }
     
 }

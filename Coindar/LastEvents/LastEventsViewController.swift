@@ -7,6 +7,8 @@ class LastEventsViewController: UIViewController {
     private let tableView: UITableView = {
         let tv = UITableView()
         tv.registerCell(EventCell.self)
+        tv.registerCell(LoadMoreCell.self)
+        tv.registerCell(HeaderCell.self)
         tv.rowHeight = UITableViewAutomaticDimension
         tv.estimatedRowHeight = 80
         tv.tableFooterView = UIView()
@@ -15,7 +17,7 @@ class LastEventsViewController: UIViewController {
         return tv
     }()
     
-    private let eventsDataSource = LastEventsDataSource(sections: [])
+    private let eventsDataSource = LastEventsDataSource(items: [])
     fileprivate lazy var viewModel: LastEventsViewModel = LastEventsViewModel(delegate: self)
     
     init() {
@@ -41,7 +43,7 @@ class LastEventsViewController: UIViewController {
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
         
-        viewModel.fetchLastEvents()
+        viewModel.fetchEventsToday()
     }
 }
 
@@ -58,8 +60,8 @@ extension LastEventsViewController: LastEventsViewModelDelegate {
         navigationController?.pushViewController(eventDetailsViewController, animated: true)
     }
     
-    func update(_ sections: [LastEventsViewModel.Section]) {
-        eventsDataSource.setSections(sections)
+    func update(_ items: [LastEventsViewModel.Item]) {
+        eventsDataSource.setItems(items)
         tableView.reloadData()
     }
 }

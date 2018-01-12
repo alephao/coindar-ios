@@ -26,6 +26,8 @@
 		27B6C26D20080C52000D2362 /* CoindarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C26C20080C52000D2362 /* CoindarService.swift */; };
 		27B6C26F20080C73000D2362 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C26E20080C73000D2362 /* ServiceProvider.swift */; };
 		27B6C27120080D02000D2362 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C27020080D02000D2362 /* Service.swift */; };
+		27B6C2732008C71D000D2362 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C2722008C71D000D2362 /* LoadMoreCell.swift */; };
+		27B6C2752008E385000D2362 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C2742008E385000D2362 /* HeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		27B6C26C20080C52000D2362 /* CoindarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindarService.swift; sourceTree = "<group>"; };
 		27B6C26E20080C73000D2362 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
 		27B6C27020080D02000D2362 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		27B6C2722008C71D000D2362 /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
+		27B6C2742008E385000D2362 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				270F05E31FFE8E0000EA7004 /* LastEventsViewModel.swift */,
 				270F05E51FFE8E0F00EA7004 /* LastEventsDataSource.swift */,
 				27B6C24F20062BE1000D2362 /* EventCell.swift */,
+				27B6C2722008C71D000D2362 /* LoadMoreCell.swift */,
+				27B6C2742008E385000D2362 /* HeaderCell.swift */,
 			);
 			path = LastEvents;
 			sourceTree = "<group>";
@@ -306,12 +312,14 @@
 				27B6C26B20076BAA000D2362 /* EventDetailsViewModel.swift in Sources */,
 				27B6C253200632F0000D2362 /* EventDetailsViewController.swift in Sources */,
 				27B6C27120080D02000D2362 /* Service.swift in Sources */,
+				27B6C2752008E385000D2362 /* HeaderCell.swift in Sources */,
 				2746AA1A1FFE513A0075A5D3 /* LastEventsViewController.swift in Sources */,
 				270F05E41FFE8E0000EA7004 /* LastEventsViewModel.swift in Sources */,
 				2746AA181FFE51390075A5D3 /* AppDelegate.swift in Sources */,
 				27B6C25020062BE1000D2362 /* EventCell.swift in Sources */,
 				27B6C26F20080C73000D2362 /* ServiceProvider.swift in Sources */,
 				2746AA2D1FFE5B300075A5D3 /* Networking.swift in Sources */,
+				27B6C2732008C71D000D2362 /* LoadMoreCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
