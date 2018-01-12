@@ -23,6 +23,9 @@
 		27B6C26620075FF5000D2362 /* lastEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B6C26520075FF5000D2362 /* lastEvents.json */; };
 		27B6C2692007644C000D2362 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C2682007644C000D2362 /* Colors.swift */; };
 		27B6C26B20076BAA000D2362 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C26A20076BAA000D2362 /* EventDetailsViewModel.swift */; };
+		27B6C26D20080C52000D2362 /* CoindarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C26C20080C52000D2362 /* CoindarService.swift */; };
+		27B6C26F20080C73000D2362 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C26E20080C73000D2362 /* ServiceProvider.swift */; };
+		27B6C27120080D02000D2362 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B6C27020080D02000D2362 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		27B6C26520075FF5000D2362 /* lastEvents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lastEvents.json; sourceTree = "<group>"; };
 		27B6C2682007644C000D2362 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		27B6C26A20076BAA000D2362 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
+		27B6C26C20080C52000D2362 /* CoindarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindarService.swift; sourceTree = "<group>"; };
+		27B6C26E20080C73000D2362 /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		27B6C27020080D02000D2362 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +154,10 @@
 		2746AA291FFE51750075A5D3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				27B6C26C20080C52000D2362 /* CoindarService.swift */,
 				2746AA2C1FFE5B300075A5D3 /* Networking.swift */,
+				27B6C27020080D02000D2362 /* Service.swift */,
+				27B6C26E20080C73000D2362 /* ServiceProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -291,14 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B6C26D20080C52000D2362 /* CoindarService.swift in Sources */,
 				270F05E61FFE8E0F00EA7004 /* LastEventsDataSource.swift in Sources */,
 				27B6C2692007644C000D2362 /* Colors.swift in Sources */,
 				27B6C26B20076BAA000D2362 /* EventDetailsViewModel.swift in Sources */,
 				27B6C253200632F0000D2362 /* EventDetailsViewController.swift in Sources */,
+				27B6C27120080D02000D2362 /* Service.swift in Sources */,
 				2746AA1A1FFE513A0075A5D3 /* LastEventsViewController.swift in Sources */,
 				270F05E41FFE8E0000EA7004 /* LastEventsViewModel.swift in Sources */,
 				2746AA181FFE51390075A5D3 /* AppDelegate.swift in Sources */,
 				27B6C25020062BE1000D2362 /* EventCell.swift in Sources */,
+				27B6C26F20080C73000D2362 /* ServiceProvider.swift in Sources */,
 				2746AA2D1FFE5B300075A5D3 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

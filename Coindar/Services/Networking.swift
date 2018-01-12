@@ -1,7 +1,7 @@
 import CoindarFoundation
 
-class Networking<Target: API> {
-    func getData(_ token: Target, callback: @escaping (Result<Data>) -> Void){
+class Networking {
+    func getData<Target: API>(_ token: Target, callback: @escaping (Result<Data>) -> Void){
         
         let params = token.params
 
