@@ -12,6 +12,7 @@
 		270F05B61FFE86FF00EA7004 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F05B51FFE86FF00EA7004 /* API.swift */; };
 		270F05EC1FFE8F2C00EA7004 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F05EB1FFE8F2C00EA7004 /* UITableViewCell+Extensions.swift */; };
 		270F05EE1FFE8F3500EA7004 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F05ED1FFE8F3500EA7004 /* UITableView+Extensions.swift */; };
+		27285697200B1FCC0067E68B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27285696200B1FCC0067E68B /* Coordinator.swift */; };
 		27305CF92009983300BC58E2 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27305CF82009983300BC58E2 /* ErrorHandler.swift */; };
 		27305CFB2009983C00BC58E2 /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27305CFA2009983C00BC58E2 /* Matchers.swift */; };
 		27305CFD20099A3700BC58E2 /* NSErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27305CFC20099A3700BC58E2 /* NSErrorHandler.swift */; };
@@ -27,6 +28,7 @@
 		270F05B51FFE86FF00EA7004 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		270F05EB1FFE8F2C00EA7004 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		270F05ED1FFE8F3500EA7004 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		27285696200B1FCC0067E68B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		27305CF82009983300BC58E2 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		27305CFA2009983C00BC58E2 /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
 		27305CFC20099A3700BC58E2 /* NSErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSErrorHandler.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				270F05EA1FFE8F1F00EA7004 /* Extensions */,
 				270F05B51FFE86FF00EA7004 /* API.swift */,
 				270F05B31FFE86BE00EA7004 /* Result.swift */,
+				27285696200B1FCC0067E68B /* Coordinator.swift */,
 				270F05AB1FFE86AE00EA7004 /* CoindarFoundation.h */,
 				270F05AC1FFE86AE00EA7004 /* Info.plist */,
 			);
@@ -177,6 +180,7 @@
 			files = (
 				27305CFB2009983C00BC58E2 /* Matchers.swift in Sources */,
 				270F05B61FFE86FF00EA7004 /* API.swift in Sources */,
+				27285697200B1FCC0067E68B /* Coordinator.swift in Sources */,
 				27305CF92009983300BC58E2 /* ErrorHandler.swift in Sources */,
 				27305CFD20099A3700BC58E2 /* NSErrorHandler.swift in Sources */,
 				27B6C25520075948000D2362 /* UIColor+Extensions.swift in Sources */,
