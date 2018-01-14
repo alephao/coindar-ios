@@ -38,6 +38,7 @@ final class EventsCoordinator: Coordinator, EventsCoordinatorDelegate {
         let lastEventsViewController = LastEventsViewController(viewModel: viewModel)
         viewModel.delegate = lastEventsViewController
         tabBarController.viewControllers = [lastEventsViewController]
+        tabBarController.title = lastEventsViewController.title
     }
     
     func showEventDetails(for event: CoindarEvent) {

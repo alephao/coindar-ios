@@ -32,19 +32,22 @@ final class AppCoordinator: Coordinator, AppCoordinatorDelegate {
         startMainFlow()
     }
     
-    // TODO: Break this into smaller peaces
     func startMainFlow() {
-        let tabBarController = UITabBarController()
+        let rootTabBarController = RootTabBarController()
         
         let eventsCoordinator = EventsCoordinator(serviceProvider: serviceProvider,
                                                   navigationController: navigationController,
-                                                  tabBarController: tabBarController)
+                                                  tabBarController: rootTabBarController)
         childCoordinators.append(eventsCoordinator)
-        navigationController.viewControllers = [tabBarController]
+        
+        let moreCoordinator = MoreCoordinator(serviceProvider: serviceProvider,
+                                              navigationController: navigationController, tabBarController: rootTabBarController)
+        childCoordinators.append(moreCoordinator)
+        
+        navigationController.viewControllers = [rootTabBarController]
         
         eventsCoordinator.start()
-        
-        //        tabBarController.viewControllers?.append(<#T##newElement: UIViewController##UIViewController#>)
+        moreCoordinator.start()
     }
 }
 

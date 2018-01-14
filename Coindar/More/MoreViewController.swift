@@ -1,33 +1,29 @@
 import UIKit
-import CoindarFoundation
-import CoindarAPI
 
-class LastEventsViewController: ViewController {
+class MoreViewController: ViewController {
     
     private let tableView: UITableView = {
         let tv = UITableView()
-        tv.registerCell(EventCell.self)
-        tv.registerCell(LoadMoreCell.self)
-        tv.registerCell(HeaderCell.self)
+        tv.registerCell(UITableViewCell.self)
         tv.rowHeight = UITableViewAutomaticDimension
         tv.estimatedRowHeight = 80
         tv.tableFooterView = UIView()
-        tv.separatorInset = .zero
+//        tv.separatorInset = .zero
         tv.separatorColor = UIColor.hex(0xa0a0a0)
         return tv
     }()
     
-    private let eventsDataSource = LastEventsDataSource(items: [])
-    fileprivate let viewModel: LastEventsViewModel
+    fileprivate let viewModel: MoreViewModel
     
-    init(viewModel: LastEventsViewModel) {
+    init(viewModel: MoreViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        title = "Last Events"
-        tableView.delegate = self
-        tableView.dataSource = eventsDataSource
+        title = "More"
         
-        tabBarItem = UITabBarItem(title: "Last Events", image: #imageLiteral(resourceName: "ic_view_list"), tag: 0)
+        tableView.delegate = self
+        tableView.dataSource = viewModel.dataSource
+        
+        tabBarItem = UITabBarItem(title: "More", image: #imageLiteral(resourceName: "ic_more_horiz"), tag: 1)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -45,20 +41,12 @@ class LastEventsViewController: ViewController {
         tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
-        
-        viewModel.fetchMoreEvents()
     }
 }
 
-extension LastEventsViewController: UITableViewDelegate {
+extension MoreViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRow(at: indexPath)
     }
 }
 
-extension LastEventsViewController: LastEventsViewModelDelegate {
-    func update(_ items: [LastEventsViewModel.Item]) {
-        eventsDataSource.setItems(items)
-        tableView.reloadData()
-    }
-}
