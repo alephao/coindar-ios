@@ -2,8 +2,6 @@ import CoindarAPI
 
 class EventDetailsViewModel {
     
-    private let event: CoindarEvent
-    
     var eventCaption: String {
         return event.caption
     }
@@ -22,8 +20,16 @@ class EventDetailsViewModel {
         return URL(string: event.proof)
     }
     
-    init(event: CoindarEvent) {
+    private let event: CoindarEvent
+    private weak var coordinator: EventDetailsCoordinatorDelegate?
+    
+    init(event: CoindarEvent, coordinator: EventDetailsCoordinatorDelegate) {
         self.event = event
+        self.coordinator = coordinator
     }
     
+    func openProofLink() {
+        guard let url = proofLink else { return }
+        coordinator?.showSafariView(url: url)
+    }
 }

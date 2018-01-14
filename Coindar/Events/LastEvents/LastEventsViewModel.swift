@@ -2,7 +2,6 @@ import CoindarAPI
 
 protocol LastEventsViewModelDelegate: AnyObject, Loadable {
     func update(_ items: [LastEventsViewModel.Item])
-    func showDetails(for event: CoindarEvent)
 }
 
 class LastEventsViewModel {
@@ -23,10 +22,12 @@ class LastEventsViewModel {
     
     private let coindarService: CoindarService
     weak var delegate: LastEventsViewModelDelegate?
+    weak var coordinator: LastEventsCoordinatorDelegate?
     
-    init(delegate: LastEventsViewModelDelegate, coindarService: CoindarService = ServiceProvider.shared.coindarService) {
-        self.delegate = delegate
+    init(coindarService: CoindarService,
+         coordinator: LastEventsCoordinatorDelegate) {
         self.coindarService = coindarService
+        self.coordinator = coordinator
     }
     
     func didSelectRow(at indexPath: IndexPath) {
@@ -34,7 +35,7 @@ class LastEventsViewModel {
         
         switch selectedItem {
         case .event(let event):
-            delegate?.showDetails(for: event)
+            coordinator?.showEventDetails(for: event)
             break
         case .header(_): break
         case .loadMore(let viewModel):

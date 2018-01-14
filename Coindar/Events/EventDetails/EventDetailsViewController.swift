@@ -1,5 +1,4 @@
 import UIKit
-import SafariServices
 
 class EventDetailsViewController: UIViewController {
  
@@ -90,9 +89,7 @@ class EventDetailsViewController: UIViewController {
     
     @objc
     func openProofLink() {
-        guard let proofLink = viewModel.proofLink else { return }
-        let safariViewController = SFSafariViewController(url: proofLink)
-        navigationController?.present(safariViewController, animated: true, completion: nil)
+        viewModel.openProofLink()
     }
     
 }

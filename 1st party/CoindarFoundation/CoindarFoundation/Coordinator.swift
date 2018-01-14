@@ -1,6 +1,6 @@
 import UIKit
 
-protocol Coordinator: class {
+public protocol Coordinator: AnyObject {
     var rootViewController: UIViewController { get }
     var childCoordinators: [Coordinator] { get }
     

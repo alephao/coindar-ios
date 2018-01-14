@@ -18,9 +18,10 @@ class LastEventsViewController: ViewController {
     }()
     
     private let eventsDataSource = LastEventsDataSource(items: [])
-    fileprivate lazy var viewModel: LastEventsViewModel = LastEventsViewModel(delegate: self)
+    fileprivate let viewModel: LastEventsViewModel
     
-    init() {
+    init(viewModel: LastEventsViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         title = "Last Events"
         tableView.delegate = self
@@ -54,12 +55,6 @@ extension LastEventsViewController: UITableViewDelegate {
 }
 
 extension LastEventsViewController: LastEventsViewModelDelegate {
-    func showDetails(for event: CoindarEvent) {
-        let eventDetailsViewModel = EventDetailsViewModel(event: event)
-        let eventDetailsViewController = EventDetailsViewController(viewModel: eventDetailsViewModel)
-        navigationController?.pushViewController(eventDetailsViewController, animated: true)
-    }
-    
     func update(_ items: [LastEventsViewModel.Item]) {
         eventsDataSource.setItems(items)
         tableView.reloadData()
