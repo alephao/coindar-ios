@@ -66,7 +66,11 @@ class LastEventsViewModel {
             case .success(let events):
                 self.currentPage += 1
                 var itemsToAppend: [Item] = [.header(events[0].startDate) ]
-                itemsToAppend.append(contentsOf: events.map({ LastEventsViewModel.Item.event($0) }))
+                let eventsToAdd = events.sorted(by: { a, b in
+                    a.publicDate.compare(b.publicDate) == .orderedDescending
+                })
+                .map({ LastEventsViewModel.Item.event($0) })
+                itemsToAppend.append(contentsOf: eventsToAdd)
                 itemsToAppend.append(.loadMore(self.loadMoreViewModel))
                 DispatchQueue.main.async {
                     if self.items.count > 0 {
