@@ -13,6 +13,11 @@
 		270F05E11FFE89EC00EA7004 /* CoindarFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 270F05DF1FFE89EC00EA7004 /* CoindarFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		270F05E41FFE8E0000EA7004 /* LastEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F05E31FFE8E0000EA7004 /* LastEventsViewModel.swift */; };
 		270F05E61FFE8E0F00EA7004 /* LastEventsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270F05E51FFE8E0F00EA7004 /* LastEventsDataSource.swift */; };
+		2728568F200A43C80067E68B /* ErrorDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2728568E200A43C80067E68B /* ErrorDisplayable.swift */; };
+		27285691200AEE1C0067E68B /* LoadMoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27285690200AEE1C0067E68B /* LoadMoreViewModel.swift */; };
+		27285693200AF16C0067E68B /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27285692200AF16C0067E68B /* Loadable.swift */; };
+		27305D0020099B9A00BC58E2 /* ErrorHandler+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27305CFF20099B9A00BC58E2 /* ErrorHandler+Extensions.swift */; };
+		27305D042009A24C00BC58E2 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27305D032009A24C00BC58E2 /* NetworkingError.swift */; };
 		2746AA181FFE51390075A5D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746AA171FFE51390075A5D3 /* AppDelegate.swift */; };
 		2746AA1A1FFE513A0075A5D3 /* LastEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746AA191FFE513A0075A5D3 /* LastEventsViewController.swift */; };
 		2746AA1F1FFE513A0075A5D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2746AA1E1FFE513A0075A5D3 /* Assets.xcassets */; };
@@ -60,6 +65,11 @@
 		270F05DF1FFE89EC00EA7004 /* CoindarFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoindarFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		270F05E31FFE8E0000EA7004 /* LastEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventsViewModel.swift; sourceTree = "<group>"; };
 		270F05E51FFE8E0F00EA7004 /* LastEventsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventsDataSource.swift; sourceTree = "<group>"; };
+		2728568E200A43C80067E68B /* ErrorDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDisplayable.swift; sourceTree = "<group>"; };
+		27285690200AEE1C0067E68B /* LoadMoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreViewModel.swift; sourceTree = "<group>"; };
+		27285692200AF16C0067E68B /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		27305CFF20099B9A00BC58E2 /* ErrorHandler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorHandler+Extensions.swift"; sourceTree = "<group>"; };
+		27305D032009A24C00BC58E2 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		2746AA141FFE51390075A5D3 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2746AA171FFE51390075A5D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2746AA191FFE513A0075A5D3 /* LastEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventsViewController.swift; sourceTree = "<group>"; };
@@ -116,9 +126,20 @@
 				270F05E51FFE8E0F00EA7004 /* LastEventsDataSource.swift */,
 				27B6C24F20062BE1000D2362 /* EventCell.swift */,
 				27B6C2722008C71D000D2362 /* LoadMoreCell.swift */,
+				27285690200AEE1C0067E68B /* LoadMoreViewModel.swift */,
 				27B6C2742008E385000D2362 /* HeaderCell.swift */,
 			);
 			path = LastEvents;
+			sourceTree = "<group>";
+		};
+		27305CFE20099B8100BC58E2 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				27305CFF20099B9A00BC58E2 /* ErrorHandler+Extensions.swift */,
+				27305D032009A24C00BC58E2 /* NetworkingError.swift */,
+				2728568E200A43C80067E68B /* ErrorDisplayable.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		2746AA0B1FFE51390075A5D3 = {
@@ -197,7 +218,9 @@
 		27B6C26720076441000D2362 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				27305CFE20099B8100BC58E2 /* Errors */,
 				27B6C2682007644C000D2362 /* Colors.swift */,
+				27285692200AF16C0067E68B /* Loadable.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -307,16 +330,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B6C26D20080C52000D2362 /* CoindarService.swift in Sources */,
+				27285691200AEE1C0067E68B /* LoadMoreViewModel.swift in Sources */,
 				270F05E61FFE8E0F00EA7004 /* LastEventsDataSource.swift in Sources */,
 				27B6C2692007644C000D2362 /* Colors.swift in Sources */,
 				27B6C26B20076BAA000D2362 /* EventDetailsViewModel.swift in Sources */,
 				27B6C253200632F0000D2362 /* EventDetailsViewController.swift in Sources */,
+				27305D042009A24C00BC58E2 /* NetworkingError.swift in Sources */,
+				27305D0020099B9A00BC58E2 /* ErrorHandler+Extensions.swift in Sources */,
 				27B6C27120080D02000D2362 /* Service.swift in Sources */,
 				27B6C2752008E385000D2362 /* HeaderCell.swift in Sources */,
 				2746AA1A1FFE513A0075A5D3 /* LastEventsViewController.swift in Sources */,
+				27285693200AF16C0067E68B /* Loadable.swift in Sources */,
 				270F05E41FFE8E0000EA7004 /* LastEventsViewModel.swift in Sources */,
 				2746AA181FFE51390075A5D3 /* AppDelegate.swift in Sources */,
 				27B6C25020062BE1000D2362 /* EventCell.swift in Sources */,
+				2728568F200A43C80067E68B /* ErrorDisplayable.swift in Sources */,
 				27B6C26F20080C73000D2362 /* ServiceProvider.swift in Sources */,
 				2746AA2D1FFE5B300075A5D3 /* Networking.swift in Sources */,
 				27B6C2732008C71D000D2362 /* LoadMoreCell.swift in Sources */,

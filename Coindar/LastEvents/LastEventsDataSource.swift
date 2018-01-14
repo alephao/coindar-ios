@@ -33,9 +33,10 @@ class LastEventsDataSource: NSObject, UITableViewDataSource {
             let cell: HeaderCell = tableView.dequeueReusableCell()
             cell.setup(title: title)
             return cell
-            break
-        case .loadMore:
+        case .loadMore(let viewModel):
             let cell: LoadMoreCell = tableView.dequeueReusableCell()
+            cell.viewModel = viewModel
+            viewModel.delegate = cell
             return cell
         }
     }

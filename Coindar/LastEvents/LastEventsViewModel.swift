@@ -1,6 +1,6 @@
 import CoindarAPI
 
-protocol LastEventsViewModelDelegate: AnyObject {
+protocol LastEventsViewModelDelegate: AnyObject, Loadable {
     func update(_ items: [LastEventsViewModel.Item])
     func showDetails(for event: CoindarEvent)
 }
@@ -10,7 +10,7 @@ class LastEventsViewModel {
     enum Item {
         case event(CoindarEvent)
         case header(Date)
-        case loadMore
+        case loadMore(LoadMoreViewModel)
     }
     
     private var items: [Item] = [] {
@@ -19,7 +19,9 @@ class LastEventsViewModel {
         }
     }
     
-    let coindarService: CoindarService
+    private let loadMoreViewModel = LoadMoreViewModel()
+    
+    private let coindarService: CoindarService
     weak var delegate: LastEventsViewModelDelegate?
     
     init(delegate: LastEventsViewModelDelegate, coindarService: CoindarService = ServiceProvider.shared.coindarService) {
@@ -35,92 +37,42 @@ class LastEventsViewModel {
             delegate?.showDetails(for: event)
             break
         case .header(_): break
-        case .loadMore:
-            fetchMoreEvents()
+        case .loadMore(let viewModel):
+            if !viewModel.isLoading {
+                fetchMoreEvents()
+            }
             break
         }
     }
     
-    func fetchLastEvents() {
-        
-        coindarService.fetchLastEvents { [weak self] result in
-            switch result {
-            case .error(let error):
-                print("Error")
-                print(error)
-            case .success(let events):
-                var grouped = [String: [CoindarEvent]]()
-                for event in events {
-                    let key = CoindarEvent.Formatters.medium.string(from: event.startDate)
-                    if let _ = grouped[key] {
-                        grouped[key]!.append(event)
-                    } else {
-                        grouped[key] = [event]
-                    }
-                }
-                
-                var items = [Item]()
-                for (_, value) in grouped {
-                    items.append(.header(value[0].startDate))
-                    items.append(contentsOf: value.map({ LastEventsViewModel.Item.event($0) }))
-                }
-                
-                items.append(.loadMore)
-                
-                DispatchQueue.main.async {
-                    self?.items = items
-                }
-            }
-        }
-    }
-    
-    func fetchEventsToday() {
-        coindarService.fetchEventsToday(offset: 0) { [weak self] result in
-            switch result {
-            case .error(let error):
-                print("Error")
-                print(error)
-            case .success(let events):
-                var grouped = [String: [CoindarEvent]]()
-                for event in events {
-                    let key = CoindarEvent.Formatters.medium.string(from: event.startDate)
-                    if let _ = grouped[key] {
-                        grouped[key]!.append(event)
-                    } else {
-                        grouped[key] = [event]
-                    }
-                }
-                
-                var items = [Item]()
-                for (_, value) in grouped {
-                    items.append(.header(value[0].startDate))
-                    items.append(contentsOf: value.map({ LastEventsViewModel.Item.event($0) }))
-                }
-                
-                items.append(.loadMore)
-                
-                DispatchQueue.main.async {
-                    self?.items = items
-                }
-            }
-        }
-    }
-    
-    var currentPage = 1
+    var currentPage = 0
     func fetchMoreEvents() {
+        if currentPage == 0 {
+            self.delegate?.startLoading()
+        } else {
+            self.loadMoreViewModel.startLoading()
+        }
         coindarService.fetchEventsToday(offset: currentPage) { [weak self] result in
+            guard let `self` = self else { return }
+            if self.currentPage == 0 {
+                self.delegate?.stopLoading()
+            } else {
+                self.loadMoreViewModel.stopLoading()
+            }
             switch result {
             case .error(let error):
                 print("Error")
                 print(error)
             case .success(let events):
-                self?.currentPage += 1
+                self.currentPage += 1
                 var itemsToAppend: [Item] = [.header(events[0].startDate) ]
                 itemsToAppend.append(contentsOf: events.map({ LastEventsViewModel.Item.event($0) }))
-                itemsToAppend.append(.loadMore)
+                itemsToAppend.append(.loadMore(self.loadMoreViewModel))
                 DispatchQueue.main.async {
-                    self?.items.removeLast()
-                    self?.items.append(contentsOf: itemsToAppend)
+                    if self.items.count > 0 {
+                        self.items.removeLast()
+                    }
+                    self.items.append(contentsOf: itemsToAppend)
                 }
             }
         }

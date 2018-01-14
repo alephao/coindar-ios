@@ -27,12 +27,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
-    // MARK: Presenting
-    func presentAlert(_ alert: UIAlertController) {
-        let presentingViewController = self.window?.rootViewController?.presentingViewController ?? self.window?.rootViewController
-        presentingViewController?.present(alert, animated: true, completion: nil)
-    }
 }
 
 

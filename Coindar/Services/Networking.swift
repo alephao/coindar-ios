@@ -16,8 +16,14 @@ class Networking {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let task = URLSession.shared.dataTask(with: request) { data, _, error in
-            if let error = error {
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            
+            if let response = response as? HTTPURLResponse,
+                let error: Error = (NetworkingError.Client(rawValue: response.statusCode) ?? NetworkingError.Server(rawValue: response.statusCode)) {
+                ErrorHandler.defaultHandler.handle(error)
+                callback(.error(error))
+            } else if let error = error {
+                ErrorHandler.defaultHandler.handle(error)
                 callback(.error(error))
             } else if let data = data {
                 callback(.success(data))

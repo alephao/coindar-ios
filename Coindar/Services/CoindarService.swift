@@ -69,8 +69,11 @@ class CoindarService: Service {
                 break
             case .success(let data):
                 do {
-                    let events = try JSONDecoder().decode([CoindarEvent].self, from: data)
-                    callback(.success(events))
+                    let events = try JSONDecoder().decode([CoindarEvent?].self, from: data)
+                    let nonNilEvents = events
+                        .filter { $0 != nil }
+                        .map { $0! }
+                    callback(.success(nonNilEvents))
                 } catch {
                     callback(.error(error))
                 }

@@ -2,7 +2,7 @@ import UIKit
 import CoindarFoundation
 import CoindarAPI
 
-class LastEventsViewController: UIViewController {
+class LastEventsViewController: ViewController {
     
     private let tableView: UITableView = {
         let tv = UITableView()
@@ -43,7 +43,7 @@ class LastEventsViewController: UIViewController {
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
         
-        viewModel.fetchEventsToday()
+        viewModel.fetchMoreEvents()
     }
 }
 
