@@ -88,7 +88,7 @@
 		272856B3200B64600067E68B /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		27305CFF20099B9A00BC58E2 /* ErrorHandler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorHandler+Extensions.swift"; sourceTree = "<group>"; };
 		27305D032009A24C00BC58E2 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
-		2746AA141FFE51390075A5D3 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2746AA141FFE51390075A5D3 /* tothemoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tothemoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2746AA171FFE51390075A5D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2746AA191FFE513A0075A5D3 /* LastEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventsViewController.swift; sourceTree = "<group>"; };
 		2746AA1E1FFE513A0075A5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		2746AA2C1FFE5B300075A5D3 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		27B6C24F20062BE1000D2362 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		27B6C252200632F0000D2362 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
-		27B6C25A20075FC9000D2362 /* CoindarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoindarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B6C25A20075FC9000D2362 /* tothemoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tothemoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B6C25E20075FC9000D2362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27B6C26520075FF5000D2362 /* lastEvents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lastEvents.json; sourceTree = "<group>"; };
 		27B6C2682007644C000D2362 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -224,8 +224,8 @@
 		2746AA151FFE51390075A5D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2746AA141FFE51390075A5D3 /* Coindar.app */,
-				27B6C25A20075FC9000D2362 /* CoindarTests.xctest */,
+				2746AA141FFE51390075A5D3 /* tothemoon.app */,
+				27B6C25A20075FC9000D2362 /* tothemoonTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,9 +295,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2746AA131FFE51390075A5D3 /* Coindar */ = {
+		2746AA131FFE51390075A5D3 /* tothemoon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "Coindar" */;
+			buildConfigurationList = 2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "tothemoon" */;
 			buildPhases = (
 				2746AA101FFE51390075A5D3 /* Sources */,
 				2746AA111FFE51390075A5D3 /* Frameworks */,
@@ -308,14 +308,14 @@
 			);
 			dependencies = (
 			);
-			name = Coindar;
+			name = tothemoon;
 			productName = Coindar;
-			productReference = 2746AA141FFE51390075A5D3 /* Coindar.app */;
+			productReference = 2746AA141FFE51390075A5D3 /* tothemoon.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27B6C25920075FC9000D2362 /* CoindarTests */ = {
+		27B6C25920075FC9000D2362 /* tothemoonTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27B6C26120075FC9000D2362 /* Build configuration list for PBXNativeTarget "CoindarTests" */;
+			buildConfigurationList = 27B6C26120075FC9000D2362 /* Build configuration list for PBXNativeTarget "tothemoonTests" */;
 			buildPhases = (
 				27B6C25620075FC9000D2362 /* Sources */,
 				27B6C25720075FC9000D2362 /* Frameworks */,
@@ -326,9 +326,9 @@
 			dependencies = (
 				27B6C26020075FC9000D2362 /* PBXTargetDependency */,
 			);
-			name = CoindarTests;
+			name = tothemoonTests;
 			productName = CoindarTests;
-			productReference = 27B6C25A20075FC9000D2362 /* CoindarTests.xctest */;
+			productReference = 27B6C25A20075FC9000D2362 /* tothemoonTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -352,7 +352,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2746AA0F1FFE51390075A5D3 /* Build configuration list for PBXProject "Coindar" */;
+			buildConfigurationList = 2746AA0F1FFE51390075A5D3 /* Build configuration list for PBXProject "tothemoon" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -365,8 +365,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2746AA131FFE51390075A5D3 /* Coindar */,
-				27B6C25920075FC9000D2362 /* CoindarTests */,
+				2746AA131FFE51390075A5D3 /* tothemoon */,
+				27B6C25920075FC9000D2362 /* tothemoonTests */,
 			);
 		};
 /* End PBXProject section */
@@ -439,7 +439,7 @@
 /* Begin PBXTargetDependency section */
 		27B6C26020075FC9000D2362 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2746AA131FFE51390075A5D3 /* Coindar */;
+			target = 2746AA131FFE51390075A5D3 /* tothemoon */;
 			targetProxy = 27B6C25F20075FC9000D2362 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -607,7 +607,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coindar.app/Coindar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tothemoon.app/tothemoon";
 			};
 			name = Debug;
 		};
@@ -623,14 +623,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coindar.app/Coindar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tothemoon.app/tothemoon";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2746AA0F1FFE51390075A5D3 /* Build configuration list for PBXProject "Coindar" */ = {
+		2746AA0F1FFE51390075A5D3 /* Build configuration list for PBXProject "tothemoon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2746AA241FFE513A0075A5D3 /* Debug */,
@@ -639,7 +639,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "Coindar" */ = {
+		2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "tothemoon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2746AA271FFE513A0075A5D3 /* Debug */,
@@ -648,7 +648,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27B6C26120075FC9000D2362 /* Build configuration list for PBXNativeTarget "CoindarTests" */ = {
+		27B6C26120075FC9000D2362 /* Build configuration list for PBXNativeTarget "tothemoonTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27B6C26220075FC9000D2362 /* Debug */,

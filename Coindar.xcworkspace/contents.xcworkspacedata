@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Coindar.xcodeproj">
+      location = "group:/Users/lala/Workspace/Coindar/tothemoon.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:1st party/CoindarAPI/CoindarAPI.xcodeproj">
