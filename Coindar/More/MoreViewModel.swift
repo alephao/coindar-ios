@@ -1,36 +1,65 @@
-import Foundation
+import UIKit
 
 class MoreViewModel {
     
-    enum Item {
-        case `default`(String)
+    struct Section {
+        let title: String?
+        let items: [Item]
     }
     
-    var items: [Item] = {
-        var items = [
-            Item.default("Donate Bitcoin"),
-            Item.default("Donate Ether"),
-        ]
+    enum Item {
+        case `default`(String)
+        case donationItem(String, String)
+        case version(String, String)
+    }
+    
+    let donateSection: Section = {
+        return Section(title: "Donate (tap to copy address)",
+                       items: [
+                        Item.donationItem("Bitcoin", "1KFe8vs2TiimD9M9pWjx3aQNNWUBd9nEh1"),
+                        Item.donationItem("Ether and Ethereum Tokens", "0xCDA750ED5dfAadEd9910C729E9c5631756A30a85")
+            ])
+    }()
+    
+    let versionSection: Section? = {
         if let infoDict = Bundle.main.infoDictionary,
             let version = infoDict["CFBundleShortVersionString"] as? String {
-            items.append(Item.default("v\(version)"))
+            return Section(title: nil,
+                           items: [Item.version("App Version", "v\(version)")])
         }
-        return items
+        return nil
     }()
+    
+    let sections: [Section]
     
     weak var coordinator: MoreCoordinatorDelegate?
     let dataSource: MoreDataSource
     
     init(coordinator: MoreCoordinatorDelegate) {
         self.coordinator = coordinator
-        dataSource = MoreDataSource(items: self.items)
+        var sections = [
+            self.donateSection,
+        ]
+        
+        if let versionSection = versionSection {
+            sections.append(versionSection)
+        }
+        
+        self.sections = sections
+        
+        dataSource = MoreDataSource(sections: sections)
     }
     
     func didSelectRow(at indexPath: IndexPath) {
-        let selectedItem = items[indexPath.row]
+        let selectedItem = sections[indexPath.section].items[indexPath.row]
         
         switch selectedItem {
         case .default(_): break
+        case .donationItem(_, let address):
+            UIPasteboard.general.string = address
+            AppDelegate.shared.showCopiedFeedback()
+            break
+        case .version(_, _): break
         }
     }
     

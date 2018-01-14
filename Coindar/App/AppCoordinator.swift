@@ -17,6 +17,11 @@ final class AppCoordinator: Coordinator, AppCoordinatorDelegate {
     private lazy var navigationController: UINavigationController = {
         let nc = UINavigationController(rootViewController: UIViewController())
         nc.isNavigationBarHidden = false
+        
+        if #available(iOS 11.0, *) {
+            nc.navigationBar.prefersLargeTitles = true
+        }
+        
         return nc
     }()
     

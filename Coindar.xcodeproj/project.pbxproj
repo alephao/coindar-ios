@@ -23,6 +23,8 @@
 		272856AB200B32090067E68B /* MoreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272856AA200B32090067E68B /* MoreCoordinator.swift */; };
 		272856AD200B33D50067E68B /* MoreDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272856AC200B33D50067E68B /* MoreDataSource.swift */; };
 		272856AF200B3FF20067E68B /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272856AE200B3FF20067E68B /* RootTabBarController.swift */; };
+		272856B2200B629D0067E68B /* SubtitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272856B1200B629D0067E68B /* SubtitleCell.swift */; };
+		272856B4200B64600067E68B /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272856B3200B64600067E68B /* DetailCell.swift */; };
 		27305D0020099B9A00BC58E2 /* ErrorHandler+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27305CFF20099B9A00BC58E2 /* ErrorHandler+Extensions.swift */; };
 		27305D042009A24C00BC58E2 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27305D032009A24C00BC58E2 /* NetworkingError.swift */; };
 		2746AA181FFE51390075A5D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746AA171FFE51390075A5D3 /* AppDelegate.swift */; };
@@ -82,6 +84,8 @@
 		272856AA200B32090067E68B /* MoreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCoordinator.swift; sourceTree = "<group>"; };
 		272856AC200B33D50067E68B /* MoreDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDataSource.swift; sourceTree = "<group>"; };
 		272856AE200B3FF20067E68B /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		272856B1200B629D0067E68B /* SubtitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleCell.swift; sourceTree = "<group>"; };
+		272856B3200B64600067E68B /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		27305CFF20099B9A00BC58E2 /* ErrorHandler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorHandler+Extensions.swift"; sourceTree = "<group>"; };
 		27305D032009A24C00BC58E2 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		2746AA141FFE51390075A5D3 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +174,7 @@
 				272856A8200B31BB0067E68B /* MoreViewModel.swift */,
 				272856AA200B32090067E68B /* MoreCoordinator.swift */,
 				272856AC200B33D50067E68B /* MoreDataSource.swift */,
+				272856B0200B5EEE0067E68B /* Cells */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -181,6 +186,15 @@
 				27B6C2722008C71D000D2362 /* LoadMoreCell.swift */,
 				27285690200AEE1C0067E68B /* LoadMoreViewModel.swift */,
 				27B6C2742008E385000D2362 /* HeaderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		272856B0200B5EEE0067E68B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				272856B1200B629D0067E68B /* SubtitleCell.swift */,
+				272856B3200B64600067E68B /* DetailCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -394,6 +408,7 @@
 				27305D042009A24C00BC58E2 /* NetworkingError.swift in Sources */,
 				27305D0020099B9A00BC58E2 /* ErrorHandler+Extensions.swift in Sources */,
 				27B6C27120080D02000D2362 /* Service.swift in Sources */,
+				272856B2200B629D0067E68B /* SubtitleCell.swift in Sources */,
 				27B6C2752008E385000D2362 /* HeaderCell.swift in Sources */,
 				2746AA1A1FFE513A0075A5D3 /* LastEventsViewController.swift in Sources */,
 				272856A9200B31BB0067E68B /* MoreViewModel.swift in Sources */,
@@ -407,6 +422,7 @@
 				2728568F200A43C80067E68B /* ErrorDisplayable.swift in Sources */,
 				27B6C26F20080C73000D2362 /* ServiceProvider.swift in Sources */,
 				2746AA2D1FFE5B300075A5D3 /* Networking.swift in Sources */,
+				272856B4200B64600067E68B /* DetailCell.swift in Sources */,
 				27B6C2732008C71D000D2362 /* LoadMoreCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

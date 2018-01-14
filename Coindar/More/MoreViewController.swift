@@ -3,11 +3,12 @@ import UIKit
 class MoreViewController: ViewController {
     
     private let tableView: UITableView = {
-        let tv = UITableView()
+        let tv = UITableView(frame: .zero, style: .grouped)
         tv.registerCell(UITableViewCell.self)
+        tv.registerCell(SubtitleCell.self)
+        tv.registerCell(DetailCell.self)
         tv.rowHeight = UITableViewAutomaticDimension
         tv.estimatedRowHeight = 80
-        tv.tableFooterView = UIView()
 //        tv.separatorInset = .zero
         tv.separatorColor = UIColor.hex(0xa0a0a0)
         return tv
@@ -41,6 +42,12 @@ class MoreViewController: ViewController {
         tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }
 
