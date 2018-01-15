@@ -37,6 +37,10 @@ class MoreDataSource: NSObject, UITableViewDataSource {
             let cell: DetailCell = tableView.dequeueReusableCell()
             cell.setup(title: title, detail: detail)
             return cell
+        case .appReview(let title):
+            let cell: DetailCell = tableView.dequeueReusableCell()
+            cell.setup(title: title, detail: "")
+            return cell
         }
     }
     

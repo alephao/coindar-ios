@@ -17,6 +17,8 @@ class LastEventsViewController: ViewController {
         return tv
     }()
     
+    private let refreshControl = UIRefreshControl()
+    
     private let eventsDataSource = LastEventsDataSource(items: [])
     fileprivate let viewModel: LastEventsViewModel
     
@@ -26,6 +28,10 @@ class LastEventsViewController: ViewController {
         title = "Last Events"
         tableView.delegate = self
         tableView.dataSource = eventsDataSource
+        
+        tableView.refreshControl = refreshControl
+        
+        refreshControl.addTarget(self, action: #selector(refresh), for: .primaryActionTriggered)
         
         tabBarItem = UITabBarItem(title: "Last Events", image: #imageLiteral(resourceName: "ic_view_list"), tag: 0)
     }
@@ -47,6 +53,23 @@ class LastEventsViewController: ViewController {
         tableView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor).isActive = true
         
         viewModel.fetchMoreEvents()
+    }
+    
+    @objc
+    private func refresh() {
+        viewModel.refresh()
+    }
+    
+    override func startLoading() {
+        DispatchQueue.main.async {
+            self.refreshControl.beginRefreshing()
+        }
+    }
+    
+    override func stopLoading() {
+        DispatchQueue.main.async {
+            self.refreshControl.endRefreshing()
+        }
     }
 }
 

@@ -46,6 +46,12 @@ class LastEventsViewModel {
         }
     }
     
+    func refresh() {
+        currentPage = 0
+        items = []
+        fetchMoreEvents()
+    }
+    
     var currentPage = 0
     func fetchMoreEvents() {
         if currentPage == 0 {
