@@ -4,13 +4,25 @@ public struct CoindarEvent: Decodable {
     
     public struct Formatters {
         /// yyyy-mm-dd HH: MM
-        static let ymdTime = DateFormatter(dateFormat: "yyyy-MM-dd HH:mm")
+        static let ymdTime: DateFormatter = {
+            let df = DateFormatter(dateFormat: "yyyy-MM-dd HH:mm")
+            df.timeZone = TimeZone(identifier: "UTC") ?? TimeZone.current
+            return df
+        }()
 
         /// yyyy-MM-dd
-        static let ymd = DateFormatter(dateFormat: "yyyy-MM-dd")
+        static let ymd: DateFormatter = {
+            let df = DateFormatter(dateFormat: "yyyy-MM-dd")
+            df.timeZone = TimeZone(identifier: "UTC") ?? TimeZone.current
+            return df
+        }()
         
         /// yyyy-MM
-        static let ym = DateFormatter(dateFormat: "yyyy-MM")
+        static let ym: DateFormatter  = {
+            let df = DateFormatter(dateFormat: "yyyy-MM")
+            df.timeZone = TimeZone(identifier: "UTC") ?? TimeZone.current
+            return df
+        }()
         
         /// MMMM dd yyyy
         public static let medium = DateFormatter(dateFormat: "dd MMMM yyyy")
