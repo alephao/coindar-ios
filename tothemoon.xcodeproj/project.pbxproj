@@ -88,7 +88,7 @@
 		272856B3200B64600067E68B /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		27305CFF20099B9A00BC58E2 /* ErrorHandler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ErrorHandler+Extensions.swift"; sourceTree = "<group>"; };
 		27305D032009A24C00BC58E2 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
-		2746AA141FFE51390075A5D3 /* tothemoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tothemoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2746AA141FFE51390075A5D3 /* tothemoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = tothemoon.app; path = "to the moon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2746AA171FFE51390075A5D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2746AA191FFE513A0075A5D3 /* LastEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastEventsViewController.swift; sourceTree = "<group>"; };
 		2746AA1E1FFE513A0075A5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
