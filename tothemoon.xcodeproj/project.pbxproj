@@ -295,9 +295,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2746AA131FFE51390075A5D3 /* tothemoon */ = {
+		2746AA131FFE51390075A5D3 /* to the moon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "tothemoon" */;
+			buildConfigurationList = 2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "to the moon" */;
 			buildPhases = (
 				2746AA101FFE51390075A5D3 /* Sources */,
 				2746AA111FFE51390075A5D3 /* Frameworks */,
@@ -308,7 +308,7 @@
 			);
 			dependencies = (
 			);
-			name = tothemoon;
+			name = "to the moon";
 			productName = Coindar;
 			productReference = 2746AA141FFE51390075A5D3 /* tothemoon.app */;
 			productType = "com.apple.product-type.application";
@@ -365,7 +365,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2746AA131FFE51390075A5D3 /* tothemoon */,
+				2746AA131FFE51390075A5D3 /* to the moon */,
 				27B6C25920075FC9000D2362 /* tothemoonTests */,
 			);
 		};
@@ -439,7 +439,7 @@
 /* Begin PBXTargetDependency section */
 		27B6C26020075FC9000D2362 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2746AA131FFE51390075A5D3 /* tothemoon */;
+			target = 2746AA131FFE51390075A5D3 /* to the moon */;
 			targetProxy = 27B6C25F20075FC9000D2362 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -639,7 +639,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "tothemoon" */ = {
+		2746AA261FFE513A0075A5D3 /* Build configuration list for PBXNativeTarget "to the moon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2746AA271FFE513A0075A5D3 /* Debug */,

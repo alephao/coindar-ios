@@ -53,7 +53,8 @@ class CoindarService: Service {
     }
     
     func fetchEventsToday(offset: Int = 0, callback: @escaping CoindarCallback) {
-        let today = Date().addingTimeInterval(Double(86400 * offset))
+        let offsetInMs = Double(86400 * offset)
+        let today = Date().addingTimeInterval(offsetInMs)
         let day = CoindarService.calendar.component(.day, from: today)
         let month = CoindarService.calendar.component(.month, from: today)
         let year = CoindarService.calendar.component(.year, from: today)
