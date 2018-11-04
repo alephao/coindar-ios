@@ -1,7 +1,8 @@
 platform :ios, '10.0'
 
-target 'Coindar' do
+target 'CoindarFramework' do
   use_frameworks!
  
   pod 'CoindarAPI'
+  pod 'SnapKit'
 end

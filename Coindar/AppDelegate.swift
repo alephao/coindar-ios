@@ -5,7 +5,7 @@ import CoreData
 import CoindarFramework
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let window = UIWindow()
 

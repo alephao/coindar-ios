@@ -1,6 +1,0 @@
-framework module Pods_Coindar {
-  umbrella header "Pods-Coindar-umbrella.h"
-
-  export *
-  module * { export * }
-}
