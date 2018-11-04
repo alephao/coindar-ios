@@ -1,0 +1,6 @@
+framework module CoindarAPI {
+  umbrella header "CoindarAPI-umbrella.h"
+
+  export *
+  module * { export * }
+}
