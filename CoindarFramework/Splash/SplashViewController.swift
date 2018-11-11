@@ -1,39 +1,53 @@
 //  Copyright © lalacode.io All rights reserved.
 
 import UIKit
+import Overture
 import SnapKit
 import CoindarAPI
+import RxSwift
+import RxCocoa
 
 public class SplashViewController: UIViewController {
+
+    private let disposeBag = DisposeBag()
+
+    private let viewModel = SplashViewModel()
 
     override public func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
 
         let progressView = UIProgressView(progressViewStyle: .default)
-        view.addSubview(progressView)
 
-        progressView.snp.makeConstraints { make in
-            make.leading.trailing.centerY.equalToSuperview()
+        let loadingLabel = UILabel()
+        loadingLabel.text = "Loading Coins..."
+
+        let stack = UIStackView(arrangedSubviews: [loadingLabel, progressView])
+        stack.axis = .vertical
+        stack.distribution = .fill
+
+        view.addSubview(stack)
+        stack.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.leading.trailing.equalToSuperview().inset(20)
         }
 
-        _ = Current.coindarApi.getTags(progress: updateProgress(progressView), onSuccess: startApp(_:), onError: displayErrorAlert(presentedBy: self))
-    }
+        viewModel.progress
+            .drive(progressView.rx.progress)
+            .disposed(by: disposeBag)
 
-    private func startApp(_ tags: [Tag]) -> Void {
-        for tag in tags {
-            print(tag.name)
-        }
+        viewModel.displayError
+            .subscribe(onNext: displayErrorAlert(presentedBy: self))
+            .disposed(by: disposeBag)
+
+        viewModel.finishedLoading
+            .subscribe(onNext: { _ in print("Finished loading") })
+            .disposed(by: disposeBag)
     }
 }
 
-fileprivate func updateProgress(_ progressView: UIProgressView) -> (Double) -> Void {
-    return { progress in
-        progressView.progress = Float(progress)
-    }
-}
 
-func displayErrorAlert(presentedBy presenter: UIViewController) -> (Error) -> Void {
+func displayErrorAlert(presentedBy presenter: UIViewController) -> ((Error) -> Void) {
     return { error in
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))

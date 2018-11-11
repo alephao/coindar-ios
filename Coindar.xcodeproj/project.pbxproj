@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		113ED96A9B5BFF529393BC1E /* Pods_CoindarFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977A3E16706D2968C9BFE4A8 /* Pods_CoindarFramework.framework */; };
 		27616B29218EFB3F00D4CF1B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27616B28218EFB3F00D4CF1B /* Config.swift */; };
+		27884C48218F1D5500683B59 /* RxCoindar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27884C47218F1D5500683B59 /* RxCoindar.swift */; };
 		27CE9054218E76E500069005 /* Coindar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CE9052218E76E500069005 /* Coindar.xcdatamodeld */; };
 		27CE9056218E76E600069005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CE9055218E76E600069005 /* Assets.xcassets */; };
 		27CE9059218E76E600069005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE9057218E76E600069005 /* LaunchScreen.storyboard */; };
@@ -17,6 +18,7 @@
 		27E235B5218E7F3000D68920 /* CoindarFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27E235AD218E7F3000D68920 /* CoindarFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27E235BB218E7F5A00D68920 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE904D218E76E500069005 /* SplashViewController.swift */; };
 		27E235BC218E7FFD00D68920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE904B218E76E500069005 /* AppDelegate.swift */; };
+		27E9014B2198210600535CF3 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9014A2198210600535CF3 /* SplashViewModel.swift */; };
 		27F94CF0218E8BB300FAEF54 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F94CEF218E8BB300FAEF54 /* Environment.swift */; };
 		3B7ADF9DF3C017D21B865B8C /* Pods_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		27616B28218EFB3F00D4CF1B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = SOURCE_ROOT; };
+		27884C47218F1D5500683B59 /* RxCoindar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCoindar.swift; sourceTree = "<group>"; };
 		27CE9048218E76E500069005 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE904B218E76E500069005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CE904D218E76E500069005 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		27E235AD218E7F3000D68920 /* CoindarFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoindarFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E235AF218E7F3000D68920 /* CoindarFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoindarFramework.h; sourceTree = "<group>"; };
 		27E235B0218E7F3000D68920 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E9014A2198210600535CF3 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		27F94CEF218E8BB300FAEF54 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		3CAACD2CB6547B40776BF3F8 /* Pods-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
 		41B7B1A0F5B7F790CC3F20BC /* Pods-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				27CE904D218E76E500069005 /* SplashViewController.swift */,
+				27E9014A2198210600535CF3 /* SplashViewModel.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -130,9 +135,10 @@
 		27E235AE218E7F3000D68920 /* CoindarFramework */ = {
 			isa = PBXGroup;
 			children = (
+				27616B2B218EFC1E00D4CF1B /* Splash */,
 				27616B28218EFB3F00D4CF1B /* Config.swift */,
 				27F94CEF218E8BB300FAEF54 /* Environment.swift */,
-				27616B2B218EFC1E00D4CF1B /* Splash */,
+				27884C47218F1D5500683B59 /* RxCoindar.swift */,
 				27E235AF218E7F3000D68920 /* CoindarFramework.h */,
 				27E235B0218E7F3000D68920 /* Info.plist */,
 			);
@@ -282,7 +288,11 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CoindarAPI/CoindarAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -292,7 +302,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoindarAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +374,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E9014B2198210600535CF3 /* SplashViewModel.swift in Sources */,
+				27884C48218F1D5500683B59 /* RxCoindar.swift in Sources */,
 				27E235BB218E7F5A00D68920 /* SplashViewController.swift in Sources */,
 				27F94CF0218E8BB300FAEF54 /* Environment.swift in Sources */,
 				27616B29218EFB3F00D4CF1B /* Config.swift in Sources */,
