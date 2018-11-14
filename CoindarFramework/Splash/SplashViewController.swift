@@ -20,7 +20,7 @@ public class SplashViewController: UIViewController {
         let progressView = UIProgressView(progressViewStyle: .default)
 
         let loadingLabel = UILabel()
-        loadingLabel.text = "Loading Coins..."
+        loadingLabel.text = "Loading..."
 
         let stack = UIStackView(arrangedSubviews: [loadingLabel, progressView])
         stack.axis = .vertical
@@ -45,7 +45,6 @@ public class SplashViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 }
-
 
 func displayErrorAlert(presentedBy presenter: UIViewController) -> ((Error) -> Void) {
     return { error in

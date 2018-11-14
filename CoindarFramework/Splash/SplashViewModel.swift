@@ -8,6 +8,7 @@ import CoindarAPI
 
 enum GlobalState {
     static var coins: [CoindarAPI.Coin] = []
+    static var tags: [CoindarAPI.Tag] = []
 }
 
 internal class SplashViewModel {
@@ -23,22 +24,42 @@ internal class SplashViewModel {
     lazy var finishedLoading: Observable<Void> = _finishedLoading
 
     init() {
+        let coinsRequest = Current.coindar.rx.getCoins().share()
+        let tagsRequest = Current.coindar.rx.getTags().share()
 
-        let coins = Current.coindar.rx.getCoins().share()
-
-        progress = coins
-            .filter(Either.filterLeft)
-            .map(pipe(Either.mapLeft, Float.init))
+        progress = totalProgressFromRequests(getProgressFromRequest(coinsRequest),
+                                             getProgressFromRequest(tagsRequest))
             .asDriver(onErrorJustReturn: 0)
 
-        coins
-            .filter(Either.filterRight)
-            .map(Either.mapRight)
-            .subscribe(onNext: { [weak self] coins in
-                GlobalState.coins = coins
-                self?._finishedLoading.onNext(())
-            }, onError: { [weak self] error in
-                self?._displayError.onNext(error)
+        Observable
+            .zip(getRight(coinsRequest), getRight(tagsRequest))
+            .subscribe(
+                onNext: { [weak self] (coins, tags) in
+                    GlobalState.coins = coins
+                    GlobalState.tags = tags
+                    self?._finishedLoading.onNext(())
+                },
+                onError: { [weak self] error in
+                    self?._displayError.onNext(error)
             }).disposed(by: disposeBag)
     }
+}
+
+private func getProgressFromRequest<T>(_ observable: Observable<Either<Double, T>>) -> Observable<Float> {
+    return observable
+        .filter(Either.filterLeft)
+        .map(pipe(Either.mapLeft, Float.init))
+        .catchErrorJustReturn(0)
+}
+
+private func totalProgressFromRequests(_ observables: Observable<Float>...) -> Observable<Float> {
+    return Observable.combineLatest(observables) { obs in
+        return obs.reduce(0, +) / Float(obs.count)
+    }
+}
+
+private func getRight<A, B>(_ observable: Observable<Either<A, B>>) -> Observable<B> {
+    return observable
+        .filter(Either.filterRight)
+        .map(Either.mapRight)
 }
