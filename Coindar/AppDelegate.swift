@@ -9,9 +9,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let window = UIWindow()
 
+    private lazy var coordinator: AppCoordinator = AppCoordinator(window: window)
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window.rootViewController = SplashViewController()
-        window.makeKeyAndVisible()
+        coordinator.start()
         return true
     }
 

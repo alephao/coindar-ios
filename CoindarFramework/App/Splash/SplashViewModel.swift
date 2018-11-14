@@ -23,7 +23,7 @@ internal class SplashViewModel {
     private let _finishedLoading: PublishSubject<Void> = .init()
     lazy var finishedLoading: Observable<Void> = _finishedLoading
 
-    init() {
+    init(coordinator: AppCoordinator) {
         let coinsRequest = Current.coindar.rx.getCoins().share()
         let tagsRequest = Current.coindar.rx.getTags().share()
 
@@ -42,6 +42,8 @@ internal class SplashViewModel {
                 onError: { [weak self] error in
                     self?._displayError.onNext(error)
             }).disposed(by: disposeBag)
+
+        coordinator.bind(gotoCoinsObservable: finishedLoading)
     }
 }
 

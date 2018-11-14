@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		113ED96A9B5BFF529393BC1E /* Pods_CoindarFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 977A3E16706D2968C9BFE4A8 /* Pods_CoindarFramework.framework */; };
+		15067098219C2387000AC091 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15067097219C2387000AC091 /* Coordinator.swift */; };
+		1506709A219C23DC000AC091 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15067099219C23DC000AC091 /* AppCoordinator.swift */; };
 		27616B29218EFB3F00D4CF1B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27616B28218EFB3F00D4CF1B /* Config.swift */; };
 		27884C48218F1D5500683B59 /* RxCoindar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27884C47218F1D5500683B59 /* RxCoindar.swift */; };
 		27CE9054218E76E500069005 /* Coindar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CE9052218E76E500069005 /* Coindar.xcdatamodeld */; };
@@ -48,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		15067097219C2387000AC091 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		15067099219C23DC000AC091 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27616B28218EFB3F00D4CF1B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = SOURCE_ROOT; };
 		27884C47218F1D5500683B59 /* RxCoindar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCoindar.swift; sourceTree = "<group>"; };
 		27CE9048218E76E500069005 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1506709B219C23E3000AC091 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				15067099219C23DC000AC091 /* AppCoordinator.swift */,
+				27616B2B218EFC1E00D4CF1B /* Splash */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		27616B2B218EFC1E00D4CF1B /* Splash */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +148,8 @@
 		27E235AE218E7F3000D68920 /* CoindarFramework */ = {
 			isa = PBXGroup;
 			children = (
-				27616B2B218EFC1E00D4CF1B /* Splash */,
+				1506709B219C23E3000AC091 /* App */,
+				15067097219C2387000AC091 /* Coordinator.swift */,
 				27616B28218EFB3F00D4CF1B /* Config.swift */,
 				27F94CEF218E8BB300FAEF54 /* Environment.swift */,
 				27884C47218F1D5500683B59 /* RxCoindar.swift */,
@@ -378,7 +392,9 @@
 				27884C48218F1D5500683B59 /* RxCoindar.swift in Sources */,
 				27E235BB218E7F5A00D68920 /* SplashViewController.swift in Sources */,
 				27F94CF0218E8BB300FAEF54 /* Environment.swift in Sources */,
+				15067098219C2387000AC091 /* Coordinator.swift in Sources */,
 				27616B29218EFB3F00D4CF1B /* Config.swift in Sources */,
+				1506709A219C23DC000AC091 /* AppCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
