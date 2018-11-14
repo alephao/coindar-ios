@@ -5,7 +5,7 @@ import Result
 
 public typealias Cancellable = Moya.Cancellable
 
-public class Coindar {
+open class Coindar {
     
     private var provider: MoyaProvider<CoindarTarget>
     
@@ -14,9 +14,9 @@ public class Coindar {
         provider = MoyaProvider<CoindarTarget>(plugins: [authPlugin])
     }
     
-    public func getEvents(params: EventsParams,
-                          onSuccess: @escaping ([Event]) -> Void,
-                          onError: @escaping (Error) -> Void) -> Cancellable {
+    open func getEvents(params: EventsParams,
+                        onSuccess: @escaping ([Event]) -> Void,
+                        onError: @escaping (Error) -> Void) -> Cancellable {
         return provider.request(.events(params)) { result in
             switch result {
             case .success(let response):
@@ -32,9 +32,9 @@ public class Coindar {
         }
     }
     
-    public func getCoins(progress: @escaping (Double) -> Void,
-                         onSuccess: @escaping ([Coin]) -> Void,
-                         onError: @escaping (Error) -> Void) -> Cancellable {
+    open func getCoins(progress: @escaping (Double) -> Void,
+                       onSuccess: @escaping ([Coin]) -> Void,
+                       onError: @escaping (Error) -> Void) -> Cancellable {
         return provider.request(.coins, progress: { progress($0.progress) }) { result in
             switch result {
             case .success(let response):
@@ -50,9 +50,9 @@ public class Coindar {
         }
     }
     
-    public func getTags(progress: @escaping (Double) -> Void,
-                        onSuccess: @escaping ([Tag]) -> Void,
-                        onError: @escaping (Error) -> Void) -> Cancellable {
+    open func getTags(progress: @escaping (Double) -> Void,
+                      onSuccess: @escaping ([Tag]) -> Void,
+                      onError: @escaping (Error) -> Void) -> Cancellable {
         return provider.request(.tags, progress: { progress($0.progress) }) { result in
             switch result {
             case .success(let response):
@@ -67,10 +67,10 @@ public class Coindar {
             }
         }
     }
-
-    public func getSocial(coins: [Coin],
-                          onSuccess: @escaping ([Social]) -> Void,
-                          onError: @escaping (Error) -> Void) -> Cancellable {
+    
+    open func getSocial(coins: [Coin],
+                        onSuccess: @escaping ([Social]) -> Void,
+                        onError: @escaping (Error) -> Void) -> Cancellable {
         let coinIds = coins.map({ $0.id })
         return provider.request(.social(coins: coinIds)) { result in
             switch result {

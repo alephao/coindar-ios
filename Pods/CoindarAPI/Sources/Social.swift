@@ -2,7 +2,7 @@
 
 import Foundation
 
-public struct Social: Codable {
+public struct Social {
     public let coinId: String
     public let website: URL?
     public let bitcointalk: URL?
@@ -17,9 +17,39 @@ public struct Social: Codable {
     public let redditCount: String?
     public let telegramCount: String?
     public let facebookCount: String?
+
+    public init(coinId: String,
+                website: URL?,
+                bitcointalk: URL?,
+                twitter: URL?,
+                reddit: URL?,
+                telegram: URL?,
+                facebook: URL?,
+                github: URL?,
+                explorer: URL?,
+                youtube: URL?,
+                twitterCount: String?,
+                redditCount: String?,
+                telegramCount: String?,
+                facebookCount: String?) {
+        self.coinId = coinId
+        self.website = website
+        self.bitcointalk = bitcointalk
+        self.twitter = twitter
+        self.reddit = reddit
+        self.telegram = telegram
+        self.facebook = facebook
+        self.github = github
+        self.explorer = explorer
+        self.youtube = youtube
+        self.twitterCount = twitterCount
+        self.redditCount = redditCount
+        self.telegramCount = telegramCount
+        self.facebookCount = facebookCount
+    }
 }
 
-extension Social {
+extension Social: Codable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         

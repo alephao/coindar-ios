@@ -2,7 +2,7 @@
 
 import Foundation
 
-public struct Event: Codable {
+public struct Event {
     public let caption: String
     public let source: URL
     public let proof: URL?
@@ -12,7 +12,29 @@ public struct Event: Codable {
     public let coinId: String
     public let coinPriceChanges: String
     public let tags: String
-    
+
+    public init(caption: String,
+                source: URL,
+                proof: URL?,
+                datePublic: Date,
+                dateStart: Date,
+                dateEnd: Date?,
+                coinId: String,
+                coinPriceChanges: String,
+                tags: String) {
+        self.caption = caption
+        self.source = source
+        self.proof = proof
+        self.datePublic = datePublic
+        self.dateStart = dateStart
+        self.dateEnd = dateEnd
+        self.coinId = coinId
+        self.coinPriceChanges = coinPriceChanges
+        self.tags = tags
+    }
+}
+
+extension Event {
     enum EventDateFormatter {
         static let utc = DateFormatter(dateFormat: "yyyy-MM-dd HH:mm")
         static let noTime = DateFormatter(dateFormat: "yyyy-MM-dd")
@@ -27,7 +49,7 @@ public struct Event: Codable {
     }
 }
 
-extension Event {
+extension Event: Codable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
