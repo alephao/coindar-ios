@@ -8,4 +8,4 @@ public struct Environment {
     public var userDefaults = UserDefaults.standard
 }
 
-public let Current = Environment()
+public var Current = Environment()
