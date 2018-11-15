@@ -14,6 +14,7 @@ abstract_target 'App' do
   pod 'Overture', '~> 0.3'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
   pod 'ReSwift'
 
   target 'Coindar' do
