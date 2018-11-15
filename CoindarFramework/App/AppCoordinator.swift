@@ -2,6 +2,14 @@
 
 import UIKit
 import RxSwift
+import CoindarAPI
+
+public struct AppState {
+    public var coins: [CoindarAPI.Coin] = []
+    public var tags: [CoindarAPI.Tag] = []
+}
+
+public var GlobalState = AppState(coins: [], tags: [])
 
 public class AppCoordinator: Coordinator {
 

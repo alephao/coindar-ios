@@ -6,11 +6,6 @@ import RxCocoa
 import Overture
 import CoindarAPI
 
-enum GlobalState {
-    static var coins: [CoindarAPI.Coin] = []
-    static var tags: [CoindarAPI.Tag] = []
-}
-
 internal class SplashViewModel {
 
     private let disposeBag = DisposeBag()
