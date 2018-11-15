@@ -1,3 +1,10 @@
+using_bundler = defined? Bundler
+unless using_bundler
+    puts "\nPlease re-run using Bundler:".red
+    puts "  bundle exec pod #{ARGV.join(" ")}\n\n"
+    exit!
+end
+
 platform :ios, '10.0'
 use_frameworks!
 
