@@ -16,6 +16,7 @@ abstract_target 'App' do
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod 'ReSwift'
+  pod 'Nuke', '~> 7.0'
 
   target 'Coindar' do
   end

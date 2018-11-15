@@ -8,6 +8,7 @@ PODS:
   - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
+  - Nuke (7.5.1)
   - Overture (0.3.0)
   - Result (3.2.4)
   - ReSwift (4.0.1)
@@ -24,6 +25,7 @@ PODS:
 
 DEPENDENCIES:
   - CoindarAPI (~> 1.1.2)
+  - Nuke (~> 7.0)
   - Overture (~> 0.3)
   - ReSwift
   - RxCocoa
@@ -37,6 +39,7 @@ SPEC REPOS:
     - CoindarAPI
     - Differentiator
     - Moya
+    - Nuke
     - Overture
     - Result
     - ReSwift
@@ -51,6 +54,7 @@ SPEC CHECKSUMS:
   CoindarAPI: 3e1b85e9e2377597eced075d6732aa329f38df74
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Moya: a725035953bc1c0eb1be505ab903984501d82440
+  Nuke: 3814db501e55f17951451839c726ffd91641e9a5
   Overture: 05dd0bcf2c9c63f1cf4555cd321baaef76d58784
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
@@ -60,6 +64,6 @@ SPEC CHECKSUMS:
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 786800a26c6504b0b9ae904ba3df9e039eff43ec
+PODFILE CHECKSUM: b3025dd5f7242b88b2c6186cef8254f968685456
 
 COCOAPODS: 1.5.3
