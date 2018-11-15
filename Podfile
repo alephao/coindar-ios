@@ -14,4 +14,6 @@ abstract_target 'App' do
   
   target 'CoindarFramework' do
   end
+
+  target 'CoindarTests'
 end
