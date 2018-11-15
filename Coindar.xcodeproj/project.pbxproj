@@ -26,6 +26,11 @@
 		27FDFA2B219E107100E50899 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA2A219E107100E50899 /* CoinCell.swift */; };
 		27FDFA2D219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA2C219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift */; };
 		27FDFA2F219E116700E50899 /* UITableView+registerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA2E219E116700E50899 /* UITableView+registerCell.swift */; };
+		27FDFA39219E138900E50899 /* CoindarMocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 27FDFA37219E138900E50899 /* CoindarMocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27FDFA3E219E13FD00E50899 /* CancellableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA3D219E13FD00E50899 /* CancellableMock.swift */; };
+		27FDFA40219E145400E50899 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA3F219E145400E50899 /* Coins.swift */; };
+		27FDFA42219E14BA00E50899 /* Coindar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA41219E14BA00E50899 /* Coindar.swift */; };
+		39AF6D7650FE9809D213C092 /* Pods_CoindarMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05FFAFC9A814F602CC40395 /* Pods_CoindarMocks.framework */; };
 		3AF41C89A7F395F96ED5305D /* Pods_App_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */; };
 		3B7ADF9DF3C017D21B865B8C /* Pods_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */; };
 		6ABABC1C219D6FE0004BCE30 /* CoindarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABABC1B219D6FE0004BCE30 /* CoindarTests.swift */; };
@@ -88,6 +93,12 @@
 		27FDFA2A219E107100E50899 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 		27FDFA2C219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+reuseIdentifier.swift"; sourceTree = "<group>"; };
 		27FDFA2E219E116700E50899 /* UITableView+registerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+registerCell.swift"; sourceTree = "<group>"; };
+		27FDFA35219E138900E50899 /* CoindarMocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoindarMocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27FDFA37219E138900E50899 /* CoindarMocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoindarMocks.h; sourceTree = "<group>"; };
+		27FDFA38219E138900E50899 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FDFA3D219E13FD00E50899 /* CancellableMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableMock.swift; sourceTree = "<group>"; };
+		27FDFA3F219E145400E50899 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
+		27FDFA41219E14BA00E50899 /* Coindar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coindar.swift; sourceTree = "<group>"; };
 		3CAACD2CB6547B40776BF3F8 /* Pods-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
 		41B7B1A0F5B7F790CC3F20BC /* Pods-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC08F145F6A5A3D7A528976 /* Pods-App-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,13 +108,16 @@
 		6ABABC19219D6FE0004BCE30 /* CoindarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoindarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABABC1B219D6FE0004BCE30 /* CoindarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindarTests.swift; sourceTree = "<group>"; };
 		6ABABC1D219D6FE0004BCE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B14789AFA48064175ED55A7 /* Pods-CoindarMocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarMocks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarMocks/Pods-CoindarMocks.debug.xcconfig"; sourceTree = "<group>"; };
 		735A954528C4179B02106897 /* Pods-App-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarFramework/Pods-App-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Coindar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDC117464CE5185CB8B74A1 /* Pods-App-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.release.xcconfig"; sourceTree = "<group>"; };
 		977A3E16706D2968C9BFE4A8 /* Pods_CoindarFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoindarFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A972A250F2BC77B653F0558B /* Pods-CoindarFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.release.xcconfig"; sourceTree = "<group>"; };
+		B4366F9CE6D0AACC5B04B1D6 /* Pods-CoindarMocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarMocks.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarMocks/Pods-CoindarMocks.release.xcconfig"; sourceTree = "<group>"; };
 		C5FFFF68B89958E139AE07B5 /* Pods-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.release.xcconfig"; sourceTree = "<group>"; };
 		CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_CoindarFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05FFAFC9A814F602CC40395 /* Pods_CoindarMocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoindarMocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coindar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF708C89731881A4B6A3FEF0 /* Pods-App-CoindarFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarFramework/Pods-App-CoindarFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +139,14 @@
 			files = (
 				113ED96A9B5BFF529393BC1E /* Pods_CoindarFramework.framework in Frameworks */,
 				D6AEE396FE5D09F411981AC5 /* Pods_App_CoindarFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FDFA32219E138900E50899 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AF6D7650FE9809D213C092 /* Pods_CoindarMocks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +188,7 @@
 				27E235AE218E7F3000D68920 /* CoindarFramework */,
 				6A5E455E219D621000F2B749 /* CoindarTests */,
 				6ABABC1A219D6FE0004BCE30 /* CoindarTests */,
+				27FDFA36219E138900E50899 /* CoindarMocks */,
 				27CE9049218E76E500069005 /* Products */,
 				61B76B90DBFD1AFE2E8A79F1 /* Pods */,
 				DFB31E7AEBE2B257FCAA17C6 /* Frameworks */,
@@ -178,6 +201,7 @@
 				27CE9048218E76E500069005 /* Coindar.app */,
 				27E235AD218E7F3000D68920 /* CoindarFramework.framework */,
 				6ABABC19219D6FE0004BCE30 /* CoindarTests.xctest */,
+				27FDFA35219E138900E50899 /* CoindarMocks.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +243,18 @@
 			path = Coins;
 			sourceTree = "<group>";
 		};
+		27FDFA36219E138900E50899 /* CoindarMocks */ = {
+			isa = PBXGroup;
+			children = (
+				27FDFA37219E138900E50899 /* CoindarMocks.h */,
+				27FDFA38219E138900E50899 /* Info.plist */,
+				27FDFA3D219E13FD00E50899 /* CancellableMock.swift */,
+				27FDFA3F219E145400E50899 /* Coins.swift */,
+				27FDFA41219E14BA00E50899 /* Coindar.swift */,
+			);
+			path = CoindarMocks;
+			sourceTree = "<group>";
+		};
 		61B76B90DBFD1AFE2E8A79F1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +268,8 @@
 				EF708C89731881A4B6A3FEF0 /* Pods-App-CoindarFramework.release.xcconfig */,
 				1254AD883D5F1F3D60964B75 /* Pods-App-CoindarTests.debug.xcconfig */,
 				086873086056752FBBBA6E53 /* Pods-App-CoindarTests.release.xcconfig */,
+				6B14789AFA48064175ED55A7 /* Pods-CoindarMocks.debug.xcconfig */,
+				B4366F9CE6D0AACC5B04B1D6 /* Pods-CoindarMocks.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -262,6 +300,7 @@
 				789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */,
 				CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */,
 				653739CE513BADA8703E2F1F /* Pods_App_CoindarTests.framework */,
+				D05FFAFC9A814F602CC40395 /* Pods_CoindarMocks.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -274,6 +313,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				27E235B1218E7F3000D68920 /* CoindarFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FDFA30219E138900E50899 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FDFA39219E138900E50899 /* CoindarMocks.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +367,25 @@
 			productReference = 27E235AD218E7F3000D68920 /* CoindarFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		27FDFA34219E138900E50899 /* CoindarMocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27FDFA3A219E138900E50899 /* Build configuration list for PBXNativeTarget "CoindarMocks" */;
+			buildPhases = (
+				E68C394FC0854A73ED3FD081 /* [CP] Check Pods Manifest.lock */,
+				27FDFA30219E138900E50899 /* Headers */,
+				27FDFA31219E138900E50899 /* Sources */,
+				27FDFA32219E138900E50899 /* Frameworks */,
+				27FDFA33219E138900E50899 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoindarMocks;
+			productName = CoindarMocks;
+			productReference = 27FDFA35219E138900E50899 /* CoindarMocks.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		6ABABC18219D6FE0004BCE30 /* CoindarTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6ABABC21219D6FE0004BCE30 /* Build configuration list for PBXNativeTarget "CoindarTests" */;
@@ -356,6 +422,10 @@
 					27E235AC218E7F3000D68920 = {
 						CreatedOnToolsVersion = 10.0;
 					};
+					27FDFA34219E138900E50899 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
 					6ABABC18219D6FE0004BCE30 = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -377,6 +447,7 @@
 				27CE9047218E76E500069005 /* Coindar */,
 				27E235AC218E7F3000D68920 /* CoindarFramework */,
 				6ABABC18219D6FE0004BCE30 /* CoindarTests */,
+				27FDFA34219E138900E50899 /* CoindarMocks */,
 			);
 		};
 /* End PBXProject section */
@@ -392,6 +463,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		27E235AB218E7F3000D68920 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FDFA33219E138900E50899 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -419,12 +497,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CoindarAPI/CoindarAPI.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -437,12 +515,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoindarAPI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -465,12 +543,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-App-CoindarTests/Pods-App-CoindarTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CoindarAPI/CoindarAPI.framework",
-				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
@@ -483,12 +561,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoindarAPI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
@@ -544,6 +622,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E68C394FC0854A73ED3FD081 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoindarMocks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F4EEF6F234583E99E0CD5C42 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -593,6 +693,16 @@
 				1506709A219C23DC000AC091 /* AppCoordinator.swift in Sources */,
 				27FDFA2F219E116700E50899 /* UITableView+registerCell.swift in Sources */,
 				27FDFA29219E0FDD00E50899 /* CoinsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27FDFA31219E138900E50899 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27FDFA40219E145400E50899 /* Coins.swift in Sources */,
+				27FDFA3E219E13FD00E50899 /* CancellableMock.swift in Sources */,
+				27FDFA42219E14BA00E50899 /* Coindar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +959,69 @@
 			};
 			name = Release;
 		};
+		27FDFA3B219E138900E50899 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B14789AFA48064175ED55A7 /* Pods-CoindarMocks.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoindarMocks/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.CoindarMocks;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		27FDFA3C219E138900E50899 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4366F9CE6D0AACC5B04B1D6 /* Pods-CoindarMocks.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoindarMocks/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.CoindarMocks;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		6ABABC22219D6FE0004BCE30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1254AD883D5F1F3D60964B75 /* Pods-App-CoindarTests.debug.xcconfig */;
@@ -913,6 +1086,15 @@
 			buildConfigurations = (
 				27E235B7218E7F3000D68920 /* Debug */,
 				27E235B8218E7F3000D68920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27FDFA3A219E138900E50899 /* Build configuration list for PBXNativeTarget "CoindarMocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27FDFA3B219E138900E50899 /* Debug */,
+				27FDFA3C219E138900E50899 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

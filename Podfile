@@ -18,11 +18,11 @@ abstract_target 'App' do
   pod 'ReSwift'
   pod 'Nuke', '~> 7.0'
 
-  target 'Coindar' do
-  end
-  
-  target 'CoindarFramework' do
-  end
-
+  target 'Coindar'
+  target 'CoindarFramework'
   target 'CoindarTests'
+end
+
+target 'CoindarMocks' do
+    pod 'CoindarAPI', '~> 1.1.2'
 end
