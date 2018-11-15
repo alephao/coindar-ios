@@ -22,10 +22,11 @@
 		27E235BC218E7FFD00D68920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE904B218E76E500069005 /* AppDelegate.swift */; };
 		27E9014B2198210600535CF3 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9014A2198210600535CF3 /* SplashViewModel.swift */; };
 		27F94CF0218E8BB300FAEF54 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F94CEF218E8BB300FAEF54 /* Environment.swift */; };
+		346C825E36390C2B94B03035 /* Pods_App_CoindarTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653739CE513BADA8703E2F1F /* Pods_App_CoindarTests.framework */; };
 		3AF41C89A7F395F96ED5305D /* Pods_App_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */; };
 		3B7ADF9DF3C017D21B865B8C /* Pods_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */; };
-		D6AEE396FE5D09F411981AC5 /* Pods_App_CoindarFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */; };
 		6A5E4560219D621000F2B749 /* CoindarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E455F219D621000F2B749 /* CoindarTests.swift */; };
+		D6AEE396FE5D09F411981AC5 /* Pods_App_CoindarFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		086873086056752FBBBA6E53 /* Pods-App-CoindarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarTests/Pods-App-CoindarTests.release.xcconfig"; sourceTree = "<group>"; };
+		1254AD883D5F1F3D60964B75 /* Pods-App-CoindarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarTests/Pods-App-CoindarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		15067097219C2387000AC091 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		15067099219C23DC000AC091 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		27616B28218EFB3F00D4CF1B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = SOURCE_ROOT; };
@@ -79,12 +82,13 @@
 		3CAACD2CB6547B40776BF3F8 /* Pods-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
 		41B7B1A0F5B7F790CC3F20BC /* Pods-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC08F145F6A5A3D7A528976 /* Pods-App-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
-		735A954528C4179B02106897 /* Pods-App-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarFramework/Pods-App-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
-		789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Coindar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FDC117464CE5185CB8B74A1 /* Pods-App-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.release.xcconfig"; sourceTree = "<group>"; };
+		653739CE513BADA8703E2F1F /* Pods_App_CoindarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_CoindarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5E455D219D621000F2B749 /* CoindarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoindarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5E455F219D621000F2B749 /* CoindarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindarTests.swift; sourceTree = "<group>"; };
 		6A5E4561219D621000F2B749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		735A954528C4179B02106897 /* Pods-App-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarFramework/Pods-App-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Coindar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FDC117464CE5185CB8B74A1 /* Pods-App-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.release.xcconfig"; sourceTree = "<group>"; };
 		977A3E16706D2968C9BFE4A8 /* Pods_CoindarFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoindarFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A972A250F2BC77B653F0558B /* Pods-CoindarFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.release.xcconfig"; sourceTree = "<group>"; };
 		C5FFFF68B89958E139AE07B5 /* Pods-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				346C825E36390C2B94B03035 /* Pods_App_CoindarTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +205,8 @@
 				7FDC117464CE5185CB8B74A1 /* Pods-App-Coindar.release.xcconfig */,
 				735A954528C4179B02106897 /* Pods-App-CoindarFramework.debug.xcconfig */,
 				EF708C89731881A4B6A3FEF0 /* Pods-App-CoindarFramework.release.xcconfig */,
+				1254AD883D5F1F3D60964B75 /* Pods-App-CoindarTests.debug.xcconfig */,
+				086873086056752FBBBA6E53 /* Pods-App-CoindarTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 				977A3E16706D2968C9BFE4A8 /* Pods_CoindarFramework.framework */,
 				789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */,
 				CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */,
+				653739CE513BADA8703E2F1F /* Pods_App_CoindarTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -282,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A5E4566219D621000F2B749 /* Build configuration list for PBXNativeTarget "CoindarTests" */;
 			buildPhases = (
+				E4D9A2B1CBAD2D0AC7E0D16C /* [CP] Check Pods Manifest.lock */,
 				6A5E4559219D621000F2B749 /* Sources */,
 				6A5E455A219D621000F2B749 /* Frameworks */,
 				6A5E455B219D621000F2B749 /* Resources */,
+				D936D1663FCB691850590D22 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -421,6 +431,68 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-App-Coindar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D936D1663FCB691850590D22 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-App-CoindarTests/Pods-App-CoindarTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CoindarAPI/CoindarAPI.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoindarAPI.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App-CoindarTests/Pods-App-CoindarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4D9A2B1CBAD2D0AC7E0D16C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-App-CoindarTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -730,6 +802,7 @@
 		};
 		6A5E4564219D621000F2B749 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1254AD883D5F1F3D60964B75 /* Pods-App-CoindarTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -750,6 +823,7 @@
 		};
 		6A5E4565219D621000F2B749 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 086873086056752FBBBA6E53 /* Pods-App-CoindarTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
