@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_CoindarFrameworkVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_CoindarFrameworkVersionString[];
+FOUNDATION_EXPORT double Pods_App_CoindarFrameworkVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_App_CoindarFrameworkVersionString[];
 

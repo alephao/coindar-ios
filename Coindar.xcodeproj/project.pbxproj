@@ -22,7 +22,9 @@
 		27E235BC218E7FFD00D68920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CE904B218E76E500069005 /* AppDelegate.swift */; };
 		27E9014B2198210600535CF3 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E9014A2198210600535CF3 /* SplashViewModel.swift */; };
 		27F94CF0218E8BB300FAEF54 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F94CEF218E8BB300FAEF54 /* Environment.swift */; };
+		3AF41C89A7F395F96ED5305D /* Pods_App_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */; };
 		3B7ADF9DF3C017D21B865B8C /* Pods_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */; };
+		D6AEE396FE5D09F411981AC5 /* Pods_App_CoindarFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,10 +70,16 @@
 		27F94CEF218E8BB300FAEF54 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		3CAACD2CB6547B40776BF3F8 /* Pods-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
 		41B7B1A0F5B7F790CC3F20BC /* Pods-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		5CC08F145F6A5A3D7A528976 /* Pods-App-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
+		735A954528C4179B02106897 /* Pods-App-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarFramework/Pods-App-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Coindar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FDC117464CE5185CB8B74A1 /* Pods-App-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.release.xcconfig"; sourceTree = "<group>"; };
 		977A3E16706D2968C9BFE4A8 /* Pods_CoindarFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoindarFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A972A250F2BC77B653F0558B /* Pods-CoindarFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.release.xcconfig"; sourceTree = "<group>"; };
 		C5FFFF68B89958E139AE07B5 /* Pods-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.release.xcconfig"; sourceTree = "<group>"; };
+		CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_CoindarFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Coindar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF708C89731881A4B6A3FEF0 /* Pods-App-CoindarFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarFramework/Pods-App-CoindarFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 			files = (
 				27E235B4218E7F3000D68920 /* CoindarFramework.framework in Frameworks */,
 				3B7ADF9DF3C017D21B865B8C /* Pods_Coindar.framework in Frameworks */,
+				3AF41C89A7F395F96ED5305D /* Pods_App_Coindar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				113ED96A9B5BFF529393BC1E /* Pods_CoindarFramework.framework in Frameworks */,
+				D6AEE396FE5D09F411981AC5 /* Pods_App_CoindarFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +176,10 @@
 				A972A250F2BC77B653F0558B /* Pods-CoindarFramework.release.xcconfig */,
 				3CAACD2CB6547B40776BF3F8 /* Pods-Coindar.debug.xcconfig */,
 				C5FFFF68B89958E139AE07B5 /* Pods-Coindar.release.xcconfig */,
+				5CC08F145F6A5A3D7A528976 /* Pods-App-Coindar.debug.xcconfig */,
+				7FDC117464CE5185CB8B74A1 /* Pods-App-Coindar.release.xcconfig */,
+				735A954528C4179B02106897 /* Pods-App-CoindarFramework.debug.xcconfig */,
+				EF708C89731881A4B6A3FEF0 /* Pods-App-CoindarFramework.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -175,6 +189,8 @@
 			children = (
 				D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */,
 				977A3E16706D2968C9BFE4A8 /* Pods_CoindarFramework.framework */,
+				789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */,
+				CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,11 +314,12 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Coindar/Pods-Coindar-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CoindarAPI/CoindarAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
+				"${BUILT_PRODUCTS_DIR}/ReSwift/ReSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -317,6 +334,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoindarAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -325,7 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Coindar/Pods-Coindar-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A1B0B78FF626A3FEB3CDFCF1 /* [CP] Check Pods Manifest.lock */ = {
@@ -343,7 +361,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Coindar-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-App-Coindar-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,7 +383,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CoindarFramework-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-App-CoindarFramework-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -538,7 +556,7 @@
 		};
 		27CE905E218E76E600069005 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CAACD2CB6547B40776BF3F8 /* Pods-Coindar.debug.xcconfig */;
+			baseConfigurationReference = 5CC08F145F6A5A3D7A528976 /* Pods-App-Coindar.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -559,7 +577,7 @@
 		};
 		27CE905F218E76E600069005 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5FFFF68B89958E139AE07B5 /* Pods-Coindar.release.xcconfig */;
+			baseConfigurationReference = 7FDC117464CE5185CB8B74A1 /* Pods-App-Coindar.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -580,7 +598,7 @@
 		};
 		27E235B7218E7F3000D68920 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41B7B1A0F5B7F790CC3F20BC /* Pods-CoindarFramework.debug.xcconfig */;
+			baseConfigurationReference = 735A954528C4179B02106897 /* Pods-App-CoindarFramework.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -610,7 +628,7 @@
 		};
 		27E235B8218E7F3000D68920 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A972A250F2BC77B653F0558B /* Pods-CoindarFramework.release.xcconfig */;
+			baseConfigurationReference = EF708C89731881A4B6A3FEF0 /* Pods-App-CoindarFramework.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;

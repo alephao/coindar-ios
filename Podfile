@@ -1,18 +1,17 @@
 platform :ios, '10.0'
 use_frameworks!
 
-target 'Coindar' do
+abstract_target 'App' do
   pod 'CoindarAPI', '~> 1.1.2'
   pod 'SnapKit'
   pod 'Overture', '~> 0.3'
   pod 'RxSwift'
   pod 'RxCocoa'
-end
+  pod 'ReSwift'
 
-target 'CoindarFramework' do
-  pod 'CoindarAPI', '~> 1.1.2'
-  pod 'SnapKit'
-  pod 'Overture', '~> 0.3'
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  target 'Coindar' do
+  end
+  
+  target 'CoindarFramework' do
+  end
 end

@@ -9,6 +9,7 @@ PODS:
     - Result (~> 3.0)
   - Overture (0.3.0)
   - Result (3.2.4)
+  - ReSwift (4.0.1)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -19,6 +20,7 @@ PODS:
 DEPENDENCIES:
   - CoindarAPI (~> 1.1.2)
   - Overture (~> 0.3)
+  - ReSwift
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -30,6 +32,7 @@ SPEC REPOS:
     - Moya
     - Overture
     - Result
+    - ReSwift
     - RxAtomic
     - RxCocoa
     - RxSwift
@@ -41,11 +44,12 @@ SPEC CHECKSUMS:
   Moya: a725035953bc1c0eb1be505ab903984501d82440
   Overture: 05dd0bcf2c9c63f1cf4555cd321baaef76d58784
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 9374352026c080d6f28893502e20e92ddb358099
+PODFILE CHECKSUM: b15ec9b852a71913a381c6acf34f153df20ebf4c
 
 COCOAPODS: 1.5.3
