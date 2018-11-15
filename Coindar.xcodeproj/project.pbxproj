@@ -25,6 +25,7 @@
 		3AF41C89A7F395F96ED5305D /* Pods_App_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */; };
 		3B7ADF9DF3C017D21B865B8C /* Pods_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */; };
 		D6AEE396FE5D09F411981AC5 /* Pods_App_CoindarFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDF15D63F0D66263A86A62A /* Pods_App_CoindarFramework.framework */; };
+		6A5E4560219D621000F2B749 /* CoindarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E455F219D621000F2B749 /* CoindarTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 27E235AC218E7F3000D68920;
 			remoteInfo = CoindarFramework;
+		};
+		6A5E4562219D621000F2B749 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27CE9040218E76E500069005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27CE9047218E76E500069005;
+			remoteInfo = Coindar;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -74,6 +82,9 @@
 		735A954528C4179B02106897 /* Pods-App-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarFramework/Pods-App-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Coindar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDC117464CE5185CB8B74A1 /* Pods-App-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.release.xcconfig"; sourceTree = "<group>"; };
+		6A5E455D219D621000F2B749 /* CoindarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoindarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5E455F219D621000F2B749 /* CoindarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindarTests.swift; sourceTree = "<group>"; };
+		6A5E4561219D621000F2B749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		977A3E16706D2968C9BFE4A8 /* Pods_CoindarFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoindarFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A972A250F2BC77B653F0558B /* Pods-CoindarFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.release.xcconfig"; sourceTree = "<group>"; };
 		C5FFFF68B89958E139AE07B5 /* Pods-Coindar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +110,13 @@
 			files = (
 				113ED96A9B5BFF529393BC1E /* Pods_CoindarFramework.framework in Frameworks */,
 				D6AEE396FE5D09F411981AC5 /* Pods_App_CoindarFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A5E455A219D621000F2B749 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +146,7 @@
 			children = (
 				27CE904A218E76E500069005 /* Coindar */,
 				27E235AE218E7F3000D68920 /* CoindarFramework */,
+				6A5E455E219D621000F2B749 /* CoindarTests */,
 				27CE9049218E76E500069005 /* Products */,
 				61B76B90DBFD1AFE2E8A79F1 /* Pods */,
 				DFB31E7AEBE2B257FCAA17C6 /* Frameworks */,
@@ -139,6 +158,7 @@
 			children = (
 				27CE9048218E76E500069005 /* Coindar.app */,
 				27E235AD218E7F3000D68920 /* CoindarFramework.framework */,
+				6A5E455D219D621000F2B749 /* CoindarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +202,15 @@
 				EF708C89731881A4B6A3FEF0 /* Pods-App-CoindarFramework.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A5E455E219D621000F2B749 /* CoindarTests */ = {
+			isa = PBXGroup;
+			children = (
+				6A5E455F219D621000F2B749 /* CoindarTests.swift */,
+				6A5E4561219D621000F2B749 /* Info.plist */,
+			);
+			path = CoindarTests;
 			sourceTree = "<group>";
 		};
 		DFB31E7AEBE2B257FCAA17C6 /* Frameworks */ = {
@@ -249,13 +278,31 @@
 			productReference = 27E235AD218E7F3000D68920 /* CoindarFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		6A5E455C219D621000F2B749 /* CoindarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A5E4566219D621000F2B749 /* Build configuration list for PBXNativeTarget "CoindarTests" */;
+			buildPhases = (
+				6A5E4559219D621000F2B749 /* Sources */,
+				6A5E455A219D621000F2B749 /* Frameworks */,
+				6A5E455B219D621000F2B749 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A5E4563219D621000F2B749 /* PBXTargetDependency */,
+			);
+			name = CoindarTests;
+			productName = CoindarTests;
+			productReference = 6A5E455D219D621000F2B749 /* CoindarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		27CE9040218E76E500069005 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Lalacode;
 				TargetAttributes = {
@@ -264,6 +311,10 @@
 					};
 					27E235AC218E7F3000D68920 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					6A5E455C219D621000F2B749 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 27CE9047218E76E500069005;
 					};
 				};
 			};
@@ -282,6 +333,7 @@
 			targets = (
 				27CE9047218E76E500069005 /* Coindar */,
 				27E235AC218E7F3000D68920 /* CoindarFramework */,
+				6A5E455C219D621000F2B749 /* CoindarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,6 +349,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		27E235AB218E7F3000D68920 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A5E455B219D621000F2B749 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -416,6 +475,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6A5E4559219D621000F2B749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A5E4560219D621000F2B749 /* CoindarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -423,6 +490,11 @@
 			isa = PBXTargetDependency;
 			target = 27E235AC218E7F3000D68920 /* CoindarFramework */;
 			targetProxy = 27E235B2218E7F3000D68920 /* PBXContainerItemProxy */;
+		};
+		6A5E4563219D621000F2B749 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27CE9047218E76E500069005 /* Coindar */;
+			targetProxy = 6A5E4562219D621000F2B749 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -656,6 +728,46 @@
 			};
 			name = Release;
 		};
+		6A5E4564219D621000F2B749 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoindarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.CoindarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coindar.app/Coindar";
+			};
+			name = Debug;
+		};
+		6A5E4565219D621000F2B749 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CoindarTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.CoindarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Coindar.app/Coindar";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -682,6 +794,15 @@
 			buildConfigurations = (
 				27E235B7218E7F3000D68920 /* Debug */,
 				27E235B8218E7F3000D68920 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6A5E4566219D621000F2B749 /* Build configuration list for PBXNativeTarget "CoindarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A5E4564219D621000F2B749 /* Debug */,
+				6A5E4565219D621000F2B749 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
