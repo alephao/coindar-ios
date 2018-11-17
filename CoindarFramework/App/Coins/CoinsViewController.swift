@@ -13,8 +13,7 @@ public final class CoinsViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     private let tableView: UITableView = {
-        let e = UITableView(frame: .zero, style: .plain)
-        e.tableFooterView = UIView()
+        let e = UITableView.standard
         e.register(CoinCell.self)
         e.rowHeight = 60
         return e
