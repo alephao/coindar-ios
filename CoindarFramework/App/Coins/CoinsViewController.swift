@@ -10,10 +10,7 @@ public struct CoinListConfiguration: ListConfiguration {
     public typealias Cell = CoinCell
     public typealias Model = Coin
 
-    public func setup(_ tableView: UITableView) {
-        tableView.register(Cell.self)
-        tableView.rowHeight = 60
-    }
+    public let rowHeight: CGFloat = 60
 
     public func load(into tableView: UITableView) -> Disposable {
         return Observable<[Model]>.from([GlobalState.coins])

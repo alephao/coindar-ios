@@ -7,8 +7,16 @@ public protocol ListConfiguration {
     associatedtype Cell: UITableViewCell
     associatedtype Model
 
-    func setup(_ tableView: UITableView)
+    var rowHeight: CGFloat { get }
+
     func load(into tableView: UITableView) -> Disposable
+}
+
+extension ListConfiguration {
+    func setup(_ tableView: UITableView) {
+        tableView.register(Cell.self)
+        tableView.rowHeight = rowHeight
+    }
 }
 
 public final class ListViewController<Configuration: ListConfiguration>: UIViewController {
