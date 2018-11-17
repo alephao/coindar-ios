@@ -40,6 +40,6 @@ public class AppCoordinator: Coordinator {
     }
 
     private func gotoCoins() {
-        navigationController.present(UIViewController(), animated: true, completion: nil)
+        navigationController.present(coinsViewController, animated: true, completion: nil)
     }
 }

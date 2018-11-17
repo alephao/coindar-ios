@@ -3,36 +3,25 @@
 import UIKit
 import CoindarAPI
 import RxSwift
+import RxCocoa
 import RxDataSources
-import Overture
-import Nuke
-import SnapKit
 
-public final class CoinsViewController: UIViewController {
+public struct CoinListConfiguration: ListConfiguration {
+    public typealias Cell = CoinCell
+    public typealias Model = Coin
 
-    private let disposeBag = DisposeBag()
-
-    private let tableView: UITableView = {
-        let e = UITableView.standard
-        e.register(CoinCell.self)
-        e.rowHeight = 60
-        return e
-    }()
-
-    override public func loadView() {
-        super.loadView()
-        view = tableView
+    public func setup(_ tableView: UITableView) {
+        tableView.register(Cell.self)
+        tableView.rowHeight = 60
     }
 
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-
-        Observable<[Coin]>.from([GlobalState.coins])
-            .bind(to: tableView.rx.items(cellIdentifier: CoinCell.reuseIdentifier, cellType: CoinCell.self)) {
+    public func load(into tableView: UITableView) -> Disposable {
+        return Observable<[Model]>.from([GlobalState.coins])
+            .bind(to: tableView.rx.items(cellIdentifier: Cell.reuseIdentifier, cellType: Cell.self)) {
                 _, coin, cell in
                 cell.setup(with: coin)
-            }.disposed(by: disposeBag)
+        }
     }
-
 }
+
+public let coinsViewController = ListViewController(configuration: CoinListConfiguration())

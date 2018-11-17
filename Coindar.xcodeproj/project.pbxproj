@@ -31,6 +31,7 @@
 		27FDFA40219E145400E50899 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA3F219E145400E50899 /* Coins.swift */; };
 		27FDFA42219E14BA00E50899 /* Coindar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA41219E14BA00E50899 /* Coindar.swift */; };
 		27FDFA44219FFC6C00E50899 /* UITableView+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA43219FFC6C00E50899 /* UITableView+Defaults.swift */; };
+		27FDFA4621A0026200E50899 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA4521A0026200E50899 /* ListViewController.swift */; };
 		39AF6D7650FE9809D213C092 /* Pods_CoindarMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05FFAFC9A814F602CC40395 /* Pods_CoindarMocks.framework */; };
 		3AF41C89A7F395F96ED5305D /* Pods_App_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789E65145364E213CAFF00F7 /* Pods_App_Coindar.framework */; };
 		3B7ADF9DF3C017D21B865B8C /* Pods_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DF357C208EE7346E6A5EB8 /* Pods_Coindar.framework */; };
@@ -101,6 +102,7 @@
 		27FDFA3F219E145400E50899 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		27FDFA41219E14BA00E50899 /* Coindar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coindar.swift; sourceTree = "<group>"; };
 		27FDFA43219FFC6C00E50899 /* UITableView+Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Defaults.swift"; sourceTree = "<group>"; };
+		27FDFA4521A0026200E50899 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		3CAACD2CB6547B40776BF3F8 /* Pods-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Coindar/Pods-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
 		41B7B1A0F5B7F790CC3F20BC /* Pods-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC08F145F6A5A3D7A528976 /* Pods-App-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				1506709B219C23E3000AC091 /* App */,
 				15067097219C2387000AC091 /* Coordinator.swift */,
+				27FDFA4521A0026200E50899 /* ListViewController.swift */,
 				27616B28218EFB3F00D4CF1B /* Config.swift */,
 				27F94CEF218E8BB300FAEF54 /* Environment.swift */,
 				27FDFA2C219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift */,
@@ -696,6 +699,7 @@
 				27FDFA2D219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift in Sources */,
 				1506709A219C23DC000AC091 /* AppCoordinator.swift in Sources */,
 				27FDFA2F219E116700E50899 /* UITableView+registerCell.swift in Sources */,
+				27FDFA4621A0026200E50899 /* ListViewController.swift in Sources */,
 				27FDFA29219E0FDD00E50899 /* CoinsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
