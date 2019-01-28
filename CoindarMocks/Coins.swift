@@ -1,25 +1,34 @@
 // Copyright © lalacode.io All rights reserved.
 
 import CoindarAPI
+import RxSwift
+import Fakery
 
-private let mockURL = URL(string: "https://coindar.org/images/coins/bitcoin/32x32.png")!
-
-func coinWith(name: String) -> Coin {
-    let coin = Coin.mock
-    return Coin(id: coin.id, name: name, symbol: coin.symbol, image32: coin.image32, image64: coin.image64)
-}
+private let faker = Faker()
 
 extension Coin {
-    public static let mock = Coin(id: "btc", name: "Bitcoin", symbol: "BTC", image32: mockURL, image64: mockURL)
+    public static var mock: Coin {
+        return Coin(
+            id: faker.company.suffix(),
+            name: faker.company.name(),
+            symbol: faker.company.suffix(),
+            image32: URL(string: faker.internet.image(width: 32, height: 32))!,
+            image64: URL(string: faker.internet.image(width: 64, height: 64))!)
+    }
 }
 
 extension Array where Element == Coin {
-    public static let mock: [Coin] = [
-        .mock,
-        coinWith(name: "Ethereum"),
-        coinWith(name: "Tenzorum"),
-        coinWith(name: "Litecoin"),
-        coinWith(name: "EOS"),
-        coinWith(name: "Ripple"),
-        ]
+    static func mock(_ amount: Int = 10) -> [Coin] {
+        var coins: [Coin] = []
+        for _ in 0...amount {
+            coins.append(.mock)
+        }
+        return coins
+    }
+}
+
+extension Observable where E == Array<Coin> {
+    static var mock: Observable<[Coin]> {
+        return Observable.just([Coin].mock())
+    }
 }
