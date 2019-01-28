@@ -27,4 +27,5 @@ target 'CoindarMocks' do
   pod 'CoindarAPI', '~> 1.1.3'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Fakery'
 end
