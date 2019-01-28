@@ -15,7 +15,7 @@ public final class CoinsViewController: UIViewController {
     private let viewModel: CoinsViewModel
     private let coordinator: AppCoordinator
 
-    init(appState: AppState, coordinator: AppCoordinator) {
+    public init(appState: AppState, coordinator: AppCoordinator) {
         viewModel = CoinsViewModel(appState: appState)
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)

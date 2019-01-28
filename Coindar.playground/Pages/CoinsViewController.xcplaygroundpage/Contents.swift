@@ -6,6 +6,14 @@ import Overture
 import CoindarMocks
 import RxSwift
 
-//let viewController = CoinsViewController(appState: .mock, coordinator: .mock)
-//
-//PlaygroundPage.current.liveView = viewController
+extension AppState {
+    static var mock: AppState {
+        return AppState(coins: .mock, tags: .mock)
+    }
+}
+
+let coordinator = AppCoordinator(window: UIWindow())
+
+let viewController = CoinsViewController(appState: .mock, coordinator: coordinator)
+
+PlaygroundPage.current.liveView = viewController
