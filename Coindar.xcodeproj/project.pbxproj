@@ -26,6 +26,7 @@
 		27FC6BE921FEE8F500C57E61 /* RequestSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FC6BE721FEE8F500C57E61 /* RequestSink.swift */; };
 		27FC6BEA21FEE8F500C57E61 /* RequestProgressSink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FC6BE821FEE8F500C57E61 /* RequestProgressSink.swift */; };
 		27FC6BEC21FEEBDC00C57E61 /* CoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FC6BEB21FEEBDC00C57E61 /* CoinsViewModel.swift */; };
+		27FC6BF421FEF48600C57E61 /* Tags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FC6BF321FEF48600C57E61 /* Tags.swift */; };
 		27FDFA29219E0FDD00E50899 /* CoinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA28219E0FDD00E50899 /* CoinsViewController.swift */; };
 		27FDFA2B219E107100E50899 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA2A219E107100E50899 /* CoinCell.swift */; };
 		27FDFA2D219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FDFA2C219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift */; };
@@ -98,6 +99,7 @@
 		27FC6BE721FEE8F500C57E61 /* RequestSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestSink.swift; sourceTree = "<group>"; };
 		27FC6BE821FEE8F500C57E61 /* RequestProgressSink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProgressSink.swift; sourceTree = "<group>"; };
 		27FC6BEB21FEEBDC00C57E61 /* CoinsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewModel.swift; sourceTree = "<group>"; };
+		27FC6BF321FEF48600C57E61 /* Tags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tags.swift; sourceTree = "<group>"; };
 		27FDFA28219E0FDD00E50899 /* CoinsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewController.swift; sourceTree = "<group>"; };
 		27FDFA2A219E107100E50899 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 		27FDFA2C219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+reuseIdentifier.swift"; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				27FDFA38219E138900E50899 /* Info.plist */,
 				27FDFA3D219E13FD00E50899 /* CancellableMock.swift */,
 				27FDFA3F219E145400E50899 /* Coins.swift */,
+				27FC6BF321FEF48600C57E61 /* Tags.swift */,
 				27FDFA41219E14BA00E50899 /* Coindar.swift */,
 			);
 			path = CoindarMocks;
@@ -716,6 +719,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FC6BF421FEF48600C57E61 /* Tags.swift in Sources */,
 				27FDFA40219E145400E50899 /* Coins.swift in Sources */,
 				27FDFA3E219E13FD00E50899 /* CancellableMock.swift in Sources */,
 				27FDFA42219E14BA00E50899 /* Coindar.swift in Sources */,
