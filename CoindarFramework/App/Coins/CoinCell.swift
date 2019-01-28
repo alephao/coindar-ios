@@ -36,11 +36,13 @@ public final class CoinCell: UITableViewCell {
 
         coinNameLabel.snp.makeConstraints { make in
             make.leading.equalTo(iconImageView.snp.trailing).offset(12)
+            make.trailing.equalToSuperview().inset(20)
             make.top.bottom.equalToSuperview()
         }
 
         coinSymbolLabel.snp.makeConstraints { make in
             make.leading.equalTo(coinNameLabel.snp.trailing).offset(8)
+            make.trailing.equalToSuperview().inset(20)
             make.top.bottom.equalToSuperview()
         }
     }
