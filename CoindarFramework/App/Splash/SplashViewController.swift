@@ -7,14 +7,15 @@ import CoindarAPI
 import RxSwift
 import RxCocoa
 
-public class SplashViewController: UIViewController {
+public final class SplashViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
 
-    private let viewModel: SplashViewModel
+    private let viewModel = SplashViewModel()
+    private let coordinator: AppCoordinator
 
     public init(coordinator: AppCoordinator) {
-        viewModel = SplashViewModel(coordinator: coordinator)
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -45,20 +46,19 @@ public class SplashViewController: UIViewController {
             .drive(progressView.rx.progress)
             .disposed(by: disposeBag)
 
-        viewModel.displayError
-            .subscribe(onNext: displayErrorAlert(presentedBy: self))
+        viewModel.error
+            .map(alertFromError)
+            .subscribe(onNext: flip(flip(curry(present))(true))(nil))
             .disposed(by: disposeBag)
 
         viewModel.finishedLoading
-            .subscribe(onNext: { _ in print("Finished loading") })
+            .subscribe(onNext: coordinator.gotoCoins)
             .disposed(by: disposeBag)
     }
 }
 
-func displayErrorAlert(presentedBy presenter: UIViewController) -> ((Error) -> Void) {
-    return { error in
-        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-        presenter.present(alert, animated: true, completion: nil)
-    }
+func alertFromError(_ error: Error) -> UIViewController {
+    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+    return alert
 }

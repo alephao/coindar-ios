@@ -12,6 +12,19 @@ public final class CoinsViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
 
+    private let viewModel: CoinsViewModel
+    private let coordinator: AppCoordinator
+
+    init(appState: AppState, coordinator: AppCoordinator) {
+        viewModel = CoinsViewModel(appState: appState)
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     private let tableView: UITableView = {
         let e = UITableView.standard
         e.register(CoinCell.self)
@@ -28,8 +41,8 @@ public final class CoinsViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
 
-        Observable<[Coin]>.from([GlobalState.coins])
-            .bind(to: tableView.rx.items(cellIdentifier: CoinCell.reuseIdentifier, cellType: CoinCell.self)) {
+        viewModel.coins
+            .drive(tableView.rx.items(cellIdentifier: CoinCell.reuseIdentifier, cellType: CoinCell.self)) {
                 _, coin, cell in
                 cell.setup(with: coin)
             }.disposed(by: disposeBag)

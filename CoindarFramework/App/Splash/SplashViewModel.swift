@@ -6,57 +6,24 @@ import RxCocoa
 import Overture
 import CoindarAPI
 
-internal class SplashViewModel {
-
-    private let disposeBag = DisposeBag()
+struct SplashViewModel {
 
     let progress: Driver<Float>
+    let error: Observable<Error>
+    let finishedLoading: Observable<AppState>
 
-    private let _displayError: PublishSubject<Error> = .init()
-    lazy var displayError: Observable<Error> = _displayError
+    init() {
+        let coinsSink = Current.coindar.rx.getCoinsSink()
+        let tagsSink = Current.coindar.rx.getTagsSink()
 
-    private let _finishedLoading: PublishSubject<Void> = .init()
-    lazy var finishedLoading: Observable<Void> = _finishedLoading
-
-    init(coordinator: AppCoordinator) {
-        let coinsRequest = Current.coindar.rx.getCoins().share()
-        let tagsRequest = Current.coindar.rx.getTags().share()
-
-        progress = totalProgressFromRequests(getProgressFromRequest(coinsRequest),
-                                             getProgressFromRequest(tagsRequest))
+        progress = Observable.combineLatest(coinsSink.progress, tagsSink.progress, resultSelector: +)
+            .map(Float.init)
             .asDriver(onErrorJustReturn: 0)
 
-        Observable
-            .zip(getRight(coinsRequest), getRight(tagsRequest))
-            .subscribe(
-                onNext: { [weak self] (coins, tags) in
-                    GlobalState.coins = coins
-                    GlobalState.tags = tags
-                    self?._finishedLoading.onNext(())
-                },
-                onError: { [weak self] error in
-                    self?._displayError.onNext(error)
-            }).disposed(by: disposeBag)
+        error = Observable.merge(coinsSink.failure, tagsSink.failure)
 
-        coordinator.bind(gotoCoinsObservable: finishedLoading)
+        finishedLoading = Observable.zip(coinsSink.success, tagsSink.success) { coins, tags in
+            AppState(coins: .just(coins), tags: .just(tags))
+        }
     }
-}
-
-private func getProgressFromRequest<T>(_ observable: Observable<Either<Double, T>>) -> Observable<Float> {
-    return observable
-        .filter(Either.filterLeft)
-        .map(pipe(Either.mapLeft, Float.init))
-        .catchErrorJustReturn(0)
-}
-
-private func totalProgressFromRequests(_ observables: Observable<Float>...) -> Observable<Float> {
-    return Observable.combineLatest(observables) { obs in
-        return obs.reduce(0, +) / Float(obs.count)
-    }
-}
-
-private func getRight<A, B>(_ observable: Observable<Either<A, B>>) -> Observable<B> {
-    return observable
-        .filter(Either.filterRight)
-        .map(Either.mapRight)
 }

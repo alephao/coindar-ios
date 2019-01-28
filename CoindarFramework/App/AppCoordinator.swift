@@ -5,11 +5,15 @@ import RxSwift
 import CoindarAPI
 
 public struct AppState {
-    public var coins: [CoindarAPI.Coin] = []
-    public var tags: [CoindarAPI.Tag] = []
-}
+    public let coins: Observable<[CoindarAPI.Coin]>
+    public let tags: Observable<[CoindarAPI.Tag]>
 
-public var GlobalState = AppState(coins: [], tags: [])
+    public init(coins: Observable<[CoindarAPI.Coin]>,
+                tags: Observable<[CoindarAPI.Tag]>) {
+        self.coins = coins
+        self.tags = tags
+    }
+}
 
 public class AppCoordinator: Coordinator {
 
@@ -32,14 +36,8 @@ public class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
     }
 
-    func bind(gotoCoinsObservable: Observable<Void>) {
-        gotoCoinsObservable
-            .observeOn(MainScheduler.instance)
-            .bind(onNext: gotoCoins)
-            .disposed(by: disposeBag)
-    }
-
-    private func gotoCoins() {
-        navigationController.present(UIViewController(), animated: true, completion: nil)
+    func gotoCoins(with appState: AppState) {
+        let viewController = CoinsViewController(appState: appState, coordinator: self)
+        navigationController.present(viewController, animated: true, completion: nil)
     }
 }

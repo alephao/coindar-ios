@@ -4,9 +4,8 @@ import CoindarAPI
 import CoindarFramework
 import Overture
 import CoindarMocks
+import RxSwift
 
-GlobalState.coins = .mock
-
-let viewController = CoinsViewController()
-
-PlaygroundPage.current.liveView = viewController
+//let viewController = CoinsViewController(appState: .mock, coordinator: .mock)
+//
+//PlaygroundPage.current.liveView = viewController
