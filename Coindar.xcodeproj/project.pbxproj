@@ -105,8 +105,6 @@
 		41B7B1A0F5B7F790CC3F20BC /* Pods-CoindarFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoindarFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CoindarFramework/Pods-CoindarFramework.debug.xcconfig"; sourceTree = "<group>"; };
 		5CC08F145F6A5A3D7A528976 /* Pods-App-Coindar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-Coindar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-Coindar/Pods-App-Coindar.debug.xcconfig"; sourceTree = "<group>"; };
 		653739CE513BADA8703E2F1F /* Pods_App_CoindarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_CoindarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A5E455F219D621000F2B749 /* CoindarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindarTests.swift; sourceTree = "<group>"; };
-		6A5E4561219D621000F2B749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6ABABC19219D6FE0004BCE30 /* CoindarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoindarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ABABC1B219D6FE0004BCE30 /* CoindarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindarTests.swift; sourceTree = "<group>"; };
 		6ABABC1D219D6FE0004BCE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 			children = (
 				27CE904A218E76E500069005 /* Coindar */,
 				27E235AE218E7F3000D68920 /* CoindarFramework */,
-				6A5E455E219D621000F2B749 /* CoindarTests */,
 				6ABABC1A219D6FE0004BCE30 /* CoindarTests */,
 				27FDFA36219E138900E50899 /* CoindarMocks */,
 				27CE9049218E76E500069005 /* Products */,
@@ -275,15 +272,6 @@
 				B4366F9CE6D0AACC5B04B1D6 /* Pods-CoindarMocks.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		6A5E455E219D621000F2B749 /* CoindarTests */ = {
-			isa = PBXGroup;
-			children = (
-				6A5E455F219D621000F2B749 /* CoindarTests.swift */,
-				6A5E4561219D621000F2B749 /* Info.plist */,
-			);
-			path = CoindarTests;
 			sourceTree = "<group>";
 		};
 		6ABABC1A219D6FE0004BCE30 /* CoindarTests */ = {
