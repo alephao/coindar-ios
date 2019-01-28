@@ -221,17 +221,25 @@
 			isa = PBXGroup;
 			children = (
 				1506709B219C23E3000AC091 /* App */,
+				27FC6BE421FEE77C00C57E61 /* UIKitExtensions */,
 				15067097219C2387000AC091 /* Coordinator.swift */,
 				27616B28218EFB3F00D4CF1B /* Config.swift */,
 				27F94CEF218E8BB300FAEF54 /* Environment.swift */,
-				27FDFA2C219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift */,
-				27FDFA2E219E116700E50899 /* UITableView+registerCell.swift */,
-				27FDFA43219FFC6C00E50899 /* UITableView+Defaults.swift */,
 				27884C47218F1D5500683B59 /* RxCoindar.swift */,
 				27E235AF218E7F3000D68920 /* CoindarFramework.h */,
 				27E235B0218E7F3000D68920 /* Info.plist */,
 			);
 			path = CoindarFramework;
+			sourceTree = "<group>";
+		};
+		27FC6BE421FEE77C00C57E61 /* UIKitExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				27FDFA2C219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift */,
+				27FDFA2E219E116700E50899 /* UITableView+registerCell.swift */,
+				27FDFA43219FFC6C00E50899 /* UITableView+Defaults.swift */,
+			);
+			path = UIKitExtensions;
 			sourceTree = "<group>";
 		};
 		27FDFA27219E0FD000E50899 /* Coins */ = {
