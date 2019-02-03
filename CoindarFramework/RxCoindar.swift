@@ -4,7 +4,7 @@ import RxSwift
 import CoindarAPI
 import Overture
 
-extension Reactive where Base == Coindar {
+public extension Reactive where Base == Coindar {
     func getEventsSink(params: CoindarAPI.EventsParams) -> RequestSink<[CoindarAPI.Event]> {
         return params
             |> curry(base.getEvents)

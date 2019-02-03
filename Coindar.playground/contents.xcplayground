@@ -2,6 +2,7 @@
 <playground version='6.0' target-platform='ios' executeOnSourceChanges='false'>
     <pages>
         <page name='SplashViewController'/>
+        <page name='CoinsViewController'/>
         <page name='EventsViewController'/>
     </pages>
 </playground>

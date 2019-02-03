@@ -21,3 +21,9 @@ public func >>> <A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> ((A) 
         g(f(a))
     }
 }
+
+public func property<RootA, Value: Equatable>(_ keyPath: KeyPath<RootA, Value>, isEqual value: Value) -> (RootA) -> Bool {
+    return { rootA in
+        rootA[keyPath: keyPath] == value
+    }
+}

@@ -36,6 +36,11 @@ public class AppCoordinator: Coordinator {
         window.makeKeyAndVisible()
     }
 
+    func gotoEvents(with appState: AppState) {
+        let viewController = EventsViewController(appState: appState)
+        navigationController.present(viewController, animated: true, completion: nil)
+    }
+
     func gotoCoins(with appState: AppState) {
         let viewController = CoinsViewController(appState: appState, coordinator: self)
         navigationController.present(viewController, animated: true, completion: nil)

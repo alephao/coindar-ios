@@ -1,5 +1,5 @@
 // Copyright © lalacode.io All rights reserved.
 
-extension UITableViewCell {
-    static public let reuseIdentifier = String(describing: self)
+public extension UITableViewCell {
+    static let reuseIdentifier = String(describing: self)
 }

@@ -5,12 +5,12 @@ import RxCocoa
 import Overture
 import Moya
 
-struct RequestProgressSink<Value> {
+public struct RequestProgressSink<Value> {
     private let requestSink: RequestSink<Value>
 
-    var success: Observable<Value> { return requestSink.success }
-    var failure: Observable<Error> { return requestSink.failure }
-    let progress: Observable<Double>
+    public var success: Observable<Value> { return requestSink.success }
+    public var failure: Observable<Error> { return requestSink.failure }
+    public let progress: Observable<Double>
 }
 
 extension RequestProgressSink {

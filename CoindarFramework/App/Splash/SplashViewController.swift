@@ -52,7 +52,7 @@ public final class SplashViewController: UIViewController {
             .disposed(by: disposeBag)
 
         viewModel.finishedLoading
-            .subscribe(onNext: coordinator.gotoCoins)
+            .subscribe(onNext: coordinator.gotoEvents)
             .disposed(by: disposeBag)
     }
 }
