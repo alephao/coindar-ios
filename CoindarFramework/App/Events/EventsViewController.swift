@@ -41,7 +41,6 @@ public final class EventsViewController: UIViewController {
 
         viewModel
             .events
-            .debug()
             .drive(collectionView.rx.items(cellIdentifier: EventCell.reuseIdentifier, cellType: EventCell.self)) { _, eventViewModel, cell in
                 cell.setup(with: eventViewModel)
         }.disposed(by: disposeBag)

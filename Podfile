@@ -9,7 +9,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 abstract_target 'App' do
-  pod 'CoindarAPI', '~> 1.1.3'
+  pod 'CoindarAPI', '~> 1.1.4'
   pod 'SnapKit'
   pod 'Overture', '~> 0.3'
   pod 'RxSwift'
@@ -24,7 +24,7 @@ abstract_target 'App' do
 end
 
 target 'CoindarMocks' do
-  pod 'CoindarAPI', '~> 1.1.3'
+  pod 'CoindarAPI', '~> 1.1.4'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Fakery'

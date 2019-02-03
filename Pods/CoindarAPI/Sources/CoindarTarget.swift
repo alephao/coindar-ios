@@ -37,7 +37,7 @@ extension CoindarTarget: TargetType {
             if let filterDateEnd = params.filterDateEnd { parameters["filter_date_end"] = Event.EventDateFormatter.noTime.string(from: filterDateEnd) }
             if let filterCoins = params.filterCoins { parameters["filter_coins"] = filterCoins }
             if let filterTags = params.filterTags { parameters["filter_tags"] = filterTags }
-            if let sortBy = params.sortBy { parameters["sort_by"] = sortBy }
+            if let sortBy = params.sortBy { parameters["sort_by"] = sortBy.rawValue }
             if let orderBy = params.orderBy { parameters["order_by"] = orderBy.rawValue }
             return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
         case .social(let coins): return .requestParameters(parameters: ["coins": coins], encoding: URLEncoding.queryString)
