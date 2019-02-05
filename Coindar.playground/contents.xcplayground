@@ -4,5 +4,6 @@
         <page name='SplashViewController'/>
         <page name='CoinsViewController'/>
         <page name='EventsViewController'/>
+        <page name='TableView'/>
     </pages>
 </playground>
