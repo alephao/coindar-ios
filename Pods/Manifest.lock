@@ -9,8 +9,8 @@ PODS:
   - Moya/Core (12.0.1):
     - Alamofire (~> 4.1)
     - Result (~> 4.0)
-  - Nuke (7.5.1)
-  - Overture (0.3.0)
+  - Nuke (7.5.2)
+  - Overture (0.3.1)
   - Result (4.1.0)
   - ReSwift (4.0.1)
   - RxAtomic (4.4.0)
@@ -58,8 +58,8 @@ SPEC CHECKSUMS:
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Fakery: 885e894a3e7c392e1da96c6e46a1abe5a0b28686
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
-  Nuke: 3814db501e55f17951451839c726ffd91641e9a5
-  Overture: 05dd0bcf2c9c63f1cf4555cd321baaef76d58784
+  Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
+  Overture: f7b76b2c43a49bd48f7e116313dd99e91d11dd83
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
