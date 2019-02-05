@@ -38,7 +38,8 @@ public class AppCoordinator: Coordinator {
 
     func gotoEvents(with appState: AppState) {
         let viewController = EventsViewController(appState: appState)
-        navigationController.present(viewController, animated: true, completion: nil)
+        let nav = UINavigationController(rootViewController: viewController)
+        navigationController.present(nav, animated: true, completion: nil)
     }
 
     func gotoCoins(with appState: AppState) {

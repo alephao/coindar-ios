@@ -25,9 +25,7 @@ public final class CoinCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        [iconImageView, coinNameLabel, coinSymbolLabel]
-            .forEach(contentView.addSubview)
+        addSubviews(iconImageView, coinNameLabel, coinSymbolLabel)
 
         iconImageView.snp.makeConstraints { make in
             make.leading.top.bottom.equalToSuperview()

@@ -19,31 +19,29 @@ public final class EventsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private let collectionView: UICollectionView = {
-        let flow = UICollectionViewFlowLayout()
-        let edge = (UIScreen.main.bounds.width / 2) - 8
-        flow.estimatedItemSize = CGSize(edge: edge)
-        flow.minimumInteritemSpacing = 0
-        flow.minimumLineSpacing = 0
-        let e = UICollectionView(frame: .zero, collectionViewLayout: flow)
+    private let tableView: UITableView = {
+        let e = UITableView.standard
+        e.rowHeight = UITableView.automaticDimension
         e.register(EventCell.self)
         return e
     }()
 
     override public func loadView() {
         super.loadView()
-        view = collectionView
+        view = tableView
     }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        title = "Events"
         view.backgroundColor = .white
 
         viewModel
             .events
-            .drive(collectionView.rx.items(cellIdentifier: EventCell.reuseIdentifier, cellType: EventCell.self)) { _, eventViewModel, cell in
+            .drive(tableView.rx.items(cellIdentifier: EventCell.reuseIdentifier, cellType: EventCell.self)) { _, eventViewModel, cell in
                 cell.setup(with: eventViewModel)
-        }.disposed(by: disposeBag)
+        }
+            .disposed(by: disposeBag)
     }
 
 }
