@@ -121,4 +121,4 @@ iOSInjectionProject/
 
 # End of https://www.gitignore.io/api/xcode,macos
 
-Config.swift
+./Config.swift
