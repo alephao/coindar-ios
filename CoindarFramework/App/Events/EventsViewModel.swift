@@ -15,7 +15,7 @@ struct EventsViewModel {
         let sink = Current.coindar.rx.getEventsSink(params: params)
 
         events = sink.success.map { events in
-            events.compactMap(with: appState.coins).map(EventViewModel.init)
+            events.zipWith(coins: appState.coins, tags: appState.tags).map(EventViewModel.init)
             }
             .asDriver(onErrorJustReturn: [])
 
@@ -24,10 +24,11 @@ struct EventsViewModel {
 }
 
 private extension Array where Element == CoindarAPI.Event {
-    func compactMap(with coins: [Coin]) -> [(CoindarAPI.Event, Coin)] {
+    func zipWith(coins: [Coin], tags: [Tag]) -> [(CoindarAPI.Event, Coin, Tag)] {
         return compactMap { event in
             let coin = coins.first(where: property(\Coin.id, isEqual: event.coinId))
-            return zip(event, coin)
+            let tag = tags.first(where: property(\Tag.id, isEqual: event.tags))
+            return zip(event, coin, tag)
         }
     }
 }

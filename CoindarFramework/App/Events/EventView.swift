@@ -23,6 +23,8 @@ final class EventView: UIView {
         return e
     }()
 
+    private let tagChip = Chip()
+
     private let imageActivityIndicator: UIActivityIndicatorView = {
         let e = UIActivityIndicatorView(style: .gray)
         e.hidesWhenStopped = true
@@ -31,7 +33,7 @@ final class EventView: UIView {
 
     init() {
         super.init(frame: .zero)
-        addSubviews(coinImageView, coinLabel, titleLabel, imageActivityIndicator)
+        addSubviews(coinImageView, coinLabel, titleLabel, tagChip, imageActivityIndicator)
 
         coinImageView.snp.makeConstraints { make in
             make.top.leading.equalToSuperview()
@@ -46,7 +48,13 @@ final class EventView: UIView {
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(coinLabel.snp.bottom).offset(8)
             make.leading.equalTo(coinImageView)
-            make.trailing.bottom.equalToSuperview()
+            make.trailing.equalToSuperview()
+        }
+
+        tagChip.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.leading.equalTo(titleLabel)
+            make.bottom.equalToSuperview()
         }
 
         imageActivityIndicator.snp.makeConstraints { make in
@@ -69,6 +77,8 @@ extension EventView: ReusableView {
     func setup(with viewModel: EventViewModel) {
         coinLabel.text = "\(viewModel.coinName) \(viewModel.coinSymbol)"
         titleLabel.text = viewModel.title
+
+        tagChip.setup(with: viewModel.tagName, andBackgroundColor: viewModel.tagStyle.color)
 
         imageActivityIndicator.startAnimating()
         Nuke.loadImage(with: viewModel.coinImageUrl, into: coinImageView) { [weak imageActivityIndicator] _, _ in
