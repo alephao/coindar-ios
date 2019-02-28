@@ -27,6 +27,7 @@
 		2763CA8C2228025E00953698 /* UIEdgeInsets+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA8B2228025E00953698 /* UIEdgeInsets+Extensions.swift */; };
 		2763CA8E222806EC00953698 /* TagStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA8D222806EC00953698 /* TagStyle.swift */; };
 		2763CA9022280A3F00953698 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA8F22280A3F00953698 /* UIColor+hex.swift */; };
+		2763CA922228127300953698 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA912228127300953698 /* Colors.swift */; };
 		27884C48218F1D5500683B59 /* RxCoindar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27884C47218F1D5500683B59 /* RxCoindar.swift */; };
 		27CE9054218E76E500069005 /* Coindar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CE9052218E76E500069005 /* Coindar.xcdatamodeld */; };
 		27CE9056218E76E600069005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CE9055218E76E600069005 /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		2763CA8B2228025E00953698 /* UIEdgeInsets+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Extensions.swift"; sourceTree = "<group>"; };
 		2763CA8D222806EC00953698 /* TagStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagStyle.swift; sourceTree = "<group>"; };
 		2763CA8F22280A3F00953698 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		2763CA912228127300953698 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		27884C47218F1D5500683B59 /* RxCoindar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCoindar.swift; sourceTree = "<group>"; };
 		27CE9048218E76E500069005 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE904B218E76E500069005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				2763CA892227FA4D00953698 /* Chip.swift */,
+				2763CA912228127300953698 /* Colors.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 			files = (
 				27FC6BE921FEE8F500C57E61 /* RequestSink.swift in Sources */,
 				27E9014B2198210600535CF3 /* SplashViewModel.swift in Sources */,
+				2763CA922228127300953698 /* Colors.swift in Sources */,
 				27FDFA44219FFC6C00E50899 /* UITableView+Defaults.swift in Sources */,
 				2754B00622070B2E004E7BA4 /* EventViewModel.swift in Sources */,
 				27FDFA2B219E107100E50899 /* CoinCell.swift in Sources */,

@@ -20,6 +20,8 @@ final class EventView: UIView {
     private let titleLabel: UILabel = {
         let e = UILabel()
         e.numberOfLines = 0
+        e.font = .boldSystemFont(ofSize: 17)
+        e.textColor = .link
         return e
     }()
 
