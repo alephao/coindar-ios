@@ -16,9 +16,6 @@ public struct AppState {
 }
 
 public class AppCoordinator: Coordinator {
-
-    private let disposeBag = DisposeBag()
-
     private let window: UIWindow
     private let navigationController: UINavigationController = {
         let e = UINavigationController()
@@ -26,24 +23,38 @@ public class AppCoordinator: Coordinator {
         return e
     }()
 
+    public var childCoordinators: [Coordinator] = []
+    private let disposeBag = DisposeBag()
+
     public init(window: UIWindow) {
         self.window = window
     }
 
     public func start() {
-        navigationController.addChild(SplashViewController(coordinator: self))
+        startSplashScene()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
+}
 
-    func gotoEvents(with appState: AppState) {
+extension AppCoordinator {
+    private func startSplashScene() {
+        let splashViewController = SplashViewController()
+        splashViewController.finishedLoading
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: goToEvents)
+            .disposed(by: disposeBag)
+        navigationController.addChild(splashViewController)
+    }
+
+    private func goToEvents(with appState: AppState) {
         let viewController = EventsViewController(appState: appState)
         let nav = UINavigationController(rootViewController: viewController)
         navigationController.present(nav, animated: true, completion: nil)
     }
 
-    func gotoCoins(with appState: AppState) {
-        let viewController = CoinsViewController(appState: appState, coordinator: self)
+    private func goToCoins(with appState: AppState) {
+        let viewController = CoinsViewController(appState: appState)
         navigationController.present(viewController, animated: true, completion: nil)
     }
 }

@@ -12,10 +12,12 @@ public final class SplashViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     private let viewModel = SplashViewModel()
-    private let coordinator: AppCoordinator
 
-    public init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
+    var finishedLoading: Observable<AppState> {
+        return viewModel.finishedLoading
+    }
+
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -49,10 +51,6 @@ public final class SplashViewController: UIViewController {
         viewModel.error
             .map(alertFromError)
             .subscribe(onNext: flip(flip(curry(present))(true))(nil))
-            .disposed(by: disposeBag)
-
-        viewModel.finishedLoading
-            .subscribe(onNext: coordinator.gotoEvents)
             .disposed(by: disposeBag)
     }
 }

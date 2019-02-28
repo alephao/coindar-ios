@@ -13,11 +13,9 @@ public final class CoinsViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     private let viewModel: CoinsViewModel
-    private let coordinator: AppCoordinator
 
-    public init(appState: AppState, coordinator: AppCoordinator) {
+    public init(appState: AppState) {
         viewModel = CoinsViewModel(appState: appState)
-        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
 
