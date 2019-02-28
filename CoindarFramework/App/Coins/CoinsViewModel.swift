@@ -9,7 +9,7 @@ struct CoinsViewModel {
     let coins: Driver<[CoindarAPI.Coin]>
 
     init(appState: AppState) {
-        coins = appState.coins.asDriver(onErrorJustReturn: [])
+        coins = Driver.just(appState.coins)
     }
 
 }

@@ -14,8 +14,8 @@ struct EventsViewModel {
         let params = EventsParams(page: 1, pageSize: 20, filterDateStart: nil, filterDateEnd: nil, filterCoins: nil, filterTags: nil, sortBy: .dateStart, orderBy: .ascending)
         let sink = Current.coindar.rx.getEventsSink(params: params)
 
-        events = Observable.combineLatest(sink.success, appState.coins) { events, coins in
-            events.compactMap(with: coins).map(EventViewModel.init)
+        events = sink.success.map { events in
+            events.compactMap(with: appState.coins).map(EventViewModel.init)
             }
             .asDriver(onErrorJustReturn: [])
 

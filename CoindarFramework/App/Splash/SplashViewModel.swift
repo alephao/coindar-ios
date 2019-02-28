@@ -23,7 +23,7 @@ struct SplashViewModel {
         error = Observable.merge(coinsSink.failure, tagsSink.failure)
 
         finishedLoading = Observable.zip(coinsSink.success, tagsSink.success) { coins, tags in
-            AppState(coins: .just(coins), tags: .just(tags))
+            AppState(coins: coins, tags: tags)
         }
     }
 }
