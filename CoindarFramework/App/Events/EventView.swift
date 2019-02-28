@@ -23,6 +23,12 @@ final class EventView: UIView {
         return e
     }()
 
+    private let dateLabel: UILabel = {
+        let e = UILabel()
+        e.numberOfLines = 0
+        return e
+    }()
+
     private let tagChip = Chip()
 
     private let imageActivityIndicator: UIActivityIndicatorView = {
@@ -33,7 +39,7 @@ final class EventView: UIView {
 
     init() {
         super.init(frame: .zero)
-        addSubviews(coinImageView, coinLabel, titleLabel, tagChip, imageActivityIndicator)
+        addSubviews(coinImageView, coinLabel, titleLabel, tagChip, dateLabel, imageActivityIndicator)
 
         coinImageView.snp.makeConstraints { make in
             make.top.leading.equalToSuperview()
@@ -57,6 +63,11 @@ final class EventView: UIView {
             make.bottom.equalToSuperview()
         }
 
+        dateLabel.snp.makeConstraints { make in
+            make.leading.greaterThanOrEqualTo(tagChip.snp.trailing).offset(4)
+            make.bottom.trailing.equalToSuperview()
+        }
+
         imageActivityIndicator.snp.makeConstraints { make in
             make.edges.equalTo(coinImageView)
         }
@@ -77,6 +88,7 @@ extension EventView: ReusableView {
     func setup(with viewModel: EventViewModel) {
         coinLabel.text = "\(viewModel.coinName) \(viewModel.coinSymbol)"
         titleLabel.text = viewModel.title
+        dateLabel.text = viewModel.startingDate
 
         tagChip.setup(with: viewModel.tagName, andBackgroundColor: viewModel.tagStyle.color)
 

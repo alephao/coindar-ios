@@ -211,9 +211,9 @@
 			children = (
 				2754B00B22070B52004E7BA4 /* EventsViewController.swift */,
 				2754B00922070B49004E7BA4 /* EventsViewModel.swift */,
-				2754B00522070B2E004E7BA4 /* EventViewModel.swift */,
 				2754B00722070B42004E7BA4 /* EventCell.swift */,
 				2763CA862227F66100953698 /* EventView.swift */,
+				2754B00522070B2E004E7BA4 /* EventViewModel.swift */,
 				2763CA8D222806EC00953698 /* TagStyle.swift */,
 			);
 			path = Events;
