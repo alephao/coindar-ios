@@ -20,6 +20,9 @@
 		2754B01522070C43004E7BA4 /* UICollectionViewCell+reuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B01422070C43004E7BA4 /* UICollectionViewCell+reuseIdentifier.swift */; };
 		27616B29218EFB3F00D4CF1B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27616B28218EFB3F00D4CF1B /* Config.swift */; };
 		2763CA802227F10400953698 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA7F2227F10400953698 /* AppState.swift */; };
+		2763CA832227F47D00953698 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA822227F47D00953698 /* Reusable.swift */; };
+		2763CA852227F60100953698 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA842227F60100953698 /* TableViewCell.swift */; };
+		2763CA872227F66100953698 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA862227F66100953698 /* EventView.swift */; };
 		27884C48218F1D5500683B59 /* RxCoindar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27884C47218F1D5500683B59 /* RxCoindar.swift */; };
 		27CE9054218E76E500069005 /* Coindar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CE9052218E76E500069005 /* Coindar.xcdatamodeld */; };
 		27CE9056218E76E600069005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CE9055218E76E600069005 /* Assets.xcassets */; };
@@ -98,6 +101,9 @@
 		2754B01422070C43004E7BA4 /* UICollectionViewCell+reuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+reuseIdentifier.swift"; sourceTree = "<group>"; };
 		27616B28218EFB3F00D4CF1B /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = SOURCE_ROOT; };
 		2763CA7F2227F10400953698 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2763CA822227F47D00953698 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		2763CA842227F60100953698 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2763CA862227F66100953698 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		27884C47218F1D5500683B59 /* RxCoindar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCoindar.swift; sourceTree = "<group>"; };
 		27CE9048218E76E500069005 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE904B218E76E500069005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 				2754B00922070B49004E7BA4 /* EventsViewModel.swift */,
 				2754B00522070B2E004E7BA4 /* EventViewModel.swift */,
 				2754B00722070B42004E7BA4 /* EventCell.swift */,
+				2763CA862227F66100953698 /* EventView.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -263,8 +270,10 @@
 				27FC6BE421FEE77C00C57E61 /* UIKitExtensions */,
 				2754B01122070BFE004E7BA4 /* FoundationExtensions */,
 				15067097219C2387000AC091 /* Coordinator.swift */,
+				2763CA842227F60100953698 /* TableViewCell.swift */,
 				27616B28218EFB3F00D4CF1B /* Config.swift */,
 				27F94CEF218E8BB300FAEF54 /* Environment.swift */,
+				2763CA822227F47D00953698 /* Reusable.swift */,
 				27884C47218F1D5500683B59 /* RxCoindar.swift */,
 				27FC6BE521FEE7D400C57E61 /* Operators.swift */,
 				27FC6BE821FEE8F500C57E61 /* RequestProgressSink.swift */,
@@ -729,13 +738,16 @@
 				2754B00622070B2E004E7BA4 /* EventViewModel.swift in Sources */,
 				27FDFA2B219E107100E50899 /* CoinCell.swift in Sources */,
 				27884C48218F1D5500683B59 /* RxCoindar.swift in Sources */,
+				2763CA832227F47D00953698 /* Reusable.swift in Sources */,
 				27E235BB218E7F5A00D68920 /* SplashViewController.swift in Sources */,
 				27FC6BE621FEE7D400C57E61 /* Operators.swift in Sources */,
 				27FC6BEC21FEEBDC00C57E61 /* CoinsViewModel.swift in Sources */,
 				2754B00E22070BCA004E7BA4 /* UICollectionView+registerCell.swift in Sources */,
 				2754B01322070C15004E7BA4 /* CGSize+initWithEdges.swift in Sources */,
+				2763CA852227F60100953698 /* TableViewCell.swift in Sources */,
 				2754B01022070BE8004E7BA4 /* UIView+addSubviews.swift in Sources */,
 				2754B01522070C43004E7BA4 /* UICollectionViewCell+reuseIdentifier.swift in Sources */,
+				2763CA872227F66100953698 /* EventView.swift in Sources */,
 				2754B00C22070B52004E7BA4 /* EventsViewController.swift in Sources */,
 				2754B00A22070B49004E7BA4 /* EventsViewModel.swift in Sources */,
 				27FC6BEA21FEE8F500C57E61 /* RequestProgressSink.swift in Sources */,
