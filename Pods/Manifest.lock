@@ -1,6 +1,6 @@
 PODS:
-  - Alamofire (4.8.1)
-  - CoindarAPI (1.1.4):
+  - Alamofire (4.8.2)
+  - CoindarAPI (1.1.5):
     - Moya (~> 12.0.1)
   - Differentiator (3.1.0)
   - Fakery (3.4.0)
@@ -12,7 +12,6 @@ PODS:
   - Nuke (7.5.2)
   - Overture (0.3.1)
   - Result (4.1.0)
-  - ReSwift (4.0.1)
   - RxAtomic (4.4.0)
   - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
@@ -25,11 +24,10 @@ PODS:
   - SnapKit (4.2.0)
 
 DEPENDENCIES:
-  - CoindarAPI (~> 1.1.4)
+  - CoindarAPI (~> 1.1.5)
   - Fakery
   - Nuke (~> 7.0)
   - Overture (~> 0.3)
-  - ReSwift
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -45,7 +43,6 @@ SPEC REPOS:
     - Nuke
     - Overture
     - Result
-    - ReSwift
     - RxAtomic
     - RxCocoa
     - RxDataSources
@@ -53,21 +50,20 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  CoindarAPI: 41d3f072cfa351d200ef41fc26b8d6efe75552d4
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  CoindarAPI: b8f4a85a3ad892e2d1935787fa3f49c622ec5980
   Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
   Fakery: 885e894a3e7c392e1da96c6e46a1abe5a0b28686
   Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
   Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
   Overture: f7b76b2c43a49bd48f7e116313dd99e91d11dd83
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
 
-PODFILE CHECKSUM: 3cb4594a6d35c2435926537f418868613974484d
+PODFILE CHECKSUM: 446fa61118b53b1277b343e9e8a654ff2af5cd47
 
 COCOAPODS: 1.5.3
