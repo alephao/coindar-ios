@@ -27,7 +27,7 @@ extension Array where Element == Coin {
     }
 }
 
-extension Observable where E == Array<Coin> {
+extension Observable where Element == Array<Coin> {
     public static var mock: Observable<[Coin]> {
         return Observable.just(.mock())
     }

@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/CoindarAPI.svg?style=flat)](https://cocoapods.org/pods/CoindarAPI)
 [![License](https://img.shields.io/cocoapods/l/CoindarAPI.svg?style=flat)](https://cocoapods.org/pods/CoindarAPI)
 [![Platform](https://img.shields.io/cocoapods/p/CoindarAPI.svg?style=flat)](https://cocoapods.org/pods/CoindarAPI)
-[![Swift 4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)](https://developer.apple.com/swift/)
+[![Swift 5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 
 A wrapper around the [Coindar API](https://coindar.org/en/api) written in Swift
 

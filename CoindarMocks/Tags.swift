@@ -24,7 +24,7 @@ extension Array where Element == Tag {
     }
 }
 
-extension Observable where E == Array<Tag> {
+extension Observable where Element == Array<Tag> {
     public static var mock: Observable<[Tag]> {
         return Observable.just(.mock())
     }

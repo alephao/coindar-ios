@@ -1,33 +1,34 @@
 PODS:
   - Alamofire (4.8.2)
-  - CoindarAPI (1.1.5):
-    - Moya (~> 12.0.1)
-  - Differentiator (3.1.0)
-  - Fakery (3.4.0)
-  - Moya (12.0.1):
-    - Moya/Core (= 12.0.1)
-  - Moya/Core (12.0.1):
+  - CoindarAPI (1.1.6):
+    - Moya (~> 13.0.0)
+  - Differentiator (4.0.1)
+  - Fakery (4.0.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
     - Alamofire (~> 4.1)
-    - Result (~> 4.0)
-  - Nuke (7.5.2)
-  - Overture (0.3.1)
+    - Result (~> 4.1)
+  - Nuke (7.6.3)
+  - Overture (0.5.0)
   - Result (4.1.0)
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
-    - RxSwift (~> 4.0)
-  - RxDataSources (3.1.0):
-    - Differentiator (~> 3.0)
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
-    - RxAtomic (~> 4.4)
-  - SnapKit (4.2.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SnapKit (5.0.0)
 
 DEPENDENCIES:
-  - CoindarAPI (~> 1.1.5)
+  - CoindarAPI (~> 1.1.6)
   - Fakery
   - Nuke (~> 7.0)
-  - Overture (~> 0.3)
+  - Overture (~> 0.5)
   - RxCocoa
   - RxDataSources
   - RxSwift
@@ -43,27 +44,27 @@ SPEC REPOS:
     - Nuke
     - Overture
     - Result
-    - RxAtomic
     - RxCocoa
     - RxDataSources
+    - RxRelay
     - RxSwift
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  CoindarAPI: b8f4a85a3ad892e2d1935787fa3f49c622ec5980
-  Differentiator: be49ca3408f0ecfc761e4c7763d20c62be01b9ad
-  Fakery: 885e894a3e7c392e1da96c6e46a1abe5a0b28686
-  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
-  Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
-  Overture: f7b76b2c43a49bd48f7e116313dd99e91d11dd83
+  CoindarAPI: 464bd7979f22cd358f33817579da8604566aa64a
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Fakery: 476f6d947de432f84703acc830a1e7166330299b
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Nuke: 44130e95e09463f8773ae4b96b90de1eba6b3350
+  Overture: 2e6252ead5da6d3347f758047f27a31cb469d59d
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
-  RxDataSources: a843bad90c29817f5923ec8163f4af2de084ceb3
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: 446fa61118b53b1277b343e9e8a654ff2af5cd47
+PODFILE CHECKSUM: 64a6ac8c55aba638633bf5661581f3429f79011f
 
 COCOAPODS: 1.5.3

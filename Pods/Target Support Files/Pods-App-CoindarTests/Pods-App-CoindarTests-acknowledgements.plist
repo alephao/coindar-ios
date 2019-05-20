@@ -133,7 +133,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>RxAtomic</string>
+			<string>RxCocoa</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
@@ -151,7 +151,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 			<key>License</key>
 			<string>MIT</string>
 			<key>Title</key>
-			<string>RxCocoa</string>
+			<string>RxRelay</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
@@ -239,7 +239,7 @@ SOFTWARE.
 			<key>FooterText</key>
 			<string>MIT License
 
-Copyright (c) 2018 Point-Free, Inc.
+Copyright (c) 2019 Point-Free, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

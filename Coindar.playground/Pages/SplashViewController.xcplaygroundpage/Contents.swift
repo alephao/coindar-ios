@@ -8,6 +8,6 @@ import CoindarMocks
 Current.coindar = CoindarMock(getCoinsResponse: .progressAndSuccess,
                               getTagsResponse: .progressAndSuccess)
 
-let viewController = SplashViewController(coordinator: AppCoordinator.init(window: UIWindow()))
+let viewController = SplashViewController()
 
 PlaygroundPage.current.liveView = viewController
