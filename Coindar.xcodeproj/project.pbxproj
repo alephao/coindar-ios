@@ -10,6 +10,7 @@
 		0B1FDC49763C570505DD2DED /* Pods_App_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE3711255B25ED3B9586C84 /* Pods_App_Coindar.framework */; };
 		15067098219C2387000AC091 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15067097219C2387000AC091 /* Coordinator.swift */; };
 		1506709A219C23DC000AC091 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15067099219C23DC000AC091 /* AppCoordinator.swift */; };
+		15DBCDAE22D5EB4100AA0E02 /* UIAlertAction+ok.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBCDAD22D5EB4100AA0E02 /* UIAlertAction+ok.swift */; };
 		2754B00622070B2E004E7BA4 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00522070B2E004E7BA4 /* EventViewModel.swift */; };
 		2754B00822070B42004E7BA4 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00722070B42004E7BA4 /* EventCell.swift */; };
 		2754B00A22070B49004E7BA4 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00922070B49004E7BA4 /* EventsViewModel.swift */; };
@@ -96,6 +97,7 @@
 		1254AD883D5F1F3D60964B75 /* Pods-App-CoindarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarTests/Pods-App-CoindarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		15067097219C2387000AC091 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		15067099219C23DC000AC091 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		15DBCDAD22D5EB4100AA0E02 /* UIAlertAction+ok.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+ok.swift"; sourceTree = "<group>"; };
 		2754B00522070B2E004E7BA4 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		2754B00722070B42004E7BA4 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		2754B00922070B49004E7BA4 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				2754B00F22070BE8004E7BA4 /* UIView+addSubviews.swift */,
 				2763CA8B2228025E00953698 /* UIEdgeInsets+Extensions.swift */,
 				2763CA8F22280A3F00953698 /* UIColor+hex.swift */,
+				15DBCDAD22D5EB4100AA0E02 /* UIAlertAction+ok.swift */,
 			);
 			path = UIKitExtensions;
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				2763CA8E222806EC00953698 /* TagStyle.swift in Sources */,
 				2763CA9022280A3F00953698 /* UIColor+hex.swift in Sources */,
 				2763CA8C2228025E00953698 /* UIEdgeInsets+Extensions.swift in Sources */,
+				15DBCDAE22D5EB4100AA0E02 /* UIAlertAction+ok.swift in Sources */,
 				27616B29218EFB3F00D4CF1B /* Config.swift in Sources */,
 				27FDFA2D219E10D000E50899 /* UITableViewCell+reuseIdentifier.swift in Sources */,
 				1506709A219C23DC000AC091 /* AppCoordinator.swift in Sources */,

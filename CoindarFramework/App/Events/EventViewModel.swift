@@ -19,6 +19,7 @@ struct EventViewModel {
     // Event
     var title: String { return event.caption }
     var startingDate: String { return formatStartingDate(event.dateStart) }
+    var proofUrl: URL? { return event.proof }
 
     public init(event: CoindarAPI.Event, coin: Coin, tag: Tag) {
         self.event = event
