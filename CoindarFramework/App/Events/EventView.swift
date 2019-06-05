@@ -31,7 +31,7 @@ final class EventView: UIView {
         return e
     }()
 
-    private let tagChip = Chip()
+    private let tagChip = _CKTagView()
 
     private let imageActivityIndicator: UIActivityIndicatorView = {
         let e = UIActivityIndicatorView(style: .gray)

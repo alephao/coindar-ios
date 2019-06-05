@@ -2,12 +2,16 @@
 
 import SwiftUI
 
-enum CKColor: Int {
+public enum CKColor: Int {
     case link = 0x3e5ca7
 }
 
 extension CKColor {
-    var swiftUi: Color {
+    public var swiftUi: Color {
         return Color(hex: rawValue)
+    }
+
+    public var uiKit: UIColor {
+        return UIColor(hex: rawValue)
     }
 }

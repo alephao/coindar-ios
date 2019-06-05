@@ -2,12 +2,12 @@
 
 import SwiftUI
 
-struct CKTagView : View {
+public struct CKTagView : View {
 
-    let text: String
-    let color: CKColor
+    public let text: String
+    public let color: CKColor
 
-    var body: some View {
+    public var body: some View {
         Text(text)
             .padding(.vertical, 4)
             .padding(.horizontal, 8)
@@ -15,7 +15,7 @@ struct CKTagView : View {
     }
 }
 
-extension CKTagView {
+public extension CKTagView {
     init(text: String) {
         self.text = text
         self.color = CKColor.link
