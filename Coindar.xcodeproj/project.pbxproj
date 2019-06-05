@@ -29,6 +29,9 @@
 		2763CA9022280A3F00953698 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA8F22280A3F00953698 /* UIColor+hex.swift */; };
 		2763CA922228127300953698 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2763CA912228127300953698 /* Colors.swift */; };
 		27884C48218F1D5500683B59 /* RxCoindar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27884C47218F1D5500683B59 /* RxCoindar.swift */; };
+		27AC962F22A7D49C0039ADCA /* CoindarKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 27AC962D22A7D49C0039ADCA /* CoindarKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27AC963222A7D49C0039ADCA /* CoindarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AC962B22A7D49C0039ADCA /* CoindarKit.framework */; };
+		27AC963322A7D49C0039ADCA /* CoindarKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27AC962B22A7D49C0039ADCA /* CoindarKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		27CE9054218E76E500069005 /* Coindar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CE9052218E76E500069005 /* Coindar.xcdatamodeld */; };
 		27CE9056218E76E600069005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CE9055218E76E600069005 /* Assets.xcassets */; };
 		27CE9059218E76E600069005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE9057218E76E600069005 /* LaunchScreen.storyboard */; };
@@ -61,6 +64,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		27AC963022A7D49C0039ADCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27CE9040218E76E500069005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27AC962A22A7D49C0039ADCA;
+			remoteInfo = CoindarKit;
+		};
 		27E235B2218E7F3000D68920 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27CE9040218E76E500069005 /* Project object */;
@@ -84,6 +94,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				27AC963322A7D49C0039ADCA /* CoindarKit.framework in Embed Frameworks */,
 				27E235B5218E7F3000D68920 /* CoindarFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -115,6 +126,9 @@
 		2763CA8F22280A3F00953698 /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		2763CA912228127300953698 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		27884C47218F1D5500683B59 /* RxCoindar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCoindar.swift; sourceTree = "<group>"; };
+		27AC962B22A7D49C0039ADCA /* CoindarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoindarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27AC962D22A7D49C0039ADCA /* CoindarKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoindarKit.h; sourceTree = "<group>"; };
+		27AC962E22A7D49C0039ADCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CE9048218E76E500069005 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE904B218E76E500069005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CE904D218E76E500069005 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -159,10 +173,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		27AC962822A7D49C0039ADCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27CE9045218E76E500069005 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AC963222A7D49C0039ADCA /* CoindarKit.framework in Frameworks */,
 				27E235B4218E7F3000D68920 /* CoindarFramework.framework in Frameworks */,
 				0B1FDC49763C570505DD2DED /* Pods_App_Coindar.framework in Frameworks */,
 			);
@@ -247,11 +269,21 @@
 			path = UIComponents;
 			sourceTree = "<group>";
 		};
+		27AC962C22A7D49C0039ADCA /* CoindarKit */ = {
+			isa = PBXGroup;
+			children = (
+				27AC962D22A7D49C0039ADCA /* CoindarKit.h */,
+				27AC962E22A7D49C0039ADCA /* Info.plist */,
+			);
+			path = CoindarKit;
+			sourceTree = "<group>";
+		};
 		27CE903F218E76E500069005 = {
 			isa = PBXGroup;
 			children = (
 				27CE904A218E76E500069005 /* Coindar */,
 				27E235AE218E7F3000D68920 /* CoindarFramework */,
+				27AC962C22A7D49C0039ADCA /* CoindarKit */,
 				6ABABC1A219D6FE0004BCE30 /* CoindarTests */,
 				27FDFA36219E138900E50899 /* CoindarMocks */,
 				27CE9049218E76E500069005 /* Products */,
@@ -267,6 +299,7 @@
 				27E235AD218E7F3000D68920 /* CoindarFramework.framework */,
 				6ABABC19219D6FE0004BCE30 /* CoindarTests.xctest */,
 				27FDFA35219E138900E50899 /* CoindarMocks.framework */,
+				27AC962B22A7D49C0039ADCA /* CoindarKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -381,6 +414,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		27AC962622A7D49C0039ADCA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27AC962F22A7D49C0039ADCA /* CoindarKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27E235A8218E7F3000D68920 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -400,6 +441,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		27AC962A22A7D49C0039ADCA /* CoindarKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27AC963422A7D49C0039ADCA /* Build configuration list for PBXNativeTarget "CoindarKit" */;
+			buildPhases = (
+				27AC962622A7D49C0039ADCA /* Headers */,
+				27AC962722A7D49C0039ADCA /* Sources */,
+				27AC962822A7D49C0039ADCA /* Frameworks */,
+				27AC962922A7D49C0039ADCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoindarKit;
+			productName = CoindarKit;
+			productReference = 27AC962B22A7D49C0039ADCA /* CoindarKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		27CE9047218E76E500069005 /* Coindar */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27CE905D218E76E600069005 /* Build configuration list for PBXNativeTarget "Coindar" */;
@@ -415,6 +474,7 @@
 			);
 			dependencies = (
 				27E235B3218E7F3000D68920 /* PBXTargetDependency */,
+				27AC963122A7D49C0039ADCA /* PBXTargetDependency */,
 			);
 			name = Coindar;
 			productName = Coindar;
@@ -489,6 +549,9 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = Lalacode;
 				TargetAttributes = {
+					27AC962A22A7D49C0039ADCA = {
+						CreatedOnToolsVersion = 11.0;
+					};
 					27CE9047218E76E500069005 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1020;
@@ -523,11 +586,19 @@
 				27E235AC218E7F3000D68920 /* CoindarFramework */,
 				6ABABC18219D6FE0004BCE30 /* CoindarTests */,
 				27FDFA34219E138900E50899 /* CoindarMocks */,
+				27AC962A22A7D49C0039ADCA /* CoindarKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		27AC962922A7D49C0039ADCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27CE9046218E76E500069005 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -740,6 +811,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		27AC962722A7D49C0039ADCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27CE9044218E76E500069005 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -811,6 +889,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		27AC963122A7D49C0039ADCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27AC962A22A7D49C0039ADCA /* CoindarKit */;
+			targetProxy = 27AC963022A7D49C0039ADCA /* PBXContainerItemProxy */;
+		};
 		27E235B3218E7F3000D68920 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27E235AC218E7F3000D68920 /* CoindarFramework */;
@@ -835,6 +918,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		27AC963522A7D49C0039ADCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoindarKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.lalainc.CoindarKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		27AC963622A7D49C0039ADCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = RWJVRQ865N;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CoindarKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.lalainc.CoindarKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		27CE905B218E76E600069005 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1157,6 +1296,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		27AC963422A7D49C0039ADCA /* Build configuration list for PBXNativeTarget "CoindarKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27AC963522A7D49C0039ADCA /* Debug */,
+				27AC963622A7D49C0039ADCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27CE9043218E76E500069005 /* Build configuration list for PBXProject "Coindar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
