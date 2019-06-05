@@ -1,47 +1,34 @@
 // Copyright © lalacode.io All rights reserved.
 
 import UIKit
+import SwiftUI
 import RxSwift
 import RxCocoa
 import CoindarAPI
 
-public final class EventsViewController: UIViewController {
+public struct EventListView: View {
+    @State var events: [EventViewModel] = []
 
-    private let disposeBag = DisposeBag()
+    public var body: some View {
+        List(events.identified(by: \.id)) { eventViewModel in
+            SUIEventView(viewModel: eventViewModel)
+        }
+    }
+
+    func fetchEvents()  -> [EventViewModel] {
+        return []
+    }
+}
+
+public final class EventsViewController: UIHostingController<EventListView> {
     private let viewModel: EventsViewModel
 
     public init(appState: AppState) {
         viewModel = EventsViewModel(appState: appState)
-        super.init(nibName: nil, bundle: nil)
+        super.init(rootView: EventListView())
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    @objc required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    private let tableView: UITableView = {
-        let e = UITableView.standard
-        e.rowHeight = UITableView.automaticDimension
-        e.register(EventCell.self)
-        return e
-    }()
-
-    override public func loadView() {
-        super.loadView()
-        view = tableView
-    }
-
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Events"
-        view.backgroundColor = .white
-
-        viewModel
-            .events
-            .drive(tableView.rx.items(cellIdentifier: EventCell.reuseIdentifier, cellType: EventCell.self)) { _, eventViewModel, cell in
-                cell.setup(with: eventViewModel)
-        }
-            .disposed(by: disposeBag)
-    }
-
 }

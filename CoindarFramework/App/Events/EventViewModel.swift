@@ -7,6 +7,8 @@ struct EventViewModel {
     private let coin: Coin
     private let tag: Tag
 
+    let id = UUID().uuidString
+
     // Coin
     var coinName: String { return coin.name }
     var coinSymbol: String { return coin.symbol }
