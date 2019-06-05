@@ -32,6 +32,9 @@
 		27AC962F22A7D49C0039ADCA /* CoindarKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 27AC962D22A7D49C0039ADCA /* CoindarKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		27AC963222A7D49C0039ADCA /* CoindarKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27AC962B22A7D49C0039ADCA /* CoindarKit.framework */; };
 		27AC963322A7D49C0039ADCA /* CoindarKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27AC962B22A7D49C0039ADCA /* CoindarKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		27AC963822A7D5E20039ADCA /* CKTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC963722A7D5E20039ADCA /* CKTagView.swift */; };
+		27AC963A22A7D6A10039ADCA /* CKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC963922A7D6A10039ADCA /* CKColor.swift */; };
+		27AC963C22A7D7120039ADCA /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC963B22A7D7120039ADCA /* Color+hex.swift */; };
 		27CE9054218E76E500069005 /* Coindar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27CE9052218E76E500069005 /* Coindar.xcdatamodeld */; };
 		27CE9056218E76E600069005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CE9055218E76E600069005 /* Assets.xcassets */; };
 		27CE9059218E76E600069005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CE9057218E76E600069005 /* LaunchScreen.storyboard */; };
@@ -129,6 +132,9 @@
 		27AC962B22A7D49C0039ADCA /* CoindarKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoindarKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AC962D22A7D49C0039ADCA /* CoindarKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoindarKit.h; sourceTree = "<group>"; };
 		27AC962E22A7D49C0039ADCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AC963722A7D5E20039ADCA /* CKTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKTagView.swift; sourceTree = "<group>"; };
+		27AC963922A7D6A10039ADCA /* CKColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKColor.swift; sourceTree = "<group>"; };
+		27AC963B22A7D7120039ADCA /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
 		27CE9048218E76E500069005 /* Coindar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coindar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CE904B218E76E500069005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27CE904D218E76E500069005 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -272,10 +278,37 @@
 		27AC962C22A7D49C0039ADCA /* CoindarKit */ = {
 			isa = PBXGroup;
 			children = (
+				27AC963D22A7D7150039ADCA /* SwiftUIExtensions */,
+				27AC963E22A7D8AE0039ADCA /* Components */,
+				27AC963F22A7D8C70039ADCA /* Style */,
 				27AC962D22A7D49C0039ADCA /* CoindarKit.h */,
 				27AC962E22A7D49C0039ADCA /* Info.plist */,
 			);
 			path = CoindarKit;
+			sourceTree = "<group>";
+		};
+		27AC963D22A7D7150039ADCA /* SwiftUIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				27AC963B22A7D7120039ADCA /* Color+hex.swift */,
+			);
+			path = SwiftUIExtensions;
+			sourceTree = "<group>";
+		};
+		27AC963E22A7D8AE0039ADCA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				27AC963722A7D5E20039ADCA /* CKTagView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		27AC963F22A7D8C70039ADCA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				27AC963922A7D6A10039ADCA /* CKColor.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		27CE903F218E76E500069005 = {
@@ -551,6 +584,7 @@
 				TargetAttributes = {
 					27AC962A22A7D49C0039ADCA = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					27CE9047218E76E500069005 = {
 						CreatedOnToolsVersion = 10.0;
@@ -815,6 +849,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27AC963C22A7D7120039ADCA /* Color+hex.swift in Sources */,
+				27AC963822A7D5E20039ADCA /* CKTagView.swift in Sources */,
+				27AC963A22A7D6A10039ADCA /* CKColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -921,6 +958,7 @@
 		27AC963522A7D49C0039ADCA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -939,6 +977,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.lalainc.CoindarKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -949,6 +988,7 @@
 		27AC963622A7D49C0039ADCA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
