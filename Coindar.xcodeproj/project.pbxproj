@@ -10,6 +10,7 @@
 		0B1FDC49763C570505DD2DED /* Pods_App_Coindar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE3711255B25ED3B9586C84 /* Pods_App_Coindar.framework */; };
 		15067098219C2387000AC091 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15067097219C2387000AC091 /* Coordinator.swift */; };
 		1506709A219C23DC000AC091 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15067099219C23DC000AC091 /* AppCoordinator.swift */; };
+		15240D2622A91E28001DF542 /* CKSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15240D2522A91E28001DF542 /* CKSpinner.swift */; };
 		2754B00622070B2E004E7BA4 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00522070B2E004E7BA4 /* EventViewModel.swift */; };
 		2754B00A22070B49004E7BA4 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00922070B49004E7BA4 /* EventsViewModel.swift */; };
 		2754B00C22070B52004E7BA4 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00B22070B52004E7BA4 /* EventsViewController.swift */; };
@@ -110,6 +111,7 @@
 		1254AD883D5F1F3D60964B75 /* Pods-App-CoindarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-CoindarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-CoindarTests/Pods-App-CoindarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		15067097219C2387000AC091 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		15067099219C23DC000AC091 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		15240D2522A91E28001DF542 /* CKSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKSpinner.swift; sourceTree = "<group>"; };
 		2754B00522070B2E004E7BA4 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		2754B00922070B49004E7BA4 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		2754B00B22070B52004E7BA4 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				27AC963722A7D5E20039ADCA /* CKTagView.swift */,
+				15240D2522A91E28001DF542 /* CKSpinner.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -861,6 +864,7 @@
 				27AC964F22A7DFA40039ADCA /* UIColor+hex.swift in Sources */,
 				27AC963822A7D5E20039ADCA /* CKTagView.swift in Sources */,
 				27AC963A22A7D6A10039ADCA /* CKColor.swift in Sources */,
+				15240D2622A91E28001DF542 /* CKSpinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

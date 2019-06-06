@@ -1,8 +1,9 @@
 // Copyright © lalacode.io All rights reserved.
 
 import CoindarAPI
+import SwiftUI
 
-struct EventViewModel {
+struct EventViewModel: Identifiable {
     private let event: CoindarAPI.Event
     private let coin: Coin
     private let tag: Tag
