@@ -11,6 +11,7 @@ public struct CKTagView : View {
         Text(text)
             .padding(.vertical, 4)
             .padding(.horizontal, 8)
+            .foregroundColor(CKColor.white.swiftUi)
             .background(backgroundColor.swiftUi)
             .cornerRadius(4)
     }

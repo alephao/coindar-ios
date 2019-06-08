@@ -3,7 +3,7 @@
 import RxSwift
 import CoindarAPI
 
-public struct AppState {
-    public let coins: [CoindarAPI.Coin]
-    public let tags: [CoindarAPI.Tag]
+struct AppState {
+    let coins: [CoindarAPI.Coin]
+    let tags: [CoindarAPI.Tag]
 }

@@ -5,6 +5,7 @@ import SwiftUI
 public enum CKColor: Int {
     case link = 0x3e5ca7
     case gray = 0xfefefe
+    case white = 0xffffff
 
     // Tags Colors
     case tagGeneral = 0x7d93cf

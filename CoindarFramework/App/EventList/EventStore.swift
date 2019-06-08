@@ -1,5 +1,6 @@
 // Copyright © lalacode.io All rights reserved.
 
+import Foundation
 import UIKit
 import SwiftUI
 import RxSwift
@@ -7,7 +8,7 @@ import RxCocoa
 import CoindarAPI
 import Combine
 
-class EventStore: BindableObject {
+final class EventStore: BindableObject {
     let didChange = PassthroughSubject<EventStore, Never>()
 
     var events: [EventViewModel] = [] {
@@ -34,33 +35,15 @@ class EventStore: BindableObject {
     }
 }
 
-public struct EventListView: View {
-    @ObjectBinding var store: EventStore
-
-    public var body: some View {
-        NavigationView {
-            List(store.events) { eventViewModel in
-                EventView(viewModel: eventViewModel)
+extension Array where Element == CoindarAPI.Event {
+    func zipWith(coins: [Coin], tags: [Tag]) -> [(CoindarAPI.Event, Coin, Tag)] {
+        return compactMap { event in
+            guard
+                let coin = coins.first(where: property(\Coin.id, isEqual: event.coinId)),
+                let tag = tags.first(where: property(\Tag.id, isEqual: event.tags)) else {
+                    return nil
             }
-            .navigationBarTitle(Text("Events"))
+            return (event, coin, tag)
         }
-    }
-
-    private let disposeBag = DisposeBag()
-
-    init(store: EventStore) {
-        self.store = store
-    }
-}
-
-public final class EventsViewController: UIHostingController<EventListView> {
-    public init(appState: AppState) {
-        let store = EventStore(appState: appState)
-        let root = EventListView(store: store)
-        super.init(rootView: root)
-    }
-
-    @objc required dynamic init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

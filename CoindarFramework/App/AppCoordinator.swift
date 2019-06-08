@@ -36,7 +36,7 @@ extension AppCoordinator {
     }
 
     private func goToEvents(with appState: AppState) {
-        let viewController = EventsViewController(appState: appState)
+        let viewController = EventListViewController(appState: appState)
         let nav = UINavigationController(rootViewController: viewController)
         navigationController.present(nav, animated: true, completion: nil)
     }
