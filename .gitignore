@@ -121,4 +121,9 @@ iOSInjectionProject/
 
 # End of https://www.gitignore.io/api/xcode,macos
 
+# coindar-ios config
 ./Config.swift
+
+# Bazel
+/bazel-*
+

@@ -11,6 +11,7 @@
 		15067098219C2387000AC091 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15067097219C2387000AC091 /* Coordinator.swift */; };
 		1506709A219C23DC000AC091 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15067099219C23DC000AC091 /* AppCoordinator.swift */; };
 		15DBCDAE22D5EB4100AA0E02 /* UIAlertAction+ok.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DBCDAD22D5EB4100AA0E02 /* UIAlertAction+ok.swift */; };
+		27128BE92325256700FB8F61 /* libSnapKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27128BE82325256700FB8F61 /* libSnapKit.a */; };
 		2754B00622070B2E004E7BA4 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00522070B2E004E7BA4 /* EventViewModel.swift */; };
 		2754B00822070B42004E7BA4 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00722070B42004E7BA4 /* EventCell.swift */; };
 		2754B00A22070B49004E7BA4 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2754B00922070B49004E7BA4 /* EventsViewModel.swift */; };
@@ -98,6 +99,7 @@
 		15067097219C2387000AC091 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		15067099219C23DC000AC091 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		15DBCDAD22D5EB4100AA0E02 /* UIAlertAction+ok.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertAction+ok.swift"; sourceTree = "<group>"; };
+		27128BE82325256700FB8F61 /* libSnapKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSnapKit.a; path = "bazel-out/ios-x86_64-min10.0-applebin_ios-ios_x86_64-fastbuild/bin/Dependencies/libSnapKit.a"; sourceTree = "<group>"; };
 		2754B00522070B2E004E7BA4 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		2754B00722070B42004E7BA4 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		2754B00922070B49004E7BA4 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27128BE92325256700FB8F61 /* libSnapKit.a in Frameworks */,
 				9BB35D9DE4B6B42486FD21D5 /* Pods_App_CoindarFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +211,14 @@
 				27616B2B218EFC1E00D4CF1B /* Splash */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		272244BE2323638900B98FC9 /* Dependencies-bazel */ = {
+			isa = PBXGroup;
+			children = (
+				27128BE82325256700FB8F61 /* libSnapKit.a */,
+			);
+			name = "Dependencies-bazel";
 			sourceTree = "<group>";
 		};
 		2754B00422070B1C004E7BA4 /* Events */ = {
@@ -252,6 +263,7 @@
 		27CE903F218E76E500069005 = {
 			isa = PBXGroup;
 			children = (
+				272244BE2323638900B98FC9 /* Dependencies-bazel */,
 				27CE904A218E76E500069005 /* Coindar */,
 				27E235AE218E7F3000D68920 /* CoindarFramework */,
 				6ABABC1A219D6FE0004BCE30 /* CoindarTests */,
@@ -429,6 +441,7 @@
 			buildConfigurationList = 27E235B6218E7F3000D68920 /* Build configuration list for PBXNativeTarget "CoindarFramework" */;
 			buildPhases = (
 				F4EEF6F234583E99E0CD5C42 /* [CP] Check Pods Manifest.lock */,
+				27128BEA2325263A00FB8F61 /* ShellScript */,
 				27E235A8218E7F3000D68920 /* Headers */,
 				27E235A9218E7F3000D68920 /* Sources */,
 				27E235AA218E7F3000D68920 /* Frameworks */,
@@ -564,6 +577,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		27128BEA2325263A00FB8F61 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bazel build //Dependencies:AllDependenciesMiniOS10 --apple_platform_type=ios\n";
+		};
 		730E0D6C4BE1D067199E2277 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -584,7 +614,6 @@
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -601,7 +630,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -628,7 +656,6 @@
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Overture/Overture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -645,7 +672,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Overture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1017,9 +1043,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/bazel-out/ios-x86_64-min10.0-applebin_ios-ios_x86_64-fastbuild/bin/Dependencies";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.CoindarFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/bazel-out/ios-x86_64-min10.0-applebin_ios-ios_x86_64-fastbuild/bin/Dependencies";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1047,9 +1075,11 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/bazel-out/ios-x86_64-min10.0-applebin_ios-ios_x86_64-fastbuild/bin/Dependencies";
 				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.CoindarFramework;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/bazel-out/ios-x86_64-min10.0-applebin_ios-ios_x86_64-fastbuild/bin/Dependencies";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1134,7 +1164,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.CoindarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1153,7 +1183,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.lalacode.CoindarTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

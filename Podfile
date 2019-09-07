@@ -10,7 +10,6 @@ use_frameworks!
 
 abstract_target 'App' do
   pod 'CoindarAPI', '~> 1.1.6'
-  pod 'SnapKit'
   pod 'Overture', '~> 0.5'
   pod 'RxSwift'
   pod 'RxCocoa'
